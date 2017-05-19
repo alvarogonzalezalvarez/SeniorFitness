@@ -10,7 +10,7 @@
 
     <ImageView
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/fuerzabrazos" />
@@ -38,17 +38,25 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
+        android:background="@android:color/holo_green_light"
         android:layout_marginTop="10dp"
-        android:text="START"
-        android:onClick="start" />
+        android:text="START" />
 
     <Button
         android:id="@+id/stop"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
+        android:background="@android:color/holo_red_light"
         android:layout_marginTop="10dp"
-        android:text="STOP"
-        android:onClick="stop" />
+        android:text="STOP" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="RESET" />
 
 </LinearLayout>

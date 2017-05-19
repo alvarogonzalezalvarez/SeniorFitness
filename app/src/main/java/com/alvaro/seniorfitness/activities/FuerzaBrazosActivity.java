@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.alvaro.seniorfitness.R;
@@ -23,6 +24,7 @@ public class FuerzaBrazosActivity extends MainActivity {
 
     FuerzaBrazosListener listener;
     SensorManager sensorService;
+    TextView repCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +32,42 @@ public class FuerzaBrazosActivity extends MainActivity {
         setContentView(R.layout.activity_fuerza_brazos);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        final TextView repCount = (TextView) findViewById(R.id.repCount);
-
+        repCount = (TextView) findViewById(R.id.repCount);
         sensorService = (SensorManager) getApplicationContext()
                             .getSystemService(getApplicationContext().SENSOR_SERVICE);
-
         listener = new FuerzaBrazosListener(repCount, 8.0f, 0.0f);
+
+        final Button startButton = (Button) findViewById(R.id.start);
+        final Button stopButton = (Button) findViewById(R.id.stop);
+        final Button resetButton = (Button) findViewById(R.id.reset);
+        stopButton.setVisibility(View.GONE);
+        resetButton.setVisibility(View.GONE);
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                start(v);
+                startButton.setVisibility(View.GONE);
+                stopButton.setVisibility(View.VISIBLE);
+                resetButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                stop(v);
+                stopButton.setVisibility(View.GONE);
+                startButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                reset(v);
+                stopButton.setVisibility(View.GONE);
+                resetButton.setVisibility(View.GONE);
+                startButton.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     public void start(View view) {
@@ -46,6 +78,12 @@ public class FuerzaBrazosActivity extends MainActivity {
 
     public void stop(View view) {
         sensorService.unregisterListener(listener);
+    }
+
+    public void reset(View view) {
+        stop(view);
+        repCount.setText("0");
+        listener = new FuerzaBrazosListener(repCount, 8.0f, 0.0f);
     }
 
     protected void onPause() {
@@ -64,8 +102,6 @@ public class FuerzaBrazosActivity extends MainActivity {
             case R.id.navigation_fuerza_brazos:
                 break;
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
         }
         return true;
