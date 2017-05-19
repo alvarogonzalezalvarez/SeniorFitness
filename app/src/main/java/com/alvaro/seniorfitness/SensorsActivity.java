@@ -1,6 +1,7 @@
 package com.alvaro.seniorfitness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -8,9 +9,14 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-public class SensorsActivity extends AppCompatActivity implements SensorEventListener {
+import com.alvaro.seniorfitness.activities.FuerzaBrazosActivity;
+import com.alvaro.seniorfitness.activities.MainActivity;
+
+public class SensorsActivity extends MainActivity implements SensorEventListener {
 
     //Common variables
     private SensorManager mSensorManager;
@@ -125,5 +131,23 @@ public class SensorsActivity extends AppCompatActivity implements SensorEventLis
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.navigation_sensors:
+                break;
+            case R.id.navigation_fuerza_brazos:
+                intent = new Intent(this, FuerzaBrazosActivity.class);
+                this.startActivity(intent);
+                break;
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 }
