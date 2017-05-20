@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.alvaro.seniorfitness.activities.FuerzaBrazosActivity">
+    tools:context="com.alvaro.seniorfitness.activities.FuerzaPiernasActivity">
 
     <ImageView
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fuerzabrazos" />
+        android:src="@drawable/fuerzapiernas" />
 
     <LinearLayout
         android:id="@+id/duracionText"

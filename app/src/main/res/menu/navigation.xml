@@ -3,18 +3,11 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_sensors"
-        android:title="@string/title_sensors"
-        app:showAsAction="always|withText" />
-
-    <item
         android:id="@+id/navigation_fuerza_brazos"
-        android:title="@string/title_fuerza_brazos"
-        app:showAsAction="always|withText" />
+        android:title="@string/title_fuerza_brazos" />
 
     <item
         android:id="@+id/navigation_fuerza_piernas"
-        android:title="@string/title_fuerza_piernas"
-        app:showAsAction="always|withText" />
+        android:title="@string/title_fuerza_piernas" />
 
 </menu>

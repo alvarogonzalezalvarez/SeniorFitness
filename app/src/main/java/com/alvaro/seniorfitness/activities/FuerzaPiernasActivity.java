@@ -8,16 +8,16 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.alvaro.seniorfitness.R;
-import com.alvaro.seniorfitness.listeners.FuerzaBrazosListener;
+import com.alvaro.seniorfitness.listeners.FuerzaPiernasListener;
 
 
-public class FuerzaBrazosActivity extends MainActivity {
+public class FuerzaPiernasActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initActivity(R.layout.activity_fuerza_brazos);
-        listener = new FuerzaBrazosListener(repCount);
+        initActivity(R.layout.activity_fuerza_piernas);
+        listener = new FuerzaPiernasListener(repCount);
     }
 
     @Override
@@ -31,17 +31,17 @@ public class FuerzaBrazosActivity extends MainActivity {
     @Override
     public void reset(View view) {
         super.reset(view);
-        listener = new FuerzaBrazosListener(repCount);
+        listener = new FuerzaPiernasListener(repCount);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         switch (item.getItemId()) {
-            case R.id.navigation_fuerza_brazos:
-                break;
             case R.id.navigation_fuerza_piernas:
-                intent = new Intent(this, FuerzaPiernasActivity.class);
+                break;
+            case R.id.navigation_fuerza_brazos:
+                intent = new Intent(this, FuerzaBrazosActivity.class);
                 this.startActivity(intent);
                 break;
             default:
