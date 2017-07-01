@@ -8,14 +8,15 @@ import android.media.ToneGenerator;
 import android.widget.TextView;
 
 
-public class MainListener implements SensorEventListener {
+public class ExerciseListener implements SensorEventListener {
     TextView textView;
     int reps;
-    ToneGenerator tone = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);;
+    ToneGenerator tone;
 
-    public MainListener(final TextView textView) {
+    public ExerciseListener(final TextView textView, ToneGenerator tone) {
         this.textView = textView;
         reps = 0;
+        this.tone = tone;
     }
 
     public void completeRep() {

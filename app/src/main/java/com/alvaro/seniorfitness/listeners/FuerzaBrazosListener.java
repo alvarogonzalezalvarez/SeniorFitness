@@ -2,14 +2,15 @@ package com.alvaro.seniorfitness.listeners;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
+import android.media.ToneGenerator;
 import android.widget.TextView;
 
 
-public class FuerzaBrazosListener extends MainListener {
+public class FuerzaBrazosListener extends ExerciseListener {
     boolean state = false;
 
-    public FuerzaBrazosListener(final TextView textView) {
-        super(textView);
+    public FuerzaBrazosListener(final TextView textView, ToneGenerator tone) {
+        super(textView, tone);
     }
 
     @Override

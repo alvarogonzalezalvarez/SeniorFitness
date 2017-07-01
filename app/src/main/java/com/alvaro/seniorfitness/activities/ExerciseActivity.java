@@ -1,5 +1,6 @@
 package com.alvaro.seniorfitness.activities;
 
+import android.content.Intent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
@@ -7,6 +8,7 @@ import android.media.ToneGenerator;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -17,13 +19,14 @@ import android.widget.TextView;
 import com.alvaro.seniorfitness.R;
 
 
-public class MainActivity extends AppCompatActivity {
+public class ExerciseActivity extends AppCompatActivity {
 
     SensorEventListener listener;
     SensorManager sensorService;
     TextView repCount;
     CountDownTimer countDown;
-    ToneGenerator tone = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
+    ToneGenerator tone;
+    static final Integer idSelected = null;
 
     protected void initActivity(int layoutResID) {
         setContentView(layoutResID);
@@ -66,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 startButton.setVisibility(View.VISIBLE);
             }
         });
+
+        tone = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
     }
 
     public void start(final View view) {
@@ -118,6 +123,40 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
         return true;
+    }
+
+    public boolean goToExerciseActivity(MenuItem item, int currentExerciseActivity) {
+        Intent intent;
+
+        if (item.getItemId() != currentExerciseActivity) {
+            switch (item.getItemId()) {
+                case R.id.navigation_resistencia_aerobica:
+                    goToActivity(ResistenciaAerobicaActivity.class);
+                    break;
+                case R.id.navigation_fuerza_piernas:
+                    goToActivity(FuerzaPiernasActivity.class);
+                    break;
+                case R.id.navigation_fuerza_brazos:
+                    goToActivity(FuerzaBrazosActivity.class);
+                    break;
+                case R.id.navigation_agilidad:
+                    goToActivity(AgilidadActivity.class);
+                    break;
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+        }
+
+        return true;
+    }
+
+    public void goToActivity(Class<?> cls) {
+        tone.release();
+        Intent intent = new Intent(this, cls);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        intent.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        startActivityIfNeeded(intent,0);
     }
 
 }

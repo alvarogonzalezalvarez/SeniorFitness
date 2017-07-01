@@ -8,16 +8,16 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.alvaro.seniorfitness.R;
-import com.alvaro.seniorfitness.listeners.FuerzaPiernasListener;
+import com.alvaro.seniorfitness.listeners.ResistenciaAerobicaListener;
 
 
-public class FuerzaPiernasActivity extends ExerciseActivity {
+public class ResistenciaAerobicaActivity extends ExerciseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initActivity(R.layout.activity_fuerza_piernas);
-        listener = new FuerzaPiernasListener(repCount, tone);
+        initActivity(R.layout.activity_resistencia_aerobica);
+        listener = new ResistenciaAerobicaListener(repCount, tone);
     }
 
     @Override
@@ -31,12 +31,12 @@ public class FuerzaPiernasActivity extends ExerciseActivity {
     @Override
     public void reset(View view) {
         super.reset(view);
-        listener = new FuerzaPiernasListener(repCount, tone);
+        listener = new ResistenciaAerobicaListener(repCount, tone);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return goToExerciseActivity(item, R.id.navigation_fuerza_piernas);
+        return goToExerciseActivity(item, R.id.navigation_resistencia_aerobica);
     }
 
 }

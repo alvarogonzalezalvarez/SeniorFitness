@@ -10,4 +10,12 @@
         android:id="@+id/navigation_fuerza_piernas"
         android:title="@string/title_fuerza_piernas" />
 
+    <item
+        android:id="@+id/navigation_resistencia_aerobica"
+        android:title="Resistencia Aeróbica" />
+
+    <item
+        android:id="@+id/navigation_agilidad"
+        android:title="Agilidad" />
+
 </menu>

@@ -11,13 +11,13 @@ import com.alvaro.seniorfitness.R;
 import com.alvaro.seniorfitness.listeners.FuerzaBrazosListener;
 
 
-public class FuerzaBrazosActivity extends MainActivity {
+public class FuerzaBrazosActivity extends ExerciseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initActivity(R.layout.activity_fuerza_brazos);
-        listener = new FuerzaBrazosListener(repCount);
+        listener = new FuerzaBrazosListener(repCount, tone);
     }
 
     @Override
@@ -31,23 +31,12 @@ public class FuerzaBrazosActivity extends MainActivity {
     @Override
     public void reset(View view) {
         super.reset(view);
-        listener = new FuerzaBrazosListener(repCount);
+        listener = new FuerzaBrazosListener(repCount, tone);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent;
-        switch (item.getItemId()) {
-            case R.id.navigation_fuerza_brazos:
-                break;
-            case R.id.navigation_fuerza_piernas:
-                intent = new Intent(this, FuerzaPiernasActivity.class);
-                this.startActivity(intent);
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-        return true;
+        return goToExerciseActivity(item, R.id.navigation_fuerza_brazos);
     }
 
 }
