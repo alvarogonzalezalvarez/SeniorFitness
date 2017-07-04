@@ -3,5 +3,7 @@
     <string name="title_sensors">Sensores</string>
     <string name="title_fuerza_brazos">Fuerza Brazos</string>
     <string name="title_fuerza_piernas">Fuerza Piernas</string>
+    <string name="title_resistencia_aerobica">Resistencia Aeróbica</string>
+    <string name="title_agilidad">Agilidad</string>
     <string name="title_activity_fuerza_brazos">FuerzaBrazosActivity</string>
 </resources>

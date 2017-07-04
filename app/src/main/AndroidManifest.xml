@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.FuerzaBrazosActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:label="@string/title_fuerza_brazos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,15 +22,18 @@
         </activity>
         <activity
             android:name=".activities.FuerzaPiernasActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:label="@string/title_fuerza_piernas">
         </activity>
         <activity
             android:name=".activities.ResistenciaAerobicaActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:label="@string/title_resistencia_aerobica">
         </activity>
         <activity
             android:name=".activities.AgilidadActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:label="@string/title_agilidad">
         </activity>
     </application>
 
