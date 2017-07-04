@@ -58,7 +58,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text=""
-        android:textSize="20dp"
+        android:textSize="50dp"
         android:textStyle="bold"/>
 
     <Button
@@ -101,8 +101,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:text="0"
-        android:textSize="100dp" />
+        android:textSize="100dp"
+        android:textColor="@android:color/black"/>
 
 </LinearLayout>

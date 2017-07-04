@@ -15,51 +15,15 @@
         android:layout_height="wrap_content"
         android:src="@drawable/agilidad" />
 
-    <LinearLayout
-        android:id="@+id/duracionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Duración de la prueba:"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/seconds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="30"
-                android:textSize="15dp"
-                android:inputType="number" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="segundos"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/remainingTime"
+    <Chronometer
+        android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text=""
-        android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textSize="100dp"/>
+
 
     <Button
         android:id="@+id/start"
@@ -86,23 +50,5 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="RESET" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Repeticiones:"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/repCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        android:textSize="100dp" />
 
 </LinearLayout>
