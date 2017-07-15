@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SeniorFitnessDBHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
     public static final String DATABASE_NAME = "SeniorFitness.db";
 
     private static final String TEXT_TYPE = " TEXT";
@@ -51,11 +51,13 @@ public class SeniorFitnessDBHelper extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_ENTRIES_SESSION =
             "CREATE TABLE IF NOT EXISTS " + SeniorFitnessContract.Session.TABLE_NAME + " (" +
-                    SeniorFitnessContract.Session.COLUMN_NAME_SESSIONID + " TEXT PRIMARY KEY," +
+                    SeniorFitnessContract.Session.COLUMN_NAME_SESSIONID + TEXT_TYPE + COMMA_SEP +
                     SeniorFitnessContract.Session.COLUMN_NAME_USERID + TEXT_TYPE + COMMA_SEP +
                     SeniorFitnessContract.Session.COLUMN_NAME_ACTIVE + TEXT_TYPE + COMMA_SEP +
-                    SeniorFitnessContract.Session.COLUMN_NAME_DATE + TEXT_TYPE +
-                    " )";
+                    SeniorFitnessContract.Session.COLUMN_NAME_DATE + " TEXT, PRIMARY KEY(" +
+                    SeniorFitnessContract.Session.COLUMN_NAME_SESSIONID + COMMA_SEP +
+                    SeniorFitnessContract.Session.COLUMN_NAME_USERID +
+                    " ))";
 
     private static final String SQL_DELETE_ENTRIES_SESSION =
             "DROP TABLE IF EXISTS " + SeniorFitnessContract.Session.TABLE_NAME;

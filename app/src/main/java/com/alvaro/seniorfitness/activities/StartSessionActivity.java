@@ -6,10 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,7 +22,7 @@ import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
 import com.alvaro.seniorfitness.model.User;
 
 
-public class MainActivity extends AppCompatActivity {
+public class StartSessionActivity extends AppCompatActivity {
 
     private SeniorFitnessDBHelper dbHelper;
     private Activity these;
@@ -40,46 +42,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.navigation_add_user:
-                goToActivity(AddUserActivity.class);
-                break;
-            case R.id.navigation_start_session:
-                goToActivity(StartSessionActivity.class);
-                break;
-            case R.id.navigation_resistencia_aerobica:
-                goToActivity(ResistenciaAerobicaActivity.class);
-                break;
-            case R.id.navigation_fuerza_piernas:
-                goToActivity(FuerzaPiernasActivity.class);
-                break;
-            case R.id.navigation_fuerza_brazos:
-                goToActivity(FuerzaBrazosActivity.class);
-                break;
-            case R.id.navigation_agilidad:
-                goToActivity(AgilidadActivity.class);
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
         }
-
-        return true;
-    }
-
-    public void goToActivity(Class<?> cls) {
-        Intent intent = new Intent(this, cls);
-        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        intent.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
-        startActivityIfNeeded(intent,0);
+        return super.onOptionsItemSelected(item);
     }
 
     private class getPersons extends AsyncTask<Void, Void, User[]> {
@@ -128,10 +98,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(User[] result) {
+        protected void onPostExecute(final User[] result) {
             if (result.length > 0) {
                 UsersAdapter adapter = new UsersAdapter(these,result);
                 listView.setAdapter(adapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        User theUser = result[position];
+                        Intent intent = new Intent(these, SelectTestActivity.class);
+                        intent.putExtra("userId", theUser.getUserID());
+                        startActivity(intent);
+                    }
+                });
             } else {
                 usersText.setVisibility(View.VISIBLE);
             }

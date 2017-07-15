@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.alvaro.seniorfitness.activities.MainActivity">
+    tools:context="com.alvaro.seniorfitness.activities.StartSessionActivity">
 
     <TextView
         android:id="@+id/usersText"
@@ -15,8 +15,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="Registra un usuario para comenzar"
-        android:textSize="15dp"
-        android:textStyle="bold"/>
+        android:textSize="15dp" />
 
     <ListView
         android:id="@+id/listUsers"

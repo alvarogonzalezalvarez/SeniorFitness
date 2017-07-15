@@ -6,20 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.alvaro.seniorfitness.activities.MainActivity">
-
-    <TextView
-        android:id="@+id/usersText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Registra un usuario para comenzar"
-        android:textSize="15dp"
-        android:textStyle="bold"/>
+    tools:context="com.alvaro.seniorfitness.activities.SelectTestActivity">
 
     <ListView
-        android:id="@+id/listUsers"
+        android:id="@+id/listTests"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:drawSelectorOnTop="false" />

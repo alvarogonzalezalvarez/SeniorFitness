@@ -28,6 +28,22 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
+            android:name=".activities.StartSessionActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SelectTestActivity"
+            android:parentActivityName=".activities.StartSessionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.StartSessionActivity" />
+        </activity>
+        <activity
             android:name=".activities.FuerzaBrazosActivity"
             android:screenOrientation="portrait">
         </activity>
