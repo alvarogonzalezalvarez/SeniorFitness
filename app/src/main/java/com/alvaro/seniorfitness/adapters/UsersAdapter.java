@@ -14,7 +14,7 @@ import com.alvaro.seniorfitness.model.User;
 public class UsersAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    TextView name, dni;
+    TextView name, dni, birthdate;
     ImageView photo;
     User[] users;
 
@@ -49,8 +49,10 @@ public class UsersAdapter extends BaseAdapter {
         name = (TextView) convertView.findViewById(R.id.name);
         dni = (TextView) convertView.findViewById(R.id.dni);
         photo = (ImageView) convertView.findViewById(R.id.photo);
+        birthdate = (TextView) convertView.findViewById(R.id.birthdate);
         name.setText(user.getName() + " " + user.getLastname());
         dni.setText(user.getUserID());
+        birthdate.setText(user.getBirthdate());
         if (user.getPhoto() != null) {
             if ("Hombre".equals(user.getGender())) {
                 photo.setImageResource(R.drawable.male_user_nophoto);

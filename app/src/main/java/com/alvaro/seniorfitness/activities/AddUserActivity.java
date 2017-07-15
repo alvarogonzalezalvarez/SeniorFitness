@@ -41,20 +41,19 @@ public class AddUserActivity extends AppCompatActivity {
         final EditText lastname = (EditText) findViewById(R.id.lastname);
         final EditText gender = (EditText) findViewById(R.id.gender);
         final EditText birthdate = (EditText) findViewById(R.id.birthdate);
-        String birthdateString = birthdate.getText().toString();
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            Date fecha = sdf.parse(birthdate.getText().toString());
-            birthdateString = sdf.format(fecha);
-        } catch (ParseException e) {}
-        final String dateToSave = birthdateString;
         final Activity these = this;
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String birthdateString = birthdate.getText().toString();
+                try {
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                    Date fecha = sdf.parse(birthdate.getText().toString());
+                    birthdateString = sdf.format(fecha);
+                } catch (ParseException e) {}
                 new insertPerson().execute(userid.getText().toString(),
                         name.getText().toString(), lastname.getText().toString(),
-                        gender.getText().toString(), dateToSave);
+                        gender.getText().toString(), birthdateString);
                 NavUtils.navigateUpFromSameTask(these);
             }
         });
