@@ -7,15 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TableLayout;
-import android.widget.TableRow;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.alvaro.seniorfitness.R;
+import com.alvaro.seniorfitness.adapters.UsersAdapter;
 import com.alvaro.seniorfitness.database.SeniorFitnessContract;
 import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
 import com.alvaro.seniorfitness.model.User;
@@ -24,15 +23,18 @@ import com.alvaro.seniorfitness.model.User;
 public class MainActivity extends AppCompatActivity {
 
     private SeniorFitnessDBHelper dbHelper;
-    private TableLayout usersTable;
     private Activity these;
+    private TextView usersText;
+    private ListView listView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dbHelper = new SeniorFitnessDBHelper(this);
-        usersTable = (TableLayout) findViewById(R.id.usersTable);
+        usersText = (TextView) findViewById(R.id.usersText);
+        usersText.setVisibility(View.GONE);
+        listView = (ListView) findViewById(R.id.listUsers);
         these = this;
         new getPersons().execute();
     }
@@ -116,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 String lastname = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_LASTNAME));
                 String gender = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_GENDER));
                 String birthdate = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE));;
-                data[i++] = new User(userId, name, lastname, gender, birthdate);
+                data[i++] = new User(userId, name, lastname, gender, birthdate, null);
             }
 
             c.close();
@@ -126,41 +128,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(User[] result) {
-            int i = 0;
-            TableRow tbrow0 = new TableRow(these);
-            TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
-            tbrow0.setLayoutParams(lp);
-            TextView tv0 = new TextView(these);
-            tv0.setText("DNI");
-            tv0.setGravity(Gravity.CENTER);
-            tbrow0.addView(tv0);
-            TextView tv1 = new TextView(these);
-            tv1.setText("NOMBRE");
-            tv1.setGravity(Gravity.CENTER);
-            tbrow0.addView(tv1);
-            TextView tv2 = new TextView(these);
-            tv2.setText("APELLIDOS");
-            tv2.setGravity(Gravity.CENTER);
-            tbrow0.addView(tv2);
-            usersTable.addView(tbrow0,i);
-            i++;
-            for (User row : result) {
-                TableRow tableRow = new TableRow(these);
-                tableRow.setLayoutParams(lp);
-                TextView userId = new TextView(these);
-                TextView name = new TextView(these);
-                TextView lastname = new TextView(these);
-                userId.setText(row.getUserID());
-                userId.setGravity(Gravity.CENTER);
-                name.setText(row.getName());
-                name.setGravity(Gravity.CENTER);
-                lastname.setText(row.getLastname());
-                lastname.setGravity(Gravity.CENTER);
-                tableRow.addView(userId);
-                tableRow.addView(name);
-                tableRow.addView(lastname);
-                usersTable.addView(tableRow,i);
-                i++;
+            if (result.length > 0) {
+                UsersAdapter adapter = new UsersAdapter(these,result);
+                listView.setAdapter(adapter);
+            } else {
+                usersText.setVisibility(View.VISIBLE);
             }
         }
     }

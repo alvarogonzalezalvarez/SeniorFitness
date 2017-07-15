@@ -8,11 +8,20 @@
     android:orientation="vertical"
     tools:context="com.alvaro.seniorfitness.activities.MainActivity">
 
-    <TableLayout
-        android:id="@+id/usersTable"
+    <TextView
+        android:id="@+id/usersText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-    </TableLayout>
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Registra a un usuario para comenzar."
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/listUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="false" />
 
 </LinearLayout>

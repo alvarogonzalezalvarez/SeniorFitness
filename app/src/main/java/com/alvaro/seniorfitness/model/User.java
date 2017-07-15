@@ -7,13 +7,15 @@ public class User {
     private String lastname;
     private String gender;
     private String birthdate;
+    private String photo;
 
-    public User(String userID, String name, String lastname, String gender, String birthdate) {
+    public User(String userID, String name, String lastname, String gender, String birthdate, String photo) {
         this.userID = userID;
         this.name = name;
         this.lastname = lastname;
         this.gender = gender;
         this.birthdate = birthdate;
+        this.photo = photo;
     }
 
     public String getUserID() {
@@ -54,5 +56,13 @@ public class User {
 
     public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }
