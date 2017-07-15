@@ -3,6 +3,18 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/navigation_add_user"
+        android:icon="@drawable/ic_add_user"
+        android:title="Añadir Usuario"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_start_session"
+        android:icon="@drawable/ic_start_session"
+        android:title="Empezar Sesión"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/navigation_fuerza_brazos"
         android:title="@string/title_fuerza_brazos" />
 

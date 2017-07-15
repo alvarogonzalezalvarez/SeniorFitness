@@ -29,7 +29,6 @@ public class ExerciseActivity extends AppCompatActivity {
     CountDownTimer countDown;
     ToneGenerator tone;
     Chronometer chronometer;
-    static final Integer idSelected = null;
 
     protected void initActivity(int layoutResID) {
         setContentView(layoutResID);

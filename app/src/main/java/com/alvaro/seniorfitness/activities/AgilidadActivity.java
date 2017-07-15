@@ -12,6 +12,7 @@ public class AgilidadActivity extends ExerciseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.title_agilidad);
         initActivity(R.layout.activity_agilidad);
     }
 
@@ -19,5 +20,4 @@ public class AgilidadActivity extends ExerciseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return goToExerciseActivity(item, R.id.navigation_agilidad);
     }
-
 }

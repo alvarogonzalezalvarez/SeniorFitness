@@ -12,28 +12,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.FuerzaBrazosActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_fuerza_brazos">
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.AddUserActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FuerzaBrazosActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
             android:name=".activities.FuerzaPiernasActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_fuerza_piernas">
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".activities.ResistenciaAerobicaActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_resistencia_aerobica">
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".activities.AgilidadActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_agilidad">
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

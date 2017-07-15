@@ -16,6 +16,7 @@ public class FuerzaPiernasActivity extends ExerciseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.title_fuerza_piernas);
         initActivity(R.layout.activity_fuerza_piernas);
         listener = new FuerzaPiernasListener(repCount, tone);
     }

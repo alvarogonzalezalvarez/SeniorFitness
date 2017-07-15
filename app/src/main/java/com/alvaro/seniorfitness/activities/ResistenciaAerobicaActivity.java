@@ -16,6 +16,7 @@ public class ResistenciaAerobicaActivity extends ExerciseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.title_resistencia_aerobica);
         initActivity(R.layout.activity_resistencia_aerobica);
         listener = new ResistenciaAerobicaListener(repCount, tone);
     }
