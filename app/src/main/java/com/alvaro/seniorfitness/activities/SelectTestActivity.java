@@ -47,6 +47,7 @@ public class SelectTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_test);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Tests");
         dbHelper = new SeniorFitnessDBHelper(this);
         userId = getIntent().getStringExtra("userId");
         listView = (ListView) findViewById(R.id.listTests);
@@ -153,7 +154,7 @@ public class SelectTestActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long result) {
-            TestsAdapter adapter = new TestsAdapter(these,tests);
+            TestsAdapter adapter = new TestsAdapter(these,tests,userId);
             listView.setAdapter(adapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -264,7 +265,7 @@ public class SelectTestActivity extends AppCompatActivity {
             if (count == tests.length) {
                 new updateSession().execute(sessionId, userId, "COMPLETED");
             } else {
-                TestsAdapter adapter = new TestsAdapter(these,tests);
+                TestsAdapter adapter = new TestsAdapter(these,tests,userId);
                 listView.setAdapter(adapter);
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override

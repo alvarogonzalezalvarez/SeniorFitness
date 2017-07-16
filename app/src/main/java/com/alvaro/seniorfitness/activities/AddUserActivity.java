@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.alvaro.seniorfitness.R;
@@ -39,6 +40,7 @@ public class AddUserActivity extends AppCompatActivity {
         final EditText lastname = (EditText) findViewById(R.id.lastname);
         final EditText gender = (EditText) findViewById(R.id.gender);
         final EditText birthdate = (EditText) findViewById(R.id.birthdate);
+        final RadioGroup genderRadioGroup = (RadioGroup) findViewById(R.id.gender_radio_group);
         final Activity these = this;
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,9 +51,15 @@ public class AddUserActivity extends AppCompatActivity {
                     Date fecha = sdf.parse(birthdate.getText().toString());
                     birthdateString = sdf.format(fecha);
                 } catch (ParseException e) {}
+                int selectedId = genderRadioGroup.getCheckedRadioButtonId();
+                String gender;
+                if(selectedId == R.id.female_radio_btn)
+                    gender = "Mujer";
+                else
+                    gender = "Hombre";
                 new insertPerson().execute(userid.getText().toString(),
                         name.getText().toString(), lastname.getText().toString(),
-                        gender.getText().toString(), birthdateString);
+                        gender, birthdateString);
                 NavUtils.navigateUpFromSameTask(these);
             }
         });

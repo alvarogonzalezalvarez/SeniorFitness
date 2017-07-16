@@ -6,6 +6,15 @@ public class Test {
     private String name;
     private String description;
     private String result;
+    private int image;
+
+    public Test(String testID, String name, String description, String result, int image) {
+        this.testID = testID;
+        this.name = name;
+        this.description = description;
+        this.result = result;
+        this.image = image;
+    }
 
     public Test(String testID, String name, String description, String result) {
         this.testID = testID;
@@ -44,5 +53,13 @@ public class Test {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 }
