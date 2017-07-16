@@ -178,6 +178,31 @@ public class SelectTestActivity extends AppCompatActivity {
         }
     }
 
+    private class updateSession extends AsyncTask<String, Void, Integer> {
+
+        @Override
+        protected Integer doInBackground(String... what) {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            // Mapa de valores, cuyas claves serán los nombres de las columnas
+            ContentValues values = new ContentValues();
+            values.put(SeniorFitnessContract.Session.COLUMN_NAME_SESSIONID, what[0]);
+            values.put(SeniorFitnessContract.Session.COLUMN_NAME_USERID, what[1]);
+            values.put(SeniorFitnessContract.Session.COLUMN_NAME_ACTIVE, what[2]);
+
+            int affectedrows = db.update(SeniorFitnessContract.Session.TABLE_NAME, values,
+                    "sessionid = ? AND userid = ?", new String[]{sessionId, userId});
+            return affectedrows;
+        }
+
+        @Override
+        protected void onPostExecute(Integer result) {
+            Intent intent = new Intent(these, ResultsActivity.class);
+            intent.putExtra("userId", userId);
+            intent.putExtra("sessionId", sessionId);
+            startActivity(intent);
+        }
+    }
+
     private class getResults extends AsyncTask<Void, Void, Result[]> {
 
         @Override
@@ -226,36 +251,47 @@ public class SelectTestActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Result[] results) {
+            int count = 0;
             for (Result result:results) {
                 for (int i=0;i<tests.length;i++) {
                     if (result.getTestID().equals(tests[i].getTestID())) {
                         tests[i].setResult(result.getResult());
+                        count++;
                     }
                 }
             }
 
-            TestsAdapter adapter = new TestsAdapter(these,tests);
-            listView.setAdapter(adapter);
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Test theTest = tests[position];
-                    Intent intent = null;
-                    if ("F_Pna".equals(theTest.getTestID())) {
-                        intent = new Intent(these, FuerzaPiernasActivity.class);
-                    } else if ("F_Br".equals(theTest.getTestID())) {
-                        intent = new Intent(these, FuerzaBrazosActivity.class);
-                    } else if ("Resist".equals(theTest.getTestID())) {
-                        intent = new Intent(these, ResistenciaAerobicaActivity.class);
-                    } else if ("Agil".equals(theTest.getTestID())) {
-                        intent = new Intent(these, AgilidadActivity.class);
+            if (count == tests.length) {
+                new updateSession().execute(sessionId, userId, "COMPLETED");
+            } else {
+                TestsAdapter adapter = new TestsAdapter(these,tests);
+                listView.setAdapter(adapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Test theTest = tests[position];
+                        if (theTest.getResult() == null) {
+                            Intent intent = null;
+                            if ("F_Pna".equals(theTest.getTestID())) {
+                                intent = new Intent(these, FuerzaPiernasActivity.class);
+                            } else if ("F_Br".equals(theTest.getTestID())) {
+                                intent = new Intent(these, FuerzaBrazosActivity.class);
+                            } else if ("Resist".equals(theTest.getTestID())) {
+                                intent = new Intent(these, ResistenciaAerobicaActivity.class);
+                            } else if ("Agil".equals(theTest.getTestID())) {
+                                intent = new Intent(these, AgilidadActivity.class);
+                            }
+                            intent.putExtra("userId", userId);
+                            intent.putExtra("sessionId", sessionId);
+                            intent.putExtra("testId", theTest.getTestID());
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Test ya realizado",
+                                    Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    intent.putExtra("userId", userId);
-                    intent.putExtra("sessionId", sessionId);
-                    intent.putExtra("testId", theTest.getTestID());
-                    startActivity(intent);
-                }
-            });
+                });
+            }
         }
     }
 
