@@ -16,8 +16,4 @@ public class AgilidadActivity extends ExerciseActivity {
         initActivity(R.layout.activity_agilidad);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return goToExerciseActivity(item, R.id.navigation_agilidad);
-    }
 }

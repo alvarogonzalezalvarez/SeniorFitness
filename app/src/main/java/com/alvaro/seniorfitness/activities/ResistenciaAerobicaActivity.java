@@ -35,9 +35,4 @@ public class ResistenciaAerobicaActivity extends ExerciseActivity {
         listener = new ResistenciaAerobicaListener(repCount, tone);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return goToExerciseActivity(item, R.id.navigation_resistencia_aerobica);
-    }
-
 }

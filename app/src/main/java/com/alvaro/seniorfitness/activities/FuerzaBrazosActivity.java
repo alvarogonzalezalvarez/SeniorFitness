@@ -35,9 +35,4 @@ public class FuerzaBrazosActivity extends ExerciseActivity {
         listener = new FuerzaBrazosListener(repCount, tone);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return goToExerciseActivity(item, R.id.navigation_fuerza_brazos);
-    }
-
 }

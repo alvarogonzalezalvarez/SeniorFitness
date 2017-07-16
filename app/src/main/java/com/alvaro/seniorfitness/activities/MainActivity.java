@@ -55,18 +55,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.navigation_start_session:
                 goToActivity(StartSessionActivity.class);
                 break;
-            case R.id.navigation_resistencia_aerobica:
-                goToActivity(ResistenciaAerobicaActivity.class);
-                break;
-            case R.id.navigation_fuerza_piernas:
-                goToActivity(FuerzaPiernasActivity.class);
-                break;
-            case R.id.navigation_fuerza_brazos:
-                goToActivity(FuerzaBrazosActivity.class);
-                break;
-            case R.id.navigation_agilidad:
-                goToActivity(AgilidadActivity.class);
-                break;
             default:
                 return super.onOptionsItemSelected(item);
         }

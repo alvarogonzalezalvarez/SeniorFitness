@@ -2,6 +2,7 @@ package com.alvaro.seniorfitness.activities;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
@@ -10,6 +11,7 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -155,6 +157,26 @@ public class SelectTestActivity extends AppCompatActivity {
         protected void onPostExecute(Long result) {
             TestsAdapter adapter = new TestsAdapter(these,tests);
             listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Test theTest = tests[position];
+                    Intent intent = null;
+                    if ("F_Pna".equals(theTest.getTestID())) {
+                        intent = new Intent(these, FuerzaPiernasActivity.class);
+                    } else if ("F_Br".equals(theTest.getTestID())) {
+                        intent = new Intent(these, FuerzaBrazosActivity.class);
+                    } else if ("Resist".equals(theTest.getTestID())) {
+                        intent = new Intent(these, ResistenciaAerobicaActivity.class);
+                    } else if ("Agil".equals(theTest.getTestID())) {
+                        intent = new Intent(these, AgilidadActivity.class);
+                    }
+                    intent.putExtra("userId", userId);
+                    intent.putExtra("sessionId", sessionId);
+                    intent.putExtra("testId", theTest.getTestID());
+                    startActivity(intent);
+                }
+            });
         }
     }
 
@@ -216,6 +238,26 @@ public class SelectTestActivity extends AppCompatActivity {
 
             TestsAdapter adapter = new TestsAdapter(these,tests);
             listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Test theTest = tests[position];
+                    Intent intent = null;
+                    if ("F_Pna".equals(theTest.getTestID())) {
+                        intent = new Intent(these, FuerzaPiernasActivity.class);
+                    } else if ("F_Br".equals(theTest.getTestID())) {
+                        intent = new Intent(these, FuerzaBrazosActivity.class);
+                    } else if ("Resist".equals(theTest.getTestID())) {
+                        intent = new Intent(these, ResistenciaAerobicaActivity.class);
+                    } else if ("Agil".equals(theTest.getTestID())) {
+                        intent = new Intent(these, AgilidadActivity.class);
+                    }
+                    intent.putExtra("userId", userId);
+                    intent.putExtra("sessionId", sessionId);
+                    intent.putExtra("testId", theTest.getTestID());
+                    startActivity(intent);
+                }
+            });
         }
     }
 

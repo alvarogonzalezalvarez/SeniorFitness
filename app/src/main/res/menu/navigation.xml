@@ -14,20 +14,4 @@
         android:title="Empezar Sesión"
         app:showAsAction="always"/>
 
-    <item
-        android:id="@+id/navigation_fuerza_brazos"
-        android:title="@string/title_fuerza_brazos" />
-
-    <item
-        android:id="@+id/navigation_fuerza_piernas"
-        android:title="@string/title_fuerza_piernas" />
-
-    <item
-        android:id="@+id/navigation_resistencia_aerobica"
-        android:title="Resistencia Aeróbica" />
-
-    <item
-        android:id="@+id/navigation_agilidad"
-        android:title="Agilidad" />
-
 </menu>

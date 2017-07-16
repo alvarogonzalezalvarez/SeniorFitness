@@ -51,4 +51,13 @@
         android:layout_marginTop="10dp"
         android:text="RESET" />
 
+    <Button
+        android:id="@+id/save"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_green_light"
+        android:layout_marginTop="10dp"
+        android:text="GUARDAR" />
+
 </LinearLayout>

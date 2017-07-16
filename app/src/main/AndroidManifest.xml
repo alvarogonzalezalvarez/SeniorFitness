@@ -45,19 +45,34 @@
         </activity>
         <activity
             android:name=".activities.FuerzaBrazosActivity"
+            android:parentActivityName=".activities.SelectTestActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectTestActivity" />
         </activity>
         <activity
             android:name=".activities.FuerzaPiernasActivity"
+            android:parentActivityName=".activities.SelectTestActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectTestActivity" />
         </activity>
         <activity
             android:name=".activities.ResistenciaAerobicaActivity"
+            android:parentActivityName=".activities.SelectTestActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectTestActivity" />
         </activity>
         <activity
             android:name=".activities.AgilidadActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectTestActivity" />
         </activity>
     </application>
 

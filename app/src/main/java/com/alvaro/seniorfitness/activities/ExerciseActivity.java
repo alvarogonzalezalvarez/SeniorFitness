@@ -1,12 +1,18 @@
 package com.alvaro.seniorfitness.activities;
 
+import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,8 +23,15 @@ import android.widget.Chronometer;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alvaro.seniorfitness.R;
+import com.alvaro.seniorfitness.database.SeniorFitnessContract;
+import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class ExerciseActivity extends AppCompatActivity {
@@ -29,20 +42,34 @@ public class ExerciseActivity extends AppCompatActivity {
     CountDownTimer countDown;
     ToneGenerator tone;
     Chronometer chronometer;
+    long elapsedTime = 0;
+    private Activity these;
+    String userId;
+    String sessionId;
+    String testId;
+    private SeniorFitnessDBHelper dbHelper;
 
     protected void initActivity(int layoutResID) {
         setContentView(layoutResID);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        dbHelper = new SeniorFitnessDBHelper(this);
+        userId = getIntent().getStringExtra("userId");
+        sessionId = getIntent().getStringExtra("sessionId");
+        testId = getIntent().getStringExtra("testId");
         repCount = (TextView) findViewById(R.id.repCount);
         sensorService = (SensorManager) getApplicationContext()
                 .getSystemService(getApplicationContext().SENSOR_SERVICE);
+        these = this;
 
         final Button startButton = (Button) findViewById(R.id.start);
         final Button stopButton = (Button) findViewById(R.id.stop);
         stopButton.setVisibility(View.GONE);
         final Button resetButton = (Button) findViewById(R.id.reset);
         resetButton.setVisibility(View.GONE);
+        final Button saveButton = (Button) findViewById(R.id.save);
+        saveButton.setVisibility(View.GONE);
         TextView remainingTime = (TextView) findViewById(R.id.remainingTime);
         if (remainingTime != null) {
             remainingTime.setVisibility(View.GONE);
@@ -75,11 +102,31 @@ public class ExerciseActivity extends AppCompatActivity {
         });
 
         chronometer = (Chronometer) findViewById(R.id.chronometer);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                String dateString = sdf.format(new Date());
+                if (chronometer != null) {
+                    new insertResult().execute(userId, testId, sessionId,
+                            Long.valueOf(elapsedTime/1000).toString(), dateString);
+                } else {
+                    new insertResult().execute(userId, testId, sessionId, repCount.getText().toString(),
+                            dateString);
+                }
+                Intent intent = NavUtils.getParentActivityIntent(these);
+                intent.putExtra("userId", userId);
+                NavUtils.navigateUpTo(these, intent);
+            }
+        });
+
         tone = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
     }
 
     public void start(final View view) {
         if (chronometer != null) {
+            elapsedTime = 0;
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.start();
         } else {
@@ -102,6 +149,8 @@ public class ExerciseActivity extends AppCompatActivity {
                     tone.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD,400);
                     Button startButton = (Button) findViewById(R.id.start);
                     Button stopButton = (Button) findViewById(R.id.stop);
+                    Button saveButton = (Button) findViewById(R.id.save);
+                    saveButton.setVisibility(View.VISIBLE);
                     stopButton.setVisibility(View.GONE);
                     startButton.setVisibility(View.GONE);
                 }
@@ -113,6 +162,9 @@ public class ExerciseActivity extends AppCompatActivity {
         sensorService.unregisterListener(listener);
         if (chronometer != null) {
             chronometer.stop();
+            elapsedTime = SystemClock.elapsedRealtime() - chronometer.getBase();
+            Button saveButton = (Button) findViewById(R.id.save);
+            saveButton.setVisibility(View.VISIBLE);
         } else {
             if (countDown != null) {
                 countDown.cancel();
@@ -122,6 +174,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
     public void reset(View view) {
         if (chronometer != null) {
+            elapsedTime = 0;
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.stop();
         } else {
@@ -145,44 +198,40 @@ public class ExerciseActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
-        return true;
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                Intent intent = NavUtils.getParentActivityIntent(this);
+                intent.putExtra("userId", userId);
+                NavUtils.navigateUpTo(this, intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
-    public boolean goToExerciseActivity(MenuItem item, int currentExerciseActivity) {
-        Intent intent;
+    private class insertResult extends AsyncTask<String, Void, Long> {
 
-        if (item.getItemId() != currentExerciseActivity) {
-            switch (item.getItemId()) {
-                case R.id.navigation_resistencia_aerobica:
-                    goToActivity(ResistenciaAerobicaActivity.class);
-                    break;
-                case R.id.navigation_fuerza_piernas:
-                    goToActivity(FuerzaPiernasActivity.class);
-                    break;
-                case R.id.navigation_fuerza_brazos:
-                    goToActivity(FuerzaBrazosActivity.class);
-                    break;
-                case R.id.navigation_agilidad:
-                    goToActivity(AgilidadActivity.class);
-                    break;
-                default:
-                    return super.onOptionsItemSelected(item);
-            }
+        @Override
+        protected Long doInBackground(String... what) {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            // Mapa de valores, cuyas claves serán los nombres de las columnas
+            ContentValues values = new ContentValues();
+            values.put(SeniorFitnessContract.Result.COLUMN_NAME_USERID, what[0]);
+            values.put(SeniorFitnessContract.Result.COLUMN_NAME_TESTID, what[1]);
+            values.put(SeniorFitnessContract.Result.COLUMN_NAME_SESSIONID, what[2]);
+            values.put(SeniorFitnessContract.Result.COLUMN_NAME_RESULT, what[3]);
+            values.put(SeniorFitnessContract.Result.COLUMN_NAME_DATE, what[4]);
+
+            long newRowId = db.insert(SeniorFitnessContract.Result.TABLE_NAME, null, values);
+            return newRowId;
         }
 
-        return true;
-    }
-
-    public void goToActivity(Class<?> cls) {
-        tone.release();
-        Intent intent = new Intent(this, cls);
-        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        intent.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
-        startActivityIfNeeded(intent,0);
+        @Override
+        protected void onPostExecute(Long result) {
+            Toast.makeText(getApplicationContext(), "Resultado guardado",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

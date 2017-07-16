@@ -27,5 +27,16 @@
         android:layout_toRightOf="@+id/photo"
         android:gravity="center"
         android:text="descripción"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_toRightOf="@+id/photo"
+        android:gravity="center"
+        android:text="resultado"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:maxLines="1" />
 
 </RelativeLayout>

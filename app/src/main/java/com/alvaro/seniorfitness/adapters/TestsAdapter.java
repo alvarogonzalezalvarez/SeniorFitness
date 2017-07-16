@@ -15,7 +15,7 @@ import com.alvaro.seniorfitness.model.User;
 public class TestsAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    TextView name, description;
+    TextView name, description, result;
     ImageView photo;
     Test[] tests;
 
@@ -49,13 +49,20 @@ public class TestsAdapter extends BaseAdapter {
 
         name = (TextView) convertView.findViewById(R.id.name);
         description = (TextView) convertView.findViewById(R.id.description);
+        result = (TextView) convertView.findViewById(R.id.result);
         photo = (ImageView) convertView.findViewById(R.id.photo);
         name.setText(test.getName());
         description.setText(test.getDescription());
         if (test.getResult() == null) {
             photo.setImageResource(R.drawable.pending);
+            result.setText("-");
         } else {
             photo.setImageResource(R.drawable.check);
+            String units = " reps";
+            if ("Agil".equals(test.getTestID())) {
+                units = " s";
+            }
+            result.setText("Resultado: " + test.getResult() + units);
         }
         photo.setScaleType(ImageView.ScaleType.FIT_END);
         return convertView;
