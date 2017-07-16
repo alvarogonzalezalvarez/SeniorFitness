@@ -130,8 +130,6 @@ public class SelectTestActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
                 new insertSession().execute(sessionId, userId, "TRUE", dateString);
             } else {
-                Toast.makeText(getApplicationContext(), "Recuperando sesión anterior",
-                        Toast.LENGTH_SHORT).show();
                 new getResults().execute();
             }
         }
