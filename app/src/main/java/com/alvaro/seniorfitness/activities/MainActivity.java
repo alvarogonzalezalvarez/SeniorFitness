@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -116,10 +117,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(User[] result) {
+        protected void onPostExecute(final User[] result) {
             if (result.length > 0) {
                 UsersAdapter adapter = new UsersAdapter(these,result);
                 listView.setAdapter(adapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        User theUser = result[position];
+                        Intent intent = new Intent(these, UserDetailsActivity.class);
+                        intent.putExtra("userId", theUser.getUserID());
+                        intent.putExtra("name", theUser.getName());
+                        intent.putExtra("lastname", theUser.getLastname());
+                        intent.putExtra("gender", theUser.getGender());
+                        intent.putExtra("birthdate", theUser.getBirthdate());
+                        intent.putExtra("photo", theUser.getPhoto());
+                        startActivity(intent);
+                    }
+                });
             } else {
                 usersText.setVisibility(View.VISIBLE);
             }
