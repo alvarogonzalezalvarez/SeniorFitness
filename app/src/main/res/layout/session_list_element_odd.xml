@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight">
+
+    <TextView
+        android:id="@+id/sessiontext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="#fff"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Android Profile XMl UI Design" />
+
+    <ImageView android:id="@+id/continuesession"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_alignParentRight="true"
+        android:contentDescription="continue"
+        android:elevation="4dp"
+        android:src="@drawable/continuesession"/>
+
+</RelativeLayout>
