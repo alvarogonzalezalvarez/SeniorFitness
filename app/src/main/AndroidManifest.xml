@@ -98,6 +98,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.SelectTestActivity" />
         </activity>
+        <activity
+            android:name=".activities.StatsActivity"
+            android:parentActivityName=".activities.UserDetailsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.UserDetailsActivity" />
+        </activity>
     </application>
 
 </manifest>

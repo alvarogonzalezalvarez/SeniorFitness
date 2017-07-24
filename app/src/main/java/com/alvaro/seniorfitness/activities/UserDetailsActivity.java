@@ -47,6 +47,7 @@ public class UserDetailsActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_details);
+        setTitle("Historial");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         userId = getIntent().getStringExtra("userId");
         name = getIntent().getStringExtra("name");
@@ -160,6 +161,16 @@ public class UserDetailsActivity extends AppCompatActivity {
                             Intent intent = new Intent(these, SelectTestActivity.class);
                             intent.putExtra("userId", theSession.getUserID());
                             intent.putExtra("sessionId", theSession.getSessionID());
+                            startActivity(intent);
+                        } else {
+                            Intent intent = new Intent(these, StatsActivity.class);
+                            intent.putExtra("userId", theSession.getUserID());
+                            intent.putExtra("sessionId", theSession.getSessionID());
+                            intent.putExtra("name", name);
+                            intent.putExtra("lastname", lastname);
+                            intent.putExtra("gender", gender);
+                            intent.putExtra("birthdate", birthdate);
+                            intent.putExtra("photo", photo);
                             startActivity(intent);
                         }
                     }

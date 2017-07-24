@@ -12,7 +12,6 @@
         android:layout_marginBottom="3dp"
         android:layout_marginTop="3dp"
         android:background="#fff"
-        android:clickable="true"
         android:elevation="4dp"
         android:padding="20dp"
         android:textStyle="bold"
@@ -26,5 +25,13 @@
         android:contentDescription="continue"
         android:elevation="4dp"
         android:src="@drawable/continuesession"/>
+
+    <ImageView android:id="@+id/showresults"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_alignParentRight="true"
+        android:contentDescription="stats"
+        android:elevation="4dp"
+        android:src="@drawable/stats"/>
 
 </RelativeLayout>

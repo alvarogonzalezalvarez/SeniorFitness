@@ -66,6 +66,7 @@ public class SessionsAdapter extends ArrayAdapter<Session> {
 
         if ("TRUE".equals(getItem(position).getActive())) {
             holder.sessiontext.setText(getItem(position).getDate() + ": Sesión en progreso");
+            holder.showresults.setVisibility(View.GONE);
         } else {
             holder.sessiontext.setText(getItem(position).getDate() + ": Sesión completada");
             holder.continuesession.setVisibility(View.GONE);
@@ -77,10 +78,12 @@ public class SessionsAdapter extends ArrayAdapter<Session> {
     private class ViewHolder {
         private TextView sessiontext;
         private ImageView continuesession;
+        private ImageView showresults;
 
         public ViewHolder(View v) {
             sessiontext = (TextView) v.findViewById(R.id.sessiontext);
             continuesession = (ImageView) v.findViewById(R.id.continuesession);
+            showresults = (ImageView) v.findViewById(R.id.showresults);
         }
     }
 }
