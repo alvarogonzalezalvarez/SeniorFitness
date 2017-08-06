@@ -1,6 +1,9 @@
 package com.alvaro.seniorfitness.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,6 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,13 +21,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alvaro.seniorfitness.R;
 import com.alvaro.seniorfitness.adapters.SessionsAdapter;
+import com.alvaro.seniorfitness.adapters.TestsAdapter;
 import com.alvaro.seniorfitness.adapters.UsersAdapter;
 import com.alvaro.seniorfitness.database.SeniorFitnessContract;
 import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
 import com.alvaro.seniorfitness.model.Session;
+import com.alvaro.seniorfitness.model.Test;
 import com.alvaro.seniorfitness.model.User;
 
 import java.io.File;
@@ -187,6 +194,60 @@ public class UserDetailsActivity extends AppCompatActivity {
         }
     }
 
+    private class deletePerson extends AsyncTask<String, Void, Integer> {
+
+        @Override
+        protected Integer doInBackground(String... what) {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            String where = SeniorFitnessContract.User.COLUMN_NAME_USERID + " = ?";
+            String[] whereArgs = new String[] { what[0] };
+
+            int affectedRows = db.delete(SeniorFitnessContract.User.TABLE_NAME, where, whereArgs);
+            return affectedRows;
+        }
+
+        @Override
+        protected void onPostExecute(Integer affectedRows) {
+            new deleteSession().execute(userId);
+        }
+    }
+
+    private class deleteSession extends AsyncTask<String, Void, Integer> {
+
+        @Override
+        protected Integer doInBackground(String... what) {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            String where = SeniorFitnessContract.Session.COLUMN_NAME_USERID + " = ?";
+            String[] whereArgs = new String[] { what[0] };
+
+            return db.delete(SeniorFitnessContract.Session.TABLE_NAME, where, whereArgs);
+        }
+
+        @Override
+        protected void onPostExecute(Integer result) {
+            new deleteResult().execute(userId);
+        }
+    }
+
+    private class deleteResult extends AsyncTask<String, Void, Integer> {
+
+        @Override
+        protected Integer doInBackground(String... what) {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            String where = SeniorFitnessContract.Result.COLUMN_NAME_USERID + " = ?";
+            String[] whereArgs = new String[] { what[0] };
+
+            return db.delete(SeniorFitnessContract.Result.TABLE_NAME, where, whereArgs);
+        }
+
+        @Override
+        protected void onPostExecute(Integer result) {
+            Toast.makeText(getApplicationContext(), "Usuario eliminado",
+                    Toast.LENGTH_SHORT).show();
+            NavUtils.navigateUpFromSameTask(these);
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -194,8 +255,34 @@ public class UserDetailsActivity extends AppCompatActivity {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
+            case R.id.navigation_delete_user:
+                deleteUser();
+                return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void deleteUser() {
+        final CharSequence[] items = { "Eliminar Usuario", "Cancelar" };
+        AlertDialog.Builder builder = new AlertDialog.Builder(UserDetailsActivity.this);
+        builder.setTitle("Confirmación");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                if (items[item].equals("Eliminar Usuario")) {
+                    new deletePerson().execute(userId);
+                } else if (items[item].equals("Cancelar")) {
+                    dialog.dismiss();
+                }
+            }
+        });
+        builder.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.user_details, menu);
+        return true;
     }
 
 }
