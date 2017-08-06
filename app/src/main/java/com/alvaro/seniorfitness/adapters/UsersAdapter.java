@@ -1,6 +1,8 @@
 package com.alvaro.seniorfitness.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,8 @@ import android.widget.TextView;
 
 import com.alvaro.seniorfitness.R;
 import com.alvaro.seniorfitness.model.User;
+
+import java.io.File;
 
 public class UsersAdapter extends BaseAdapter {
 
@@ -54,10 +58,10 @@ public class UsersAdapter extends BaseAdapter {
         dni.setText(user.getUserID());
         birthdate.setText(user.getBirthdate());
         if (user.getPhoto() != null) {
-            if ("Hombre".equals(user.getGender())) {
-                photo.setImageResource(R.drawable.male_user_nophoto);
-            } else {
-                photo.setImageResource(R.drawable.female_user_nophoto);
+            File userImage = new File(user.getPhoto());
+            if(userImage.exists()){
+                Bitmap myBitmap = BitmapFactory.decodeFile(userImage.getAbsolutePath());
+                photo.setImageBitmap(myBitmap);
             }
         } else {
             if ("Hombre".equals(user.getGender())) {

@@ -26,6 +26,7 @@ public class StatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Sesión");
         dbHelper = new SeniorFitnessDBHelper(this);
 
         sessionId = getIntent().getStringExtra("sessionId");

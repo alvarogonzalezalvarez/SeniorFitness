@@ -14,6 +14,7 @@ public class SeniorFitnessContract {
         public static final String COLUMN_NAME_LASTNAME = "lastname";
         public static final String COLUMN_NAME_GENDER = "gender";
         public static final String COLUMN_NAME_BIRTHDATE = "birthdate";
+        public static final String COLUMN_NAME_PHOTO = "photo";
     }
 
     public static class Result implements BaseColumns {

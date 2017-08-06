@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SeniorFitnessDBHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "SeniorFitness.db";
 
     private static final String TEXT_TYPE = " TEXT";
@@ -18,7 +18,8 @@ public class SeniorFitnessDBHelper extends SQLiteOpenHelper {
                     SeniorFitnessContract.User.COLUMN_NAME_NAME + TEXT_TYPE + COMMA_SEP +
                     SeniorFitnessContract.User.COLUMN_NAME_LASTNAME + TEXT_TYPE  + COMMA_SEP +
                     SeniorFitnessContract.User.COLUMN_NAME_GENDER + TEXT_TYPE  + COMMA_SEP +
-                    SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE + TEXT_TYPE +
+                    SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE + TEXT_TYPE + COMMA_SEP +
+                    SeniorFitnessContract.User.COLUMN_NAME_PHOTO + TEXT_TYPE +
                     " )";
 
     private static final String SQL_DELETE_ENTRIES_USER =

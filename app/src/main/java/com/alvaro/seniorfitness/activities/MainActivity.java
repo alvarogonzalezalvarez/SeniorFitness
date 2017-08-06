@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
                     SeniorFitnessContract.User.COLUMN_NAME_NAME,
                     SeniorFitnessContract.User.COLUMN_NAME_LASTNAME,
                     SeniorFitnessContract.User.COLUMN_NAME_GENDER,
-                    SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE
+                    SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE,
+                    SeniorFitnessContract.User.COLUMN_NAME_PHOTO
             };
 
             // Definir el orden en que devolver los datos
@@ -107,8 +108,9 @@ public class MainActivity extends AppCompatActivity {
                 String name = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_NAME));
                 String lastname = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_LASTNAME));
                 String gender = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_GENDER));
-                String birthdate = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE));;
-                data[i++] = new User(userId, name, lastname, gender, birthdate, null);
+                String birthdate = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE));
+                String photo = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_PHOTO));
+                data[i++] = new User(userId, name, lastname, gender, birthdate, photo);
             }
 
             c.close();

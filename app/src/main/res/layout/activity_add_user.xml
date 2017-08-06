@@ -12,6 +12,22 @@
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp" >
+
+        <ImageView
+            android:id="@+id/thePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <Button android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AGREGAR FOTO"
+            android:layout_marginBottom="40dp"
+            android:textColor="@android:color/black"/>
+
         <EditText
             android:id="@+id/userid"
             android:layout_width="match_parent"

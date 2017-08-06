@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -24,6 +26,7 @@ import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
 import com.alvaro.seniorfitness.model.Session;
 import com.alvaro.seniorfitness.model.User;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -42,6 +45,7 @@ public class UserDetailsActivity extends AppCompatActivity {
     private String birthdate;
     private String photo;
     private ListView listView;
+    private TextView sessionsText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,8 @@ public class UserDetailsActivity extends AppCompatActivity {
         birthdate = getIntent().getStringExtra("birthdate");
         photo = getIntent().getStringExtra("photo");
         dbHelper = new SeniorFitnessDBHelper(this);
+        sessionsText = (TextView) findViewById(R.id.sessionsText);
+        sessionsText.setVisibility(View.GONE);
         listView = (ListView) findViewById(R.id.listSessions);
         these = this;
 
@@ -84,10 +90,10 @@ public class UserDetailsActivity extends AppCompatActivity {
         } catch (ParseException e) {}
         shortBioView.setText(bio);
         if (photo != null) {
-            if ("Hombre".equals(gender)) {
-                photoView.setImageResource(R.drawable.male_user_nophoto);
-            } else {
-                photoView.setImageResource(R.drawable.female_user_nophoto);
+            File userImage = new File(photo);
+            if(userImage.exists()){
+                Bitmap myBitmap = BitmapFactory.decodeFile(userImage.getAbsolutePath());
+                photoView.setImageBitmap(myBitmap);
             }
         } else {
             if ("Hombre".equals(gender)) {
@@ -175,6 +181,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                         }
                     }
                 });
+            } else {
+                sessionsText.setVisibility(View.VISIBLE);
             }
         }
     }
