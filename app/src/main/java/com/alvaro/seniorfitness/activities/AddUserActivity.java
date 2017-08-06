@@ -34,9 +34,11 @@ import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.channels.FileChannel;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -178,8 +180,12 @@ public class AddUserActivity extends AppCompatActivity {
 
     private void galleryIntent() {
         Intent intent = new Intent();
+        File destination = new File(Environment.getExternalStorageDirectory(),
+                System.currentTimeMillis() + ".jpg");
+        picUri = Uri.fromFile(destination);
+        imagePath = destination.getAbsolutePath();
         intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);//
+        intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select File"),1);
     }
 
@@ -196,17 +202,34 @@ public class AddUserActivity extends AppCompatActivity {
         }
     }
 
-    @SuppressWarnings("deprecation")
     private void onSelectFromGalleryResult(Intent data) {
-        Bitmap bm=null;
         if (data != null) {
             try {
-                bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
+                File theImage = new File(data.getData().getPath());
+                File theCopy = new File(picUri.getPath());
+
+                FileChannel source = null;
+                FileChannel destination = null;
+
+                try {
+                    source = new FileInputStream(theImage).getChannel();
+                    destination = new FileOutputStream(theCopy).getChannel();
+                    destination.transferFrom(source, 0, source.size());
+                } finally {
+                    if (source != null) {
+                        source.close();
+                    }
+                    if (destination != null) {
+                        destination.close();
+                    }
+                }
+
+                performCrop();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        photo.setImageBitmap(bm);
     }
 
     private void onCropImageResult(Intent data) {
