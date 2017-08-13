@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  13 AUG 2017 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  13 AUG 2017 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1993,67 +1993,33 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 22.
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 37.
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand >>
@@ -2066,19 +2032,14 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 50.
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-<./imagenes/fuerza_piernas.png, id=299, 241.90375pt x 195.73125pt>
+ <./imagenes/fuerza_piernas.png, id=300, 241.90375pt x 195.73125pt>
 File: ./imagenes/fuerza_piernas.png Graphic file (type png)
 
 <use ./imagenes/fuerza_piernas.png>
 Package pdftex.def Info: ./imagenes/fuerza_piernas.png used on input line 58.
 (pdftex.def)             Requested size: 241.90315pt x 195.73076pt.
 
-Underfull \vbox (badness 2245) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 58.
@@ -2105,20 +2066,12 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 58.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
 <./imagenes/fuerza_brazos.png, id=312, 241.90375pt x 194.7275pt>
 File: ./imagenes/fuerza_brazos.png Graphic file (type png)
 
 <use ./imagenes/fuerza_brazos.png>
 Package pdftex.def Info: ./imagenes/fuerza_brazos.png used on input line 64.
 (pdftex.def)             Requested size: 241.90315pt x 194.727pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-
- []
 
 <./imagenes/resistencia_aerobica.png, id=313, 241.90375pt x 195.73125pt>
 File: ./imagenes/resistencia_aerobica.png Graphic file (type png)
@@ -2127,6 +2080,9 @@ File: ./imagenes/resistencia_aerobica.png Graphic file (type png)
 Package pdftex.def Info: ./imagenes/resistencia_aerobica.png used on input line
  70.
 (pdftex.def)             Requested size: 241.90315pt x 195.73076pt.
+
+Underfull \vbox (badness 1365) has occurred while \output is active []
+
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 70.
 Package babel Info: Redefining spanish shorthand >>
@@ -2152,10 +2108,6 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 70.
  [7 <./imagenes/fuerza_piernas.png> <./imagenes/fuerza_brazos.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-
- []
-
 <./imagenes/flexibilidad_piernas.png, id=323, 242.9075pt x 194.7275pt>
 File: ./imagenes/flexibilidad_piernas.png Graphic file (type png)
 
@@ -2163,10 +2115,6 @@ File: ./imagenes/flexibilidad_piernas.png Graphic file (type png)
 Package pdftex.def Info: ./imagenes/flexibilidad_piernas.png used on input line
  76.
 (pdftex.def)             Requested size: 242.90689pt x 194.727pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
 
 <./imagenes/flexibilidad_brazos.png, id=324, 240.9pt x 225.84375pt>
 File: ./imagenes/flexibilidad_brazos.png Graphic file (type png)
@@ -2201,10 +2149,6 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 82.
  [8 <./imagenes/resistencia_aerobica.png> <./imagenes/flexibilidad_piernas.png>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
 <./imagenes/agilidad.png, id=333, 241.90375pt x 225.84375pt>
 File: ./imagenes/agilidad.png Graphic file (type png)
 
@@ -3197,15 +3141,12 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  ) 
 Here is how much of TeX's memory you used:
  21278 strings out of 492995
  374036 string characters out of 6132704
- 582315 words of memory out of 5000000
+ 582180 words of memory out of 5000000
  24221 multiletter control sequences out of 15000+600000
  64671 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3217,7 +3158,7 @@ xlive/2017/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/20
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on memoria.pdf (47 pages, 560136 bytes).
+Output written on memoria.pdf (47 pages, 560128 bytes).
 PDF statistics:
  549 PDF objects out of 1000 (max. 8388607)
  468 compressed objects within 5 object streams

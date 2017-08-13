@@ -8,19 +8,19 @@
 \contentsline {section}{\numberline {2.1}Descripci\IeC {\'o}n}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Caracter\IeC {\'\i }sticas de la aplicaci\IeC {\'o}n}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Componentes de la aplicaci\IeC {\'o}n}{5}{subsection.2.2.1}
-\contentsline {paragraph}{Usuario}{5}{section*.8}
-\contentsline {paragraph}{Personas mayores}{6}{section*.9}
-\contentsline {paragraph}{Tests}{6}{section*.10}
-\contentsline {paragraph}{Sesiones}{6}{section*.11}
-\contentsline {paragraph}{Resultados}{6}{section*.12}
-\contentsline {paragraph}{Estad\IeC {\'\i }sticas}{6}{section*.13}
+\contentsline {subsubsection}{Usuario}{5}{section*.8}
+\contentsline {subsubsection}{Personas mayores}{5}{section*.9}
+\contentsline {subsubsection}{Tests}{6}{section*.10}
+\contentsline {subsubsection}{Sesiones}{6}{section*.11}
+\contentsline {subsubsection}{Resultados}{6}{section*.12}
+\contentsline {subsubsection}{Estad\IeC {\'\i }sticas}{6}{section*.13}
 \contentsline {subsection}{\numberline {2.2.2}Pruebas de valoraci\IeC {\'o}n de la condici\IeC {\'o}n f\IeC {\'\i }sica}{6}{subsection.2.2.2}
-\contentsline {paragraph}{Fuerza de piernas (F\_Pna)}{6}{section*.14}
-\contentsline {paragraph}{Fuerza de brazos (F\_Br)}{7}{section*.16}
-\contentsline {paragraph}{Resistencia aer\IeC {\'o}bica (Resist)}{7}{section*.18}
-\contentsline {paragraph}{Flexibilidad de piernas (Flex\_Pna)}{8}{section*.20}
-\contentsline {paragraph}{Flexibilidad de brazos (Flex\_Br)}{8}{section*.22}
-\contentsline {paragraph}{Agilidad (Agil)}{9}{section*.24}
+\contentsline {subsubsection}{Fuerza de piernas (F\_Pna)}{6}{section*.14}
+\contentsline {subsubsection}{Fuerza de brazos (F\_Br)}{7}{section*.16}
+\contentsline {subsubsection}{Resistencia aer\IeC {\'o}bica (Resist)}{7}{section*.18}
+\contentsline {subsubsection}{Flexibilidad de piernas (Flex\_Pna)}{8}{section*.20}
+\contentsline {subsubsection}{Flexibilidad de brazos (Flex\_Br)}{8}{section*.22}
+\contentsline {subsubsection}{Agilidad (Agil)}{9}{section*.24}
 \contentsline {chapter}{\numberline {3}Desarrollo del proyecto}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n temporal}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis del sistema}{11}{section.3.2}
