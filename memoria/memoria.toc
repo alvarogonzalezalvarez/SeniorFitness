@@ -9,38 +9,38 @@
 \contentsline {section}{\numberline {2.2}Caracter\IeC {\'\i }sticas de la aplicaci\IeC {\'o}n}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Componentes de la aplicaci\IeC {\'o}n}{5}{subsection.2.2.1}
 \contentsline {paragraph}{Usuario}{5}{section*.8}
-\contentsline {paragraph}{Personas mayores}{5}{section*.9}
+\contentsline {paragraph}{Personas mayores}{6}{section*.9}
 \contentsline {paragraph}{Tests}{6}{section*.10}
 \contentsline {paragraph}{Sesiones}{6}{section*.11}
 \contentsline {paragraph}{Resultados}{6}{section*.12}
 \contentsline {paragraph}{Estad\IeC {\'\i }sticas}{6}{section*.13}
 \contentsline {subsection}{\numberline {2.2.2}Pruebas de valoraci\IeC {\'o}n de la condici\IeC {\'o}n f\IeC {\'\i }sica}{6}{subsection.2.2.2}
 \contentsline {paragraph}{Fuerza de piernas (F\_Pna)}{6}{section*.14}
-\contentsline {paragraph}{Fuerza de brazos (F\_Br)}{6}{section*.15}
-\contentsline {paragraph}{Resistencia aer\IeC {\'o}bica (Resist)}{7}{section*.16}
-\contentsline {paragraph}{Flexibilidad de piernas (Flex\_Pna)}{7}{section*.17}
-\contentsline {paragraph}{Flexibilidad de brazos (Flex\_Br)}{7}{section*.18}
-\contentsline {paragraph}{Agilidad (Agil)}{7}{section*.19}
-\contentsline {chapter}{\numberline {3}Desarrollo del proyecto}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n temporal}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis del sistema}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}Base de Datos}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}C\IeC {\'o}digo fuente}{11}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Entorno \texttt {Verbatim}}{11}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Entorno \texttt {listing}}{12}{subsection.3.4.2}
-\contentsline {chapter}{Bibliografia y referencias}{15}{lstnumber.-3.1}
-\contentsline {chapter}{Software usado}{15}{lstnumber.-3.1}
-\contentsline {chapter}{Instalaci\IeC {\'o}n de \LaTeX }{16}{figure.caption.29}
-\contentsline {chapter}{GNU Free Documentation License}{21}{section*.32}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{21}{section*.33}
-\contentsline {section}{2. VERBATIM COPYING}{22}{section*.34}
-\contentsline {section}{3. COPYING IN QUANTITY}{22}{section*.35}
-\contentsline {section}{4. MODIFICATIONS}{23}{section*.36}
-\contentsline {section}{5. COMBINING DOCUMENTS}{24}{section*.37}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{25}{section*.38}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{25}{section*.39}
-\contentsline {section}{8. TRANSLATION}{25}{section*.40}
-\contentsline {section}{9. TERMINATION}{25}{section*.41}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{26}{section*.42}
-\contentsline {section}{11. RELICENSING}{26}{section*.43}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{26}{section*.44}
+\contentsline {paragraph}{Fuerza de brazos (F\_Br)}{7}{section*.16}
+\contentsline {paragraph}{Resistencia aer\IeC {\'o}bica (Resist)}{7}{section*.18}
+\contentsline {paragraph}{Flexibilidad de piernas (Flex\_Pna)}{8}{section*.20}
+\contentsline {paragraph}{Flexibilidad de brazos (Flex\_Br)}{8}{section*.22}
+\contentsline {paragraph}{Agilidad (Agil)}{9}{section*.24}
+\contentsline {chapter}{\numberline {3}Desarrollo del proyecto}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n temporal}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis del sistema}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Base de Datos}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}C\IeC {\'o}digo fuente}{13}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Entorno \texttt {Verbatim}}{13}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Entorno \texttt {listing}}{14}{subsection.3.4.2}
+\contentsline {chapter}{Bibliografia y referencias}{17}{lstnumber.-3.1}
+\contentsline {chapter}{Software usado}{17}{lstnumber.-3.1}
+\contentsline {chapter}{Instalaci\IeC {\'o}n de \LaTeX }{18}{figure.caption.35}
+\contentsline {chapter}{GNU Free Documentation License}{23}{section*.38}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{23}{section*.39}
+\contentsline {section}{2. VERBATIM COPYING}{24}{section*.40}
+\contentsline {section}{3. COPYING IN QUANTITY}{24}{section*.41}
+\contentsline {section}{4. MODIFICATIONS}{25}{section*.42}
+\contentsline {section}{5. COMBINING DOCUMENTS}{26}{section*.43}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{27}{section*.44}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{27}{section*.45}
+\contentsline {section}{8. TRANSLATION}{27}{section*.46}
+\contentsline {section}{9. TERMINATION}{27}{section*.47}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{28}{section*.48}
+\contentsline {section}{11. RELICENSING}{28}{section*.49}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{28}{section*.50}
