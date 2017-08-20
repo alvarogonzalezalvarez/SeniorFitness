@@ -7,158 +7,143 @@
 
 % Copyright (C) 2009 Pablo Recio Quijano 
 
-\section{Organización temporal}
+La planificación realizada para el desarrollo del proyecto está dividida en varias partes, tal y como pasamos a describir a continuación.
 
-En este apartado podemos añadir un diagrama de Gannt, con la
-planificación temporal que se realizó del proyecto. Para ello podemos
-usar algún programa libre como por ejemplo \programa{Planner}:
+\section{Fase inicial}
 
-\figura{gannt.png}{scale=0.6}{Diagrama de Gannt. Desarrollo del
-  proyecto}{gannt}{H}
+La primera fase consistió en plantear la idea del proyecto con la ayuda de Raquel Ureña. Tras plantear varios enfoques, se decidió realizar este proyecto debido a las motivaciones escritas anteriormente.\\
 
-Observad el código, notareis algo distinto con respecto a las imágenes
-del capítulo anterior. En este caso utilizo un comando personalizado
-en \comando{comandos.sty}, donde simplifico la creación de una
-figura, como en la figura~\ref{gannt}. % Podemos poner o no la ~
+También se pensó en qué lenguaje de programación se desarrollaría el proyecto, así como las principales bibliotecas que se usarían durante la realización del mismo, priorizando siempre opciones libres. Debido a que ya tenía suficientes conocimientos de Java, finalmente se optó por utilizar el SDK oficial de Android (Java) por su documentación, comunidad y robustez.
 
-\section{Análisis del sistema}
+\section{Fase de análisis}
 
-Si el proyecto se refiere a un sistema software, normalmente
-procederemos a un análisis y a un diseño del sistema usando notación
-UML, para organizar correctamente dicho sistema.\\
+Esta etapa está dividida principalmente en las dos partes siguientes:
 
-\LaTeX{} no trae soporte nativo para hacer este tipo de diagramas, y
-aunque se pueden utilizar paquetes que lo hagan. Sin embargo lo más
-cómodo es que utilizemos herramientas CASE para ayudarnos a dicha
-tarea, como pueden ser \programa{Dia} o \programa{Umbrello}, como
-podemos ver en la figura \ref{uml}.
+\begin{itemize}
+\item \textbf{Especificación de los requisitos}: Estudio de los diferentes requisitos que deberá cumplir la aplicación.
+\item \textbf{Recursos necesarios}: Recursos necesarios que deberemos usar para llevar a cabo el desarrollo del proyecto.
+\end{itemize}
 
-\figura{uml.png}{scale=1}{UML de ejemplo con Umbrello}{uml}{H}
+\section{Fase de aprendizaje}
 
-Ya que no es el objetivo de este documento trabajar con dichas
-herramientas, aprovecharé este apartado para mostrar algunas
-cosas más de las que podemos dotar a nuestro documento \LaTeX{}.\\
+Aunque ya conocía Java en profundidad debido a mi profesión actual, hasta ahora no me había embarcado en el desarrollo de una aplicación Android, por lo que tuve que dedicarle tiempo a aprender algunas reglas de diseño, determinadas sintaxis del lenguaje y API de librerías, así como familiarizarme con el entorno de desarrollo Android Studio, que aunque tiene algunas similitudes respecto a Eclipse (IDE que uso a diario en mi puesto de trabajo), también tiene muchas otras diferencias.\\
 
-Sabemos que tenemos un fichero \texttt{bibliografia.bib}, para que la
-herramienta Bib\TeX{}  nos genere las referencias bibliográficas. Sin
-embargo a priori no se mostrarán hasta que nos las referenciemos.\\
+Esta fase se caracterizó por intentar entender código ya escrito así como leer tutoriales y documentación oficial. Se podría dividir en varias etapas principales:
 
-Teniendo en cuenta que todo esto lo tomamos desde la ``biblia'' de
-\LaTeX, podemos hacer una referencia a ella \cite{mitt04}. También hay
-que saber que una guia de referencia online muy buena es la página en
-\texttt{wikibooks} de \LaTeX{} \cite{website:latex-wikibooks}. 
+\begin{itemize}
+\item \textbf{Aprendizaje del SDK de Android:} Las aplicaciones Android siguen un diseño específico basado en Activities, así como un sistema de layout propio para la capa de presentación. Dado que no tenía experiencia previa, me basé en la documentación oficial, la cual me ayudó a que el código evolucionase favorablemente y fuese fácil de mantener. 
+\item \textbf{Estudio de los sensores existentes en los dispositivos móviles actuales:} En los dispositivos móviles de hoy en día existen numerosos sensores que se pueden usar para la detección de movimientos. Dado que en ciertos tests la aplicación debe ser capaz de detectar la correcta realización de los ejercicios, fue necesario hacer un estudio sobre los diferentes sensores disponibles (como pueden ser el giroscopio, acelerómetro o el sensor de gravedad) para determinar cual de ellos usar.
+\item \textbf{Aprendizaje del entorno de desarrollo:} Estudio del entorno de desarrollo y de la operativa a seguir para la programación de los diferentes módulos de la aplicación, así como para el testeo, detección y depuración de errores.
+\item \textbf{Aprendizaje de otras bibliotecas:} Para algunas funcionalidades fue necesario el aprendizaje de algunas bibliotecas adicionales, como puede ser por ejemplo SQLite para la persistencia de datos en Android.
+\item \textbf{Aprendizaje del arte:} No estaba muy familiarizado con el retoque de imágenes, pero a partir de tutoriales y pruebas ensayo-error aprendí el manejo básico de los programas que usé para la edición de los iconos e imágenes usadas en la aplicación.
+\end{itemize}
 
-% TO-DO: Multirow, Multicolumn y Supertabular.
+\section{Fase de desarrollo}
 
-\section{Base de Datos}
+Tras la consecución de las etapas anteriores se comenzó el desarrollo del proyecto. Esta etapa del desarrollo es la más extensa de todas y me fue posible llevarla a cabo gracias a los prototipos y pruebas de concepto que iba implementando durante el aprendizaje de los aspectos detallados en el punto anterior.
 
-Supongamos que en este apartado, queremos incluir un \negrita{diagrama
-Entidad-Relación Extendido}, que modele la base de datos que vamos a
-utilizar en nuestro proyecto. Una posible herramienta para dibujarla
-es \programa{Dia}, una herramienta pra gráficos vectoriales bastante
-completa. Una vez hemos hecho el diagrama, podemos importarlo a una
-imagen en multitud de formatos, o también podemos a código
-\programa{.tex}.\\
+\subsection{Metodología de desarrollo}
 
-¿Qué utilidad tiene esto? Pues basicamente lo podremos modificar para
-refinarlo un poco, añadirle fórmulas matemáticas si quisieramos, o
-diversas cosas. Además de comprimir bastante en espacio respecto a una
-imagen. El diagrama \ref{ERe}, está realizado con Dia importándolo a
-\LaTeX{}:
+Para el desarrollo del presente proyecto se ha optado por el empleo del modelo de desarrollo iterativo e incremental. Se consideró que esta estrategia de desarrollo sería la idónea dado que, gracias al empleo de las iteraciones o tareas, nos sería de gran utilidad a la hora de hacer frente a la inclusión de nuevos requisitos a medida que fuera avanzando el desarrollo del proyecto.\\
 
-\begin{figure}[H]
-  \label{ERe}
-  \begin{center}
-    \input{ERe.tex}
-    % Comentar si no está el paquete tkiz instalado, y descomentar la
-    % linea siguiente. Comentar además la inclusión del paquete en
-    % estilos/estiloBase.sty
-    %\includegraphics[scale=0.8]{ERe.png}
-  \end{center}
-  \caption{Diagrama ERe de ejemplo}
-\end{figure}
+Por tanto, el empleo de esta metodología implicará que el proceso de desarrollo se divida en iteraciones que abarquen a un segmento del proyecto que ya es funcional. Al ser éste también un modelo incremental, las futuras iteraciones evolucionarán el desarrollo anterior, incluyendo mejoras y respondiendo a los requisitos del sistema que se van cumplimentando y añadiendo a posteriori. Es importante mencionar que cada iteración tratará a un requisito del sistema, y que se tendrán en cuenta primeramente los requisitos básicos que permitan tener una versión funcional del sistema en las primeras iteraciones.\\
+
+El cliente de este modo va obteniendo en cada iteración una versión más avanzada del proyecto pero siempre funcional, por lo que no tendrá que esperar al final del desarrollo de la aplicación para poder hacer uso del sistema.\\
+
+El desarrollo iterativo e incremental permite que, al dividir el desarrollo del proyecto en tareas más pequeñas, sea más flexible la respuesta ante cambios y nuevos requisitos que imponga el cliente. Del mismo modo, será más sencillo realizar las pruebas y consideraciones que se hagan tras cada iteración completada, pues si éstas se realizaran una vez se desarrolle todo el proyecto (como ocurre con otras metodologías como el desarrollo en cascada), la aparición de un error en el diseño implicaría un coste temporal importante comparado con el de detectar un error en una parte o módulo específico del proyecto.
+
+\subsection{Planificación del desarrollo}
+
+Una vez decidida la metodología de desarrollo a emplear en el proyecto, se procede a especificar cada una de las iteraciones que compondrán el desarrollo de éste.\\
+
+Antes de desarrollar cada iteración, cabe mencionar que existe una etapa previa a la del cumplimiento de las iteraciones en la que se han de especificar los objetivos del sistema, así como las diferentes tecnologías que se usarán y el tiempo que se estima para cada una de las iteraciones asignadas.\\
+
+Así pues, las iteraciones que se contemplarán en el desarrollo del proyecto son las siguientes:
+
+\begin{itemize}
+\item \textbf{Iteración 1: Implementación de la prueba Fuerza de brazos (F\_Br):} En esta iteración se implementa el test \textit{Fuerza de brazos} de la batería de pruebas Senior Fitness Test. Una vez finalizada esta iteración, la aplicación es capaz de contar, con ayuda del sensor de gravedad, las repeticiones que el usuario hace durante la realización del ejercicio y durante un tiempo determinado (en segundos) introducido por el usuario. Además, al ser el primer test que se implementa, el desarrollo se hace de forma que sea posible reutilizar mediante herencia los métodos y funciones encargados de detectar las repeticiones y dar feedback al usuario para el resto de tests que se quieran implementar.
+\item \textbf{Iteración 2: Implementación de la prueba Fuerza de piernas (F\_Pna):} En esta iteración se implementa el test \textit{Fuerza de piernas} de la batería de pruebas Senior Fitness Test. La amplitud del desarrollo en esta iteración se reduce, dado que se heredan funcionalidades de la clase padre implementada en la iteración anterior. Una vez finalizada esta iteración, la aplicación ya es capaz de contar las repeticiones que el usuario hace durante la realización de dos tipos de ejercicios diferentes de la SFT.
+\item \textbf{Iteración 3: Implementación de la prueba Resistencia aeróbica (Resist):} En esta iteración se implementa el test \textit{Resistencia aeróbica} de la batería de pruebas Senior Fitness Test. Al igual que en la iteración anterior, es posible heredar de la clase padre implementada en la primera iteración. Una vez finalizada esta iteración, la aplicación ya es capaz de contar las repeticiones que el usuario hace durante la realización de tres tipos de ejercicios diferentes de la SFT.
+\item \textbf{Iteración 4: Implementación de la prueba Agilidad (Agil):} En esta iteración se implementa el test \textit{Agilidad} de la batería de pruebas Senior Fitness Test. En este caso, al ser un tipo de ejercicio diferente en el que es necesario implementar un cronómetro y por tanto no es necesario contar repeticiones, no es posible heredar directamente de la actividad padre, por lo que es necesario hacer modificaciones sobre la misma para que pueda ser reutilizable por ejercicios que requieran un cronómetro, además de hacer la implementación propia del test.
+\item \textbf{Iteración 5: Implementación de la prueba Flexibilidad de piernas (Flex\_Pna):} En esta iteración se implementa el test \textit{Flexibilidad de piernas} de la batería de pruebas Senior Fitness Test. En este caso, al ser un tipo de ejercicio diferente en el que es necesario obtener una medida en centímetros y por tanto no es necesario contar repeticiones ni hacer uso de un cronómetro, no es posible heredar directamente de la actividad padre, por lo que es necesario hacer modificaciones sobre la misma para que pueda ser reutilizable por ejercicios de este tipo, además de hacer la implementación propia del test.
+\item \textbf{Iteración 6: Implementación de la prueba Flexibilidad de brazos (Flex\_Br):} En esta iteración se implementa el test \textit{Flexibilidad de brazos} de la batería de pruebas Senior Fitness Test. La amplitud del desarrollo se reduce en este caso con respecto a la iteración anterior, dado que en la misma se había adaptado la clase padre heredable para este tipo de ejercicios en los que el resultado a obtener es una medida en centímetros.
+\item \textbf{Iteración 7: Desarrollo del subsistema de almacenamiento de la información:} Llegados a este punto, una vez implementados todos las pruebas de la SFT, se considera necesario empezar con la implementación del sistema encargado de almacenar en una base de datos la información y los resultados obtenidos para cada uno de los tests que se realicen, así como el diseño y el despliegue de la propia estructura. Al finalizar esta iteración solo se almacenan los resultados para el usuario del dispositivo móvil, sin posibilidad de hacer los tests a cualquier persona mayor que se desee.
+\item \textbf{Iteración 8: Desarrollo del subsistema de registro de usuarios/personas mayores:} En esta tarea se implementa el sistema de registro de personas mayores en la aplicación, añadiendo una pantalla de registro básica para la obtención, validación y almacenamiento de los datos de cada persona en el sistema. También se implementa la funcionalidad para acceder a la cámara del dispositivo por si se quiere tomar una foto de la persona durante el registro, o bien elegir una imagen de la galería.
+\item \textbf{Iteración 9: Desarrollo del subsistema de gestión de personas mayores:} En esta tarea se implementa la gestión de personas mayores registradas en la app. En la pantalla principal de la aplicación se muestra un listado de las personas registradas en la aplicación (con la información básica para identificar cada una de ellas, así como una foto de la persona en caso de habérsela tomado con el dispositivo móvil durante el registro). Si se toca sobre una persona del listado, se accede a la pantalla de detalle de usuario donde se da la posibilidad de eliminar al usuario del sistema. También se mostrarán las sesiones realizadas por el usuario.
+\item \textbf{Iteración 10: Desarrollo del subsistema de gestión de sesiones:} En esta tarea se implementa la gestión de sesiones, esto es, la posibilidad de conocer qué tests ha realizado cada usuario y cuales les queda pendiente por realizar para dar por completada una sesión, mostrando en todo momento los resultados obtenidos en los tests ya realizados.
+\item \textbf{Iteración 11: Desarrollo del subsistema de resultados y cálculos de estadísticas:} En esta iteración se implementa la pantalla de resultados que se muestra una vez que el usuario ha completado una sesión (es decir, ha realizado todos los tests de la SFT). Además, también se hace la implementación del cálculo de estadísticas mostradas cuando se accede a las sesiones realizadas por el usuario desde la pantalla de detalle del mismo.
+\item \textbf{Iteración 12: Desarrollo de posibles mejoras de la aplicación:} En este punto se procederá a solventar los errores y mejoras que pudieran demandar las últimas pruebas aplicadas sobre todo el sistema, así como la inclusión de nuevas funcionalidades o tests que se soliciten.
+\item \textbf{Iteración 13: Documentación del proyecto.}
+\end{itemize}
+
+Para tener una referencia del tiempo estimado para el desarrollo del proyecto y el tiempo real empleado, se muestra a continuación una tabla que representa dichos datos.\\
+
+\begin{table}[H]
+\label{tiempo}
+\begin{center}
+\begin{tabular}{| l | l | l |}
+\hline
+Etapa & Tiempo estimado & Tiempo real\\
+\hline \hline
+Fase previa & 30 días & 28 días\\
+\hline
+Iteración 1 & 15 días & 20 días\\
+\hline
+Iteración 2 & 5 días & 7 días\\
+\hline
+Iteración 3 & 5 días & 4 días\\
+\hline
+Iteración 4 & 10 días & 6 días\\
+\hline
+Iteración 5 & 10 días & 3 días\\
+\hline
+Iteración 6 & 5 días & 3 días\\
+\hline
+Iteración 7 & 15 días & 18 días\\
+\hline
+Iteración 8 & 15 días & 10 días\\
+\hline
+Iteración 9 & 10 días & 12 días\\
+\hline
+Iteración 10 & 15 días & 19 días\\
+\hline
+Iteración 11 & 15 días & 10 días\\
+\hline
+Iteración 12 & 10 días & 8 días\\
+\hline
+Iteración 13 & 20 días & 22 días\\
+\hline \hline
+Total & 180 días & 170 días\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Tiempo estimado y tiempo real empleado en el proyecto}
+\end{table}
+
+En el último punto de este capítulo se encuentra el diagrama de Gantt inicial diseñado para el proyecto, en el cual se representa de manera gráfica el tiempo estimado que se le dedicará a cada una de las fases del desarrollo del proyecto.
+
+\section{Pruebas y correcciones}
+
+Una de las etapas más importantes del desarrollo de cualquier proyecto. Esta etapa se realizó en paralelo a la de desarrollo ya que, conforme se implementaron nuevas funcionalidades, se iban probando exhaustivamente bajo el contexto de las distintas situaciones que pudieran darse, hasta obtener el comportamiento esperado.\\
+
+Además, conforme se iban entregando versiones funcionales de la aplicación en cada iteración a Raquel Ureña, ella también ejercía de tester, dándome feedback muy importante para mejorar el proyecto.
+
+\section{Redacción de la memoria}
+
+La redacción de la memoria se ha realizado conforme se iba avanzando en el desarrollo del proyecto pero, tras la finalización de éste, se le ha dedicado más tiempo a su cumplimentación, corrigiendo puntos que han requerido modificaciones o que finalmente no se han adecuado al producto final.
+
+\section{Diagrama de Gantt}
+
+Para la documentación del proyecto y en particular para lo concerniente al tiempo en que se realizarán cada una de las tareas descritas en cada iteración, se hace uso del modelo de diagrama de Gantt. Este modelo representa el tiempo de dedicación prevista para diferentes tareas o actividades a lo largo de un tiempo total determinado.\\
+
+A continuación se mostrará el diagrama de Gantt inicial con el que se estimó el tiempo que iban a ocupar cada una de las fases e iteraciones del presente proyecto, tal y como se indicó en la sección 3.4.2 del presente capítulo.
+
+ \figura{seniorfitness_gantt.png}{scale=0.5}{Diagrama de Gantt inicial del proyecto}{seniorfitness_gantt}{H}
 
 
-\section{Código fuente}
 
-En \LaTeX tenemos varias maneras de colocar nuestro código fuente, pero
-vamos a mostrar dos básicas.
 
-\subsection{Entorno \texttt{Verbatim}}
 
-Este entorno, nos permite incluir dentro de él \negrita{cualquier}
-código, y nos respetará espacios, saltos de lineas, tabuladores... es
-decir, el compilador de \LaTeX no procesará ese entorno y lo dejará
-tal cual está. Veamos un ejemplo con el clásico programa
-\programa{Hola mundo} en \texttt{C++}:
 
-\begin{verbatim}
-/*Clásico programa en su versión C++*/
 
-#include <iostream>
 
-using namespace std;
-
-int main()
-{
-  cout << "¡Hola, mundo!" << endl;
-  return 0; //No hace falta, pero en fin
-}
-\end{verbatim}
-
-Vemos, que queda un poco ``soso'': no remarca palabras del lenguaje,
-le da igual lo que es comentario y lo que es texto, y claro, a la hora
-de tener un código relativamente amplio, pues es incomodo verlo tan
-plano. Hay alternativas como \texttt{fncyverbatim}, en la cual podemos
-formatearlo algo, añadiendo números de lineas, remarcando palabras del
-lenguaje y más opciones, pero quizás la siguiente opción sea más
-completa:
-
-\subsection{Entorno \texttt{listing}}
-
-Si vemos en el fichero \comando{comandos.sty}, podemos ver varios
-estilos definidos para este entorno. ¿En qué consiste? Pues realmente
-este entorno, sabiendo de que lenguaje le estamos pasando el código
-(admitiendo gran variedad como C, C++, Java, \TeX, SQL, ADA, Python y
-muchísimos más), y ciertas opciones, podemos formatear el código.\\
-
-Este entorno podemos llamarlo de dos formas distintas, la primera es
-utilizando un entorno propiamente dicho, con sus
-$\backslash$\texttt{begin} y $\backslash$\texttt{end} dentro del cual
-copiamos el código, y otra usando el comando
-$\backslash$\texttt{lstinputlisting}, pasándole de parámetro el propio
-fichero. Veamos de las dos formas:
-
-\begin{lstlisting}[style=C++]
-/*Clasico programa en su version C++*/
-
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-  cout << "Hola, mundo!" << endl;
-  return 0; //No hace falta, pero en fin
-}  
-\end{lstlisting}
-
-O de la segunda forma:
-
-\lstinputlisting[style=C++]{hola_mundo.cpp}
-
-Notar que uso el estilo \texttt{C++} porque ya lo tengo definido en el
-fichero mencionado anteriormente, pero se pueden añadir varios más,
-modificando los colores, si queremos o no número de lineas, o por
-ejemplo comandos de consola:
-
-\begin{lstlisting}[style=consola]
-  g++ hola_mundo.cpp -o hola_mundo
-\end{lstlisting}
-
-Desde luego, es bastante más agradable para la vista, lo cual facilita
-si lectura. Sin embargo, si usamos esta última opción probablemente
-tengamos problemas con los caracteres españoles, acentos y demás,
-debido a las diferencias de codificación entre ISO Latin-1 y UTF8. Hay
-que tener cuidado en tenerlo todo en UTF8 para que el compilador
-``entienda'' los caracteres.

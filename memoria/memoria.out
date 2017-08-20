@@ -8,26 +8,36 @@
 \BOOKMARK [1][-]{section.2.2}{Caracter\355sticas de la aplicaci\363n}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.1}{Componentes de la aplicaci\363n}{section.2.2}% 9
 \BOOKMARK [2][-]{subsection.2.2.2}{Pruebas de valoraci\363n de la condici\363n f\355sica}{section.2.2}% 10
-\BOOKMARK [0][-]{chapter.3}{Desarrollo del proyecto}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Organizaci\363n temporal}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{An\341lisis del sistema}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Base de Datos}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{C\363digo fuente}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.4.1}{Entorno Verbatim}{section.3.4}% 16
-\BOOKMARK [2][-]{subsection.3.4.2}{Entorno listing}{section.3.4}% 17
-\BOOKMARK [0][-]{lstnumber.-3.1}{Bibliografia y referencias}{}% 18
-\BOOKMARK [0][-]{lstnumber.-3.1}{Software usado}{}% 19
-\BOOKMARK [0][-]{figure.caption.35}{Instalaci\363n de LaTeX}{}% 20
-\BOOKMARK [0][-]{section*.38}{GNU Free Documentation License}{}% 21
-\BOOKMARK [1][-]{section*.39}{1. APPLICABILITY AND DEFINITIONS}{section*.38}% 22
-\BOOKMARK [1][-]{section*.40}{2. VERBATIM COPYING}{section*.38}% 23
-\BOOKMARK [1][-]{section*.41}{3. COPYING IN QUANTITY}{section*.38}% 24
-\BOOKMARK [1][-]{section*.42}{4. MODIFICATIONS}{section*.38}% 25
-\BOOKMARK [1][-]{section*.43}{5. COMBINING DOCUMENTS}{section*.38}% 26
-\BOOKMARK [1][-]{section*.44}{6. COLLECTIONS OF DOCUMENTS}{section*.38}% 27
-\BOOKMARK [1][-]{section*.45}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.38}% 28
-\BOOKMARK [1][-]{section*.46}{8. TRANSLATION}{section*.38}% 29
-\BOOKMARK [1][-]{section*.47}{9. TERMINATION}{section*.38}% 30
-\BOOKMARK [1][-]{section*.48}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.38}% 31
-\BOOKMARK [1][-]{section*.49}{11. RELICENSING}{section*.38}% 32
-\BOOKMARK [1][-]{section*.50}{ADDENDUM: How to use this License for your documents}{section*.38}% 33
+\BOOKMARK [0][-]{chapter.3}{Planificaci\363n}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Fase inicial}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{Fase de an\341lisis}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.3}{Fase de aprendizaje}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.4}{Fase de desarrollo}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.4.1}{Metodolog\355a de desarrollo}{section.3.4}% 16
+\BOOKMARK [2][-]{subsection.3.4.2}{Planificaci\363n del desarrollo}{section.3.4}% 17
+\BOOKMARK [1][-]{section.3.5}{Pruebas y correcciones}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{Redacci\363n de la memoria}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.7}{Diagrama de Gantt}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Desarrollo del proyecto}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Organizaci\363n temporal}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{An\341lisis del sistema}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Base de Datos}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.4}{C\363digo fuente}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.4.1}{Entorno Verbatim}{section.4.4}% 26
+\BOOKMARK [2][-]{subsection.4.4.2}{Entorno listing}{section.4.4}% 27
+\BOOKMARK [0][-]{lstnumber.-3.1}{Bibliografia y referencias}{}% 28
+\BOOKMARK [0][-]{lstnumber.-3.1}{Software usado}{}% 29
+\BOOKMARK [0][-]{figure.caption.37}{Instalaci\363n de LaTeX}{}% 30
+\BOOKMARK [0][-]{section*.40}{GNU Free Documentation License}{}% 31
+\BOOKMARK [1][-]{section*.41}{1. APPLICABILITY AND DEFINITIONS}{section*.40}% 32
+\BOOKMARK [1][-]{section*.42}{2. VERBATIM COPYING}{section*.40}% 33
+\BOOKMARK [1][-]{section*.43}{3. COPYING IN QUANTITY}{section*.40}% 34
+\BOOKMARK [1][-]{section*.44}{4. MODIFICATIONS}{section*.40}% 35
+\BOOKMARK [1][-]{section*.45}{5. COMBINING DOCUMENTS}{section*.40}% 36
+\BOOKMARK [1][-]{section*.46}{6. COLLECTIONS OF DOCUMENTS}{section*.40}% 37
+\BOOKMARK [1][-]{section*.47}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.40}% 38
+\BOOKMARK [1][-]{section*.48}{8. TRANSLATION}{section*.40}% 39
+\BOOKMARK [1][-]{section*.49}{9. TERMINATION}{section*.40}% 40
+\BOOKMARK [1][-]{section*.50}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.40}% 41
+\BOOKMARK [1][-]{section*.51}{11. RELICENSING}{section*.40}% 42
+\BOOKMARK [1][-]{section*.52}{ADDENDUM: How to use this License for your documents}{section*.40}% 43

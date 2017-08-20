@@ -21,26 +21,36 @@
 \contentsline {subsubsection}{Flexibilidad de piernas (Flex\_Pna)}{8}{section*.20}
 \contentsline {subsubsection}{Flexibilidad de brazos (Flex\_Br)}{8}{section*.22}
 \contentsline {subsubsection}{Agilidad (Agil)}{9}{section*.24}
-\contentsline {chapter}{\numberline {3}Desarrollo del proyecto}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Organizaci\IeC {\'o}n temporal}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis del sistema}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Base de Datos}{12}{section.3.3}
-\contentsline {section}{\numberline {3.4}C\IeC {\'o}digo fuente}{13}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Entorno \texttt {Verbatim}}{13}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Entorno \texttt {listing}}{14}{subsection.3.4.2}
-\contentsline {chapter}{Bibliografia y referencias}{17}{lstnumber.-3.1}
-\contentsline {chapter}{Software usado}{17}{lstnumber.-3.1}
-\contentsline {chapter}{Instalaci\IeC {\'o}n de \LaTeX }{18}{figure.caption.35}
-\contentsline {chapter}{GNU Free Documentation License}{23}{section*.38}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{23}{section*.39}
-\contentsline {section}{2. VERBATIM COPYING}{24}{section*.40}
-\contentsline {section}{3. COPYING IN QUANTITY}{24}{section*.41}
-\contentsline {section}{4. MODIFICATIONS}{25}{section*.42}
-\contentsline {section}{5. COMBINING DOCUMENTS}{26}{section*.43}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{27}{section*.44}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{27}{section*.45}
-\contentsline {section}{8. TRANSLATION}{27}{section*.46}
-\contentsline {section}{9. TERMINATION}{27}{section*.47}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{28}{section*.48}
-\contentsline {section}{11. RELICENSING}{28}{section*.49}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{28}{section*.50}
+\contentsline {chapter}{\numberline {3}Planificaci\IeC {\'o}n}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Fase inicial}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Fase de an\IeC {\'a}lisis}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Fase de aprendizaje}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}Fase de desarrollo}{12}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Metodolog\IeC {\'\i }a de desarrollo}{12}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Planificaci\IeC {\'o}n del desarrollo}{13}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Pruebas y correcciones}{15}{section.3.5}
+\contentsline {section}{\numberline {3.6}Redacci\IeC {\'o}n de la memoria}{15}{section.3.6}
+\contentsline {section}{\numberline {3.7}Diagrama de Gantt}{15}{section.3.7}
+\contentsline {chapter}{\numberline {4}Desarrollo del proyecto}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Organizaci\IeC {\'o}n temporal}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}An\IeC {\'a}lisis del sistema}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Base de Datos}{20}{section.4.3}
+\contentsline {section}{\numberline {4.4}C\IeC {\'o}digo fuente}{21}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Entorno \texttt {Verbatim}}{21}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Entorno \texttt {listing}}{22}{subsection.4.4.2}
+\contentsline {chapter}{Bibliografia y referencias}{25}{lstnumber.-3.1}
+\contentsline {chapter}{Software usado}{25}{lstnumber.-3.1}
+\contentsline {chapter}{Instalaci\IeC {\'o}n de \LaTeX }{26}{figure.caption.37}
+\contentsline {chapter}{GNU Free Documentation License}{31}{section*.40}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{31}{section*.41}
+\contentsline {section}{2. VERBATIM COPYING}{32}{section*.42}
+\contentsline {section}{3. COPYING IN QUANTITY}{32}{section*.43}
+\contentsline {section}{4. MODIFICATIONS}{33}{section*.44}
+\contentsline {section}{5. COMBINING DOCUMENTS}{34}{section*.45}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{35}{section*.46}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{35}{section*.47}
+\contentsline {section}{8. TRANSLATION}{35}{section*.48}
+\contentsline {section}{9. TERMINATION}{35}{section*.49}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{36}{section*.50}
+\contentsline {section}{11. RELICENSING}{36}{section*.51}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{36}{section*.52}
