@@ -7,158 +7,197 @@
 
 % Copyright (C) 2009 Pablo Recio Quijano 
 
-\section{Organización temporal}
+En este capítulo se describen todos los aspectos relacionados con el análisis de requisitos del sistema: catálogo de requisitos, modelo conceptual, así como la solución propuesta.
 
-En este apartado podemos añadir un diagrama de Gannt, con la
-planificación temporal que se realizó del proyecto. Para ello podemos
-usar algún programa libre como por ejemplo \programa{Planner}:
+\section{Especificación de requisitos del sistema}
 
-\figura{gannt.png}{scale=0.6}{Diagrama de Gannt. Desarrollo del
-  proyecto}{gannt}{H}
+En esta sección se detallan todos los tipos de requisitos necesarios para satisfacer los objetivos y características descritas en las secciones anteriores del presente documento.\\
 
-Observad el código, notareis algo distinto con respecto a las imágenes
-del capítulo anterior. En este caso utilizo un comando personalizado
-en \comando{comandos.sty}, donde simplifico la creación de una
-figura, como en la figura~\ref{gannt}. % Podemos poner o no la ~
+\subsection{Requisitos de interfaces externas}
 
-\section{Análisis del sistema}
+En este apartado se describirán los requisitos de conexión del software y el hardware, así como la interfaz de usuario.\\
 
-Si el proyecto se refiere a un sistema software, normalmente
-procederemos a un análisis y a un diseño del sistema usando notación
-UML, para organizar correctamente dicho sistema.\\
+Sobre la conexión entre el software y el hardware se encarga el SDK de Android, por lo que al ser un sistema preestablecido, no será necesario realizar el diseño ni el análisis; tan solo haremos uso de él.\\
 
-\LaTeX{} no trae soporte nativo para hacer este tipo de diagramas, y
-aunque se pueden utilizar paquetes que lo hagan. Sin embargo lo más
-cómodo es que utilizemos herramientas CASE para ayudarnos a dicha
-tarea, como pueden ser \programa{Dia} o \programa{Umbrello}, como
-podemos ver en la figura \ref{uml}.
+A continuación, pasamos a definir la interfaz de la aplicación. Todas las ventanas de la aplicación se adaptarán a la resolución nativa del dispositivo en que se ejecute.\\
 
-\figura{uml.png}{scale=1}{UML de ejemplo con Umbrello}{uml}{H}
+El usuario utilizará la pantalla táctil para interactuar con la interfaz. Por defecto, bastará con una pulsación típica para activar el evento correspondiente. En caso contrario, se mencionará explícitamente.\\
 
-Ya que no es el objetivo de este documento trabajar con dichas
-herramientas, aprovecharé este apartado para mostrar algunas
-cosas más de las que podemos dotar a nuestro documento \LaTeX{}.\\
+Las diferentes pantallas que modelarán la aplicación serán:
 
-Sabemos que tenemos un fichero \texttt{bibliografia.bib}, para que la
-herramienta Bib\TeX{}  nos genere las referencias bibliográficas. Sin
-embargo a priori no se mostrarán hasta que nos las referenciemos.\\
+\begin{itemize}
+\item \textbf{Pantalla principal}: Es la pantalla inicial, y tiene como función ofrecer al usuario el listado de personas mayores que ha registrado en la aplicación, así como la posibilidad de acceder a las siguientes pantallas:
+\begin{itemize}
+\item Pantalla de registro de personas
+\item Pantalla de selección de persona para comenzar o continuar con una sesión
+\item Pantalla de detalle de persona
+\end{itemize}
+\item \textbf{Registro de personas}: Permite al usuario registrar a personas en el sistema. La información introducida será validada y almacenada en la base de datos. Además dará la posibilidad de tomar una foto con la cámara o bien seleccionar una imagen de la galería para asignarla al usuario. Una vez seleccionada la imagen, debe mostrar al usuario una pantalla de edición que permita recortar la imagen con la proporción de aspecto usada por la aplicación.
+\item \textbf{Selección de persona para comenzar o continuar con una sesión}: Permite al usuario seleccionar una persona de entre todas las registradas en la aplicación. Una vez seleccionada, llevará a la pantalla de selección de test.
+\item \textbf{Detalle de persona}: Muestra al usuario los datos de la persona que se está consultando, así como un listado de las sesiones realizadas por el mismo, encabezado por aquella sesión que esté en progreso en caso de existir. Además da la posibilidad al usuario de eliminar a la persona, así como de acceder a la pantalla de estadísticas de cualquier sesión ya realizada o a la pantalla de selección de test para aquella sesión que esté en progreso.
+\item \textbf{Selección de test}: Muestra al usuario el listado de tests que la persona seleccionada debe realizar. Se indicarán aquellos tests que ya se hayan completado y el resultado obtenido, diferenciándolos de aquellos que estén pendientes de hacer. Además, al lado de cada test aparecerá un botón de información, que de ser pulsado mostrará una pantalla de información sobre el test a realizar.
+\item \textbf{Información de test}: Muestra al usuario una breve explicación que indica en qué consiste el ejercicio que se debe realizar para completar el test, así como instrucciones para su correcta realización con el dispositivo móvil en caso de ser necesario. A esta pantalla se accederá desde la pantalla de selección de test.
+\item \textbf{Estadísticas de sesión}: Muestra al usuario los resultados obtenidos en los diferentes tests de una sesión ya realizada por una persona, así como estadísticas sobre la misma. A esta pantalla se accederá desde la pantalla de detalle de persona.
+\item \textbf{Resultados}: Esta pantalla es la que se muestra al usuario inmediatamente después de que la persona que esté realizando una sesión haya terminado el último test de la misma que tuviese pendiente. En la pantalla se indicarán los resultados obtenidos en la sesión para cada uno de los tests realizados.
+\item \textbf{Fuerza de piernas}: En esta pantalla se lleva a cabo la realización del test Fuerza de piernas (F\_Pna). Permite al usuario especificar el tiempo (en segundos) que durará la prueba y unos botones que servirán para iniciar/parar/resetear la prueba. Durante la realización del ejercicio irá mostrando en pantalla el número de repeticiones realizadas, así como una cuenta atrás con el tiempo restante. Una vez haya finalizado el tiempo, mostrará un botón que permitirá almacenar el resultado obtenido para la persona que ha realizado el ejercicio. A esta pantalla se accederá desde la pantalla de selección de test.
+\item \textbf{Fuerza de brazos}: En esta pantalla se lleva a cabo la realización del test Fuerza de brazos (F\_Br). Permite al usuario especificar el tiempo (en segundos) que durará la prueba y unos botones que servirán para iniciar/parar/resetear la prueba. Durante la realización del ejercicio irá mostrando en pantalla el número de repeticiones realizadas, así como una cuenta atrás con el tiempo restante. Una vez haya finalizado el tiempo, mostrará un botón que permitirá almacenar el resultado obtenido para la persona que ha realizado el ejercicio. A esta pantalla se accederá desde la pantalla de selección de test.
+\item \textbf{Resistencia aeróbica}: En esta pantalla se lleva a cabo la realización del test Resistencia aeróbica (Resist). Permite al usuario especificar el tiempo (en segundos) que durará la prueba y unos botones que servirán para iniciar/parar/resetear la prueba. Durante la realización del ejercicio irá mostrando en pantalla el número de repeticiones realizadas, así como una cuenta atrás con el tiempo restante. Una vez haya finalizado el tiempo, mostrará un botón que permitirá almacenar el resultado obtenido para la persona que ha realizado el ejercicio. A esta pantalla se accederá desde la pantalla de selección de test.
+\item \textbf{Flexibilidad de piernas}: En esta pantalla se debe introducir la distancia en centímetros obtenida tras la realización del text Flexibilidad de piernas (Flex\_Pna), y debe contener un botón que tras pulsarse almacenará en el sistema el valor para la persona que esté realizando la sesión. A esta pantalla se accederá desde la pantalla de selección de test.
+\item \textbf{Flexibilidad de brazos}: En esta pantalla se debe introducir la distancia en centímetros obtenida tras la realización del text Flexibilidad de brazos (Flex\_Br), y debe contener un botón que tras pulsarse almacenará en el sistema el valor para la persona que esté realizando la sesión. A esta pantalla se accederá desde la pantalla de selección de test.
+\item \textbf{Agilidad}: Esta pantalla mostrará al usuario un cronómetro con los controles correspondientes para iniciarlo, pausarlo y resetearlo. Además mostrará un botón que tras pulsarse almacenará en el sistema el tiempo obtenido (en segundos) para la persona que esté realizando el ejercicio. A esta pantalla se accederá desde la pantalla de selección de test.
+\end{itemize}
 
-Teniendo en cuenta que todo esto lo tomamos desde la ``biblia'' de
-\LaTeX, podemos hacer una referencia a ella \cite{mitt04}. También hay
-que saber que una guia de referencia online muy buena es la página en
-\texttt{wikibooks} de \LaTeX{} \cite{website:latex-wikibooks}. 
+\subsection{Requisitos funcionales}
 
-% TO-DO: Multirow, Multicolumn y Supertabular.
+Los requisitos funcionales se han agrupado en diferentes subsistemas, cada uno de éstos contienen los requisitos establecidos que permitirán cumplir los objetivos y características descritas en las secciones anteriores y que se detallarán más adelante.\\
 
-\section{Base de Datos}
+Para describir los distintos comportamientos que tendrá el sistema, usaremos el lenguaje de modelado de sistemas UML; que representa los requisitos funcionales del sistema, centrado en qué hace y no cómo lo hace.
 
-Supongamos que en este apartado, queremos incluir un \negrita{diagrama
-Entidad-Relación Extendido}, que modele la base de datos que vamos a
-utilizar en nuestro proyecto. Una posible herramienta para dibujarla
-es \programa{Dia}, una herramienta pra gráficos vectoriales bastante
-completa. Una vez hemos hecho el diagrama, podemos importarlo a una
-imagen en multitud de formatos, o también podemos a código
-\programa{.tex}.\\
+\subsubsection{4.1.2.1. Diagramas de casos de uso}
 
-¿Qué utilidad tiene esto? Pues basicamente lo podremos modificar para
-refinarlo un poco, añadirle fórmulas matemáticas si quisieramos, o
-diversas cosas. Además de comprimir bastante en espacio respecto a una
-imagen. El diagrama \ref{ERe}, está realizado con Dia importándolo a
-\LaTeX{}:
+A continuación se mostrarán los diagramas de casos de uso de cada subsistema.
 
-\begin{figure}[H]
-  \label{ERe}
-  \begin{center}
-    \input{ERe.tex}
-    % Comentar si no está el paquete tkiz instalado, y descomentar la
-    % linea siguiente. Comentar además la inclusión del paquete en
-    % estilos/estiloBase.sty
-    %\includegraphics[scale=0.8]{ERe.png}
-  \end{center}
-  \caption{Diagrama ERe de ejemplo}
-\end{figure}
+\subsubsection{4.1.2.2. Descripción de casos de uso}
+
+A continuación se detallarán los casos de uso empleados en cada uno de los subsistemas.
+
+\subsection{Requisitos no funcionales}
+
+En este apartado se detallarán los requisitos no funcionales del sistema.
+
+\begin{table}[H]
+\label{RNF01}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RNF01 & Usabilidad.\\
+\hline
+Descripción & El sistema debe ser usable y disponer de una interfaz intuitiva, adaptable y fácil de manejar para un usuario de nivel básico.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RNF01}
+\end{table} 
+
+\begin{table}[H]
+\label{RNF02}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RNF02 & Portabilidad.\\
+\hline
+Descripción & Debe ser posible usar la aplicación en diferentes dispositivos móviles Android, independientemente del tamaño de la pantalla de los mismos, gracias al diseño adaptable empleado en las interfaces de usuario.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RNF02}
+\end{table}
+
+\begin{table}[H]
+\label{RNF03}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RNF03 & Escabilidad.\\
+\hline
+Descripción & El sistema debe responder de manera óptima y eficiente a futuras mejoras en el desarrollo de la aplicación, sin que éstas comprometan el estado de la misma. El código debe ser mantenible y fácilmente ampliable para futuras versiones.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RNF03}
+\end{table}
+
+\begin{table}[H]
+\label{RNF04}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RNF04 & Seguridad\\
+\hline
+Descripción & Cuando la aplicación necesite hacer uso de algunas características del dispositivo móvil que puedan comprometer la privacidad/seguridad de los datos del usuario, como puede ser la cámara o el acceso de lectura/escritura a los archivos de la memoria del dispositivo, siempre solicitará permiso al usuario antes de hacer uso de las mismas. En caso de que no se conceda el permiso, la aplicación seguirá siendo funcional aunque no se pueda hacer uso de las características para las que no se ha concedido el permiso.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RNF04}
+\end{table} 
+
+\begin{table}[H]
+\label{RNF05}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RNF05 & Rendimiento\\
+\hline
+Descripción & El rendimiento de la aplicación de ser tal que permita un desempeño agradable y suave durante el uso de la misma. Los tiempos de respuesta al insertar/recuperar información en la base de datos serán cortos y deberá minimizarse la utilización de recursos cuando sea posible para ahorrar batería.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RNF05}
+\end{table}
+
+\begin{table}[H]
+\label{RNF06}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RNF06 & Diseño\\
+\hline
+Descripción & Como se ha indicado en el requisito anterior, minimizar la utilización de recursos y el tiempo de respuesta debe primar sobre cualquier factor. Sin embargo, se debe tener en cuenta que los dispositivos móviles Android (Java) pueden perder el contexto de la aplicación que ejecutan, por lo que el contenido debe ser recuperable. Será de valor añadido que el paquete .APK final tenga el menor tamaño posible para abarcar aquellos teléfonos con menos memoria secundaria.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RNF06}
+\end{table}
+
+\subsection{Reglas de negocio}
+
+El sistema en su totalidad está desarrollado para ser software libre bajo licencia GNU GPL. Ello permite que el código sea accesible a cualquier desarrollador que quiera incrementar su funcionalidad y contribuir a la libre creación de contenidos. Así mismo, las herramientas y tecnologías empleadas también son de libre uso.
+
+\subsection{Requisitos de información}
+
+A continuación se detallarán los requisitos de información, que describen cómo gestiona el sistema la información que se va a almacenar, y son los siguientes:
+
+\section{Modelo conceptual de datos}
+
+En esta sección se muestra el diagrama conceptual de datos UML de la aplicación, con el que se visualizarán a modo de primer vistazo las clases que posteriormente se diseñarán e implementarán para cubrir las funcionalidades impuestas en el proyecto.\\
+
+No será hasta el capítulo siguiente cuando se desarrolle todo lo que abarca al diseño del sistema, incluido el diseño de clases UML que se genera a partir del conceptual que se muestra a continuación:
+
+\section{Modelo de comportamiento del sistema}
+
+Este modelo de comportamiento especifica como debe actuar el sistema. El sistema es el que engloba todos los objetos, y el modelo consta de dos partes:
+
+\begin{itemize}
+\item Diagramas de secuencias del sistema: Muestran la secuencia de eventos entre el usuario y el sistema.
+\item Contrato de las operaciones del sistema: Describen el efecto que producen las operaciones en el sistema.
+\end{itemize}
+
+\subsection{Diagramas de secuencia y contrato de las operaciones del sistema}
+
+A continuación se mostrarán los diagramas de secuencia. Para evitar contenidos duplicados, se omitirán las operaciones que ya hayan sido explicadas con anterioridad.
 
 
-\section{Código fuente}
 
-En \LaTeX tenemos varias maneras de colocar nuestro código fuente, pero
-vamos a mostrar dos básicas.
 
-\subsection{Entorno \texttt{Verbatim}}
 
-Este entorno, nos permite incluir dentro de él \negrita{cualquier}
-código, y nos respetará espacios, saltos de lineas, tabuladores... es
-decir, el compilador de \LaTeX no procesará ese entorno y lo dejará
-tal cual está. Veamos un ejemplo con el clásico programa
-\programa{Hola mundo} en \texttt{C++}:
 
-\begin{verbatim}
-/*Clásico programa en su versión C++*/
 
-#include <iostream>
 
-using namespace std;
 
-int main()
-{
-  cout << "¡Hola, mundo!" << endl;
-  return 0; //No hace falta, pero en fin
-}
-\end{verbatim}
 
-Vemos, que queda un poco ``soso'': no remarca palabras del lenguaje,
-le da igual lo que es comentario y lo que es texto, y claro, a la hora
-de tener un código relativamente amplio, pues es incomodo verlo tan
-plano. Hay alternativas como \texttt{fncyverbatim}, en la cual podemos
-formatearlo algo, añadiendo números de lineas, remarcando palabras del
-lenguaje y más opciones, pero quizás la siguiente opción sea más
-completa:
 
-\subsection{Entorno \texttt{listing}}
 
-Si vemos en el fichero \comando{comandos.sty}, podemos ver varios
-estilos definidos para este entorno. ¿En qué consiste? Pues realmente
-este entorno, sabiendo de que lenguaje le estamos pasando el código
-(admitiendo gran variedad como C, C++, Java, \TeX, SQL, ADA, Python y
-muchísimos más), y ciertas opciones, podemos formatear el código.\\
 
-Este entorno podemos llamarlo de dos formas distintas, la primera es
-utilizando un entorno propiamente dicho, con sus
-$\backslash$\texttt{begin} y $\backslash$\texttt{end} dentro del cual
-copiamos el código, y otra usando el comando
-$\backslash$\texttt{lstinputlisting}, pasándole de parámetro el propio
-fichero. Veamos de las dos formas:
 
-\begin{lstlisting}[style=C++]
-/*Clasico programa en su version C++*/
-
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-  cout << "Hola, mundo!" << endl;
-  return 0; //No hace falta, pero en fin
-}  
-\end{lstlisting}
-
-O de la segunda forma:
-
-\lstinputlisting[style=C++]{hola_mundo.cpp}
-
-Notar que uso el estilo \texttt{C++} porque ya lo tengo definido en el
-fichero mencionado anteriormente, pero se pueden añadir varios más,
-modificando los colores, si queremos o no número de lineas, o por
-ejemplo comandos de consola:
-
-\begin{lstlisting}[style=consola]
-  g++ hola_mundo.cpp -o hola_mundo
-\end{lstlisting}
-
-Desde luego, es bastante más agradable para la vista, lo cual facilita
-si lectura. Sin embargo, si usamos esta última opción probablemente
-tengamos problemas con los caracteres españoles, acentos y demás,
-debido a las diferencias de codificación entre ISO Latin-1 y UTF8. Hay
-que tener cuidado en tenerlo todo en UTF8 para que el compilador
-``entienda'' los caracteres.
