@@ -348,6 +348,256 @@ Importancia & Vital.\\
 
 \subsubsection{4.1.2.2.5. Tests de valoración de la condición física}
 
+\begin{table}[H]
+\label{CU11}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU11 & Definir duración de test\\
+\hline
+Descripción & El usuario define el tiempo (en segundos) que durará el test que se va a realizar. Este caso de uso solo aplica para aquellos tests que usan una cuenta atrás.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización de alguno de los siguientes tests: fuerza de brazos, fuerza de piernas o resistencia aeróbica.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el tiempo predefinido por defecto (30 segundos).
+\newline 2. Se abre el teclado numérico del dispositivo móvil.
+\newline 3. El usuario borra el valor que ya esté especificado, introduce el número de segundos deseado y acepta.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se actualiza satisfactoriamente el tiempo de duración de la prueba, mostrándose en la pantalla el número de segundos introducido por el usuario.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU11}
+\end{table}
+
+\begin{table}[H]
+\label{CU12}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU12 & Iniciar test\\
+\hline
+Descripción & El usuario pulsa sobre el botón START, activándose la detección de movimiento en el dispositivo móvil y comenzando la cuenta atrás. Además aparecen en pantalla los botones STOP y RESET.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización de alguno de los siguientes tests: fuerza de brazos, fuerza de piernas o resistencia aeróbica.\\
+\hline
+Secuencia normal & 1. El usuario coloca el dispositivo móvil en el brazo o en la pierna (según sea necesario) de la persona que va a realizar el test.
+\newline 2. El usuario pulsa sobre el botón START.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se activa la detección de movimiento en el dispositivo móvil y comienza la cuenta atrás. El botón START desaparece y en su lugar aparecen los botones STOP y RESET.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU12}
+\end{table}
+
+\begin{table}[H]
+\label{CU13}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU13 & Detectar movimiento\\
+\hline
+Descripción & El dispositivo móvil, colocado en el brazo o en la pierna con el/la que se realizará los ejercicios, detectará el movimiento realizado y contará las repeticiones que se hayan realizado de forma correcta, emitiendo un sonido por cada repetición contabilizada.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización de alguno de los siguientes tests: fuerza de brazos, fuerza de piernas o resistencia aeróbica. Debe tener colocado el móvil en el brazo o en la pierna, según el test a realizar y debe haber pulsado sobre el botón START, encontrándose el test en progreso y sin que haya finalizado la cuenta atrás.\\
+\hline
+Secuencia normal & 1. La persona que esté realizando el ejercicio y tenga el dispositivo móvil colocado en la extremidad con la que esté realizando la actividad, hace el movimiento requerido por el test mientras la cuenta atrás siga en progreso.\\
+\hline
+Secuencia alternativa & 1a. El movimiento realizado no es correcto. El sistema no contabiliza la repetición y no emite ningún sonido, manteniéndose inalterado el número de repeticiones que se muestra en pantalla.
+\newline 1b. La persona realiza el movimiento cuando la cuenta atrás ha finalizado. El sistema no contabiliza la repetición y no emite ningún sonido, dado que al haber acabado la cuenta atrás el dispositivo móvil ya no detecta el movimiento realizado.\\
+\hline
+Postcondición & El sistema contabiliza la repetición, aumentando en 1 el número de repeticiones mostradas en pantalla y emitiendo un sonido.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU13}
+\end{table}
+
+\begin{table}[H]
+\label{CU14}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU14 & Guardar resultado\\
+\hline
+Descripción & El usuario pulsa sobre el botón GUARDAR y el sistema almacena en la base de datos el resultado obtenido en el test para la sesión en progreso y para la persona que lo haya realizado.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización del test. Para que el botón GUARDAR aparezca, el test debe haberse completado. Según el tipo de test, se considerará completado cuando se cumplan una de las siguientes condiciones: que la cuenta atrás haya terminado, que el cronómetro se haya parado por el usuario o que se haya introducido la distancia medida para los tests de flexibilidad.\\
+\hline
+Secuencia normal & 1. Se finaliza el ejercicio o se completa la información requerida por el test.
+\newline 2. El sistema muestra el botón GUARDAR.
+\newline 3. El usuario pulsa sobre el botón GUARDAR.
+\newline 4. El sistema almacena en la base de datos el resultado del test para la sesión en progreso y la persona que lo haya realizado y lleva a la pantalla de selección de test, donde se muestra el resultado obtenido junto al test recién completado.\\
+\hline
+Secuencia alternativa & 1a. El test aún no se ha completado. Volver al paso 1.
+\newline 4a. El test recién completado era el último que quedaba pendiente de la sesión. En lugar de llevar a la pantalla de selección de test, lleva a la pantalla de resultados de la sesión.\\
+\hline
+Postcondición & El sistema almacena satisfactoriamente en la base de datos el resultado del test para la sesión en progreso y la persona que lo haya realizado y lleva a la pantalla de selección de test, donde se muestra el resultado recién almacenado.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU14}
+\end{table}
+
+\begin{table}[H]
+\label{CU15}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU15 & Parar test\\
+\hline
+Descripción & La realización del test se para, de forma que el dispositivo móvil deja de detectar el movimiento y la cuenta atrás se detiene. Se muestra el botón RESET para volver los contadores a 0 si así se desea.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización de alguno de los siguientes tests: fuerza de brazos, fuerza de piernas o resistencia aeróbica y el test debe estar en progreso para que el botón STOP se muestre.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón STOP.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Tanto la cuenta atrás como la detección de movimiento del dispositivo móvil se paran. Se permanece en la pantalla de realización de test, mostrando valores obtenidos hasta el momento y apareciendo el botón RESET.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU15}
+\end{table}
+
+\begin{table}[H]
+\label{CU16}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU16 & Resetear test\\
+\hline
+Descripción & Restablece todos los contadores y temporizadores a sus valores iniciales, volviéndose a mostrar la pantalla como en su estado inicial.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización de alguno de los siguientes tests: fuerza de brazos, fuerza de piernas o resistencia aeróbica. El test debe estar en progreso o parado (tras haber estado en progreso) para que el botón RESET se muestre.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón RESET.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & La cuenta atrás se inicializa y las repeticiones contabilizadas hasta el momento se ponen a 0. La detección de movimiento del dispositivo móvil se deshabilita. Se permanece en la pantalla de realización de test, con todos los contadores mostrando los valores iniciales y apareciendo únicamente el botón START.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU16}
+\end{table}
+
+\begin{table}[H]
+\label{CU17}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU17 & Iniciar cronómetro\\
+\hline
+Descripción & El usuario pulsa sobre el botón START, activándose el cronómetro. Además aparecen en pantalla los botones STOP y RESET.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización del test de Agilidad y el cronómetro no debe estar funcionando.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón START.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & El cronómetro comienza a funcionar y se va mostrando el tiempo transcurrido en pantalla. El botón START desaparece y en su lugar aparecen los botones STOP y RESET.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU17}
+\end{table}
+
+\begin{table}[H]
+\label{CU18}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU18 & Parar cronómetro\\
+\hline
+Descripción & El cronómetro se para, mostrando en pantalla el tiempo transcurrido hasta el momento. Se muestra el botón RESET para volver los contadores a 0 si así se desea y el botón GUARDAR.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización del test de Agilidad y el cronómetro debe estar funcionando.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón STOP.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se para el cronómetro y se muestra en pantalla el tiempo registrado hasta el momento. Además aparecen en pantalla el botón RESET, por si se quiere resetear el cronómetro, y el botón GUARDAR, por si se quiere guardar el tiempo obtenido durante la realización del ejercicio.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU18}
+\end{table}
+
+\begin{table}[H]
+\label{CU19}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU19 & Resetear cronómetro\\
+\hline
+Descripción & Restablece el cronómetro a 0 y se ocultan todos los botones, volviéndose a mostrar la pantalla como en su estado inicial.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización del test de Agilidad y el cronómetro debe estar en funcionamiento o parado (tras haber estado en funcionamiento) para que el botón RESET se muestre.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón RESET.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & El cronómetro se inicializa a 0. Se permanece en la pantalla de realización de test pero volviendo a su estado inicial y apareciendo únicamente el botón START.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU19}
+\end{table}
+
+\begin{table}[H]
+\label{CU20}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU20 & Introducir distancia\\
+\hline
+Descripción & El usuario introduce la medida obtenida tras realizar el test de flexibilidad de brazos o de piernas a la persona que realiza la sesión.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de realización de alguno de los siguientes tests: flexibilidad de brazos o flexibilidad de piernas.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el input donde introducirá la distancia en centímetros.
+\newline 2. Se abre el teclado numérico del dispositivo móvil.
+\newline 3. El usuario introduce la distancia obtenida y acepta.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se muestra satisfactoriamente en la pantalla la distancia introducida y se muestra el botón GUARDAR para almacenar en el sistema el valor introducido para la sesión y la persona que ha realizado el test.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU20}
+\end{table}
+
 \subsection{Requisitos no funcionales}
 
 En este apartado se detallarán los requisitos no funcionales del sistema.
