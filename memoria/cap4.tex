@@ -81,6 +81,273 @@ A continuación se muestran los diagramas de casos de uso comentados:
 
 A continuación se detallarán los casos de uso empleados en cada uno de los subsistemas.
 
+\subsubsection{4.1.2.2.1. Subsistema de registro de personas mayores}
+
+\begin{table}[H]
+\label{CU01}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU01 & Registrar persona.\\
+\hline
+Descripción & La persona se registra en el sistema indicando sus datos.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de registro de personas.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón de registro de persona desde la pantalla principal.
+\newline 2. Se muestra al usuario la pantalla de registro de persona.
+\newline 3. El usuario hace o selecciona una foto de la persona e introduce el DNI, su nombre, apellidos, fecha de nacimiento y género y pulsa sobre Guardar.
+\newline 4. El sistema registra la persona y redirige a la pantalla principal de la aplicación.\\
+\hline
+Secuencia alternativa & 4a. Se ha dejado uno o varios campos vacíos. Vuelve al paso 3.
+\newline 4b. Se ha introducido un DNI de persona existente. Vuelve al paso 3.\\
+\hline
+Postcondición & Se registra a la persona en el sistema exitosamente y redirige a la pantalla principal de la aplicación.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU01}
+\end{table} 
+
+\subsubsection{4.1.2.2.2. Subsistema de gestión de personas mayores}
+
+\begin{table}[H]
+\label{CU02}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU02 & Ver detalle de persona.\\
+\hline
+Descripción & El usuario visualiza los datos y sesiones realizadas por la persona seleccionada.\\
+\hline
+Precondición & Debe existir al menos una persona registrada en la aplicación y el usuario debe haber pulsado sobre una persona del listado de personas registradas de la pantalla principal.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre una de las personas listadas en la pantalla principal.
+\newline 2. Se muestra al usuario la pantalla de detalle de persona, donde se encuentran los datos de la misma y un listado de las sesiones realizadas.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se visualizan los datos de la persona seleccionada y se muestra el listado de sesiones realizadas y la sesión que actualmente tenga en progreso la persona, en caso de que tuviese alguna.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU02}
+\end{table} 
+
+\begin{table}[H]
+\label{CU03}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU03 & Eliminar persona.\\
+\hline
+Descripción & El usuario elimina la persona seleccionada del sistema, así como todos los datos y resultados asociados a la misma.\\
+\hline
+Precondición & El usuario debe estar en la pantalla de detalle de usuario, por lo que debe existir al menos una persona registrada en la aplicación y el usuario debe haber pulsado sobre una persona del listado de personas registradas de la pantalla principal.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre una de las personas listadas en la pantalla principal.
+\newline 2. Se muestra al usuario la pantalla de detalle de persona, donde se encuentran los datos de la misma y un listado de las sesiones realizadas.
+\newline 3. El usuario pulsa sobre el icono de la papelera, situado en la esquina superior izquierda.
+\newline 4. Se muestra al usuario un popup de confirmación, donde el usuario puede confirmar o cancelar la acción.
+\newline 5. El usuario confirma la acción y el sistema elimina la persona seleccionada y retorna al usuario a la pantalla principal de la aplicación.\\
+\hline
+Secuencia alternativa & 5a. El usuario cancela la acción. Vuelve al paso 2.\\
+\hline
+Postcondición & Se elimina la persona seleccionada del sistema exitosamente, así como los datos y resultados asociados a la misma.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU03}
+\end{table} 
+
+\subsubsection{4.1.2.2.3. Subsistema de gestión de sesiones}
+
+\begin{table}[H]
+\label{CU04}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU04 & Comenzar sesión.\\
+\hline
+Descripción & El usuario pulsa sobre el botón de la pesa situado en la esquina superior derecha de la pantalla principal y la aplicación muestra el listado de personas registradas en el sistema para que el usuario seleccione la persona que comenzará la sesión.\\
+\hline
+Precondición & Debe existir al menos una persona registrada en la aplicación y el usuario debe haber pulsado sobre el botón de la pesa situado en la esquina superior derecha de la pantalla principal.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el icono de la pesa situado en la esquina superior derecha de la pantalla principal.
+\newline 2. Se muestra la pantalla el listado de personas registradas en la aplicación.\\
+\hline
+Secuencia alternativa & 2a. Si no hay ninguna persona registrada en la aplicación, se muestra un mensaje indicando que debe existir al menos una persona registrada en el sistema.\\
+\hline
+Postcondición & Se muestra el listado de personas registradas en la aplicación para que el usuario seleccione la persona que comenzará la sesión.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU04}
+\end{table}
+
+\begin{table}[H]
+\label{CU05}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU05 & Seleccionar persona.\\
+\hline
+Descripción & El usuario pulsa sobre uno de los usuarios listados y, en caso de que el usuario no tenga ningúna sesión en progreso, se creará la sesión en el sistema para el usuario seleccionado. Por último se mostrará la pantalla de selección de test.\\
+\hline
+Precondición & El usuario se debe encontrar en la pantalla de selección de usuario y debe existir al menos una persona registrada en la aplicación.\\
+\hline
+Secuencia normal & 1. El usuario selecciona una de las personas listadas.
+\newline 2. Se crea la sesión en el sistema para la persona seleccionada en caso de que el usuario no tuviese ninguna sesión en progreso.
+\newline 3. Se muestra la pantalla de selección de test.\\
+\hline
+Secuencia alternativa & 2a. La persona seleccionada ya tiene una sesión creada y en progreso. Salta al punto 3, mostrándose los resultados obtenidos en aquellos tests que ya hayan sido completados para la sesión que tiene en progreso.\\
+\hline
+Postcondición & Se crea la sesión en el sistema satisfactoriamente para la persona seleccionada en caso de que no tuviese ninguna sesión en progreso y se muestra al usuario la pantalla de selección de test.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU05}
+\end{table}
+
+\begin{table}[H]
+\label{CU06}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU06 & Seleccionar test.\\
+\hline
+Descripción & El usuario pulsa sobre uno de los test listados que no estén ya completados y se mostrará la pantalla de realización del test correspondiente.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de selección de test y la persona seleccionada debe tener una sesión creada y no completada.\\
+\hline
+Secuencia normal & 1. El usuario selecciona uno de los tests que no estén ya completados.
+\newline 2. Se muestra la pantalla de realización del test correspondiente.\\
+\hline
+Secuencia alternativa & 1a. El usuario selecciona un test que ya estaba completado. Se muestra un mensaje en pantalla indicando que el test ya ha sido realizado y el usuario permanece en la pantalla de selección de test.\\
+\hline
+Postcondición & Se accede satisfactoriamente a la pantalla de realización del test.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU06}
+\end{table}
+
+\begin{table}[H]
+\label{CU07}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU07 & Ver información de test.\\
+\hline
+Descripción & El usuario pulsa sobre el icono de información situado a la derecha de cada test en la pantalla de selección de test. El sistema entonces muestra una pantalla con explicaciones sobre cómo realizar el test para el que se está consultando la información.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de selección de test y la persona seleccionada debe tener una sesión creada y no completada.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre el botón de información que aparece a la derecha de los tests no completados en la pantalla de selección de test.
+\newline 2. Se muestra la pantalla de información del test, con las explicaciones pertinentes sobre como realizar el ejercicio.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se accede satisfactoriamente a la pantalla de información del test.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU07}
+\end{table}
+
+\begin{table}[H]
+\label{CU08}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU08 & Reanudar sesión\\
+\hline
+Descripción & El usuario pulsa sobre la sesión en progreso que aparece listada en la pantalla de detalle de persona, mostrándose la pantalla de selección de test.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de detalle de usuario y la persona seleccionada debe tener una sesión creada y no completada.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre la sesión en progreso listada para el usuario del que estamos consultando el detalle.
+\newline 2. Se muestra la pantalla de selección de test, diferenciando aquellos que ya estén completados de los pendientes y mostrando los resultados para los que ya están realizados por el usuario para esa sesión.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se accede satisfactoriamente a la pantalla de selección de test y se muestran los resultados de aquellos que ya estuviesen completados para la sesión, en caso de que los hubiese.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU08}
+\end{table}
+
+\subsubsection{4.1.2.2.4. Subsistema de resultados y cálculos de estadísticas}
+
+\begin{table}[H]
+\label{CU09}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU09 & Ver estadísticas de sesión\\
+\hline
+Descripción & El usuario pulsa sobre cualquier sesión ya completada de las que aparecen listadas en la pantalla de detalle de persona, mostrándose la pantalla de estadísticas de la sesión.\\
+\hline
+Precondición & El usuario debe encontrarse en la pantalla de detalle de usuario y la persona seleccionada debe tener al menos una sesión ya completada.\\
+\hline
+Secuencia normal & 1. El usuario pulsa sobre cualquiera de las sesiones listadas como completadas para el usuario del que estamos consultando el detalle.
+\newline 2. Se muestra la pantalla de estadísticas de la sesión completada seleccionada en el paso anterior.\\
+\hline
+Secuencia alternativa & No hay.\\
+\hline
+Postcondición & Se accede satisfactoriamente a la pantalla de estadísticas de la sesión completada seleccionada en la pantalla de detalle de usuario.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU09}
+\end{table}
+
+\begin{table}[H]
+\label{CU10}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+CU10 & Mostrar resultados\\
+\hline
+Descripción & Cuando el usuario realiza el último test que quede por completar de la sesión, se mostrará al usuario la pantalla de resultados, que mostrará los resultados obtenidos en cada uno de los tests durante la sesión que se acaba de completar.\\
+\hline
+Precondición & El usuario debe haber completado todos los tests de la sesión que en ese momento tuviese en progreso.\\
+\hline
+Secuencia normal & 1. El usuario completa el último test que tuviese pendiente de la sesión que tuviese en progreso en el momento de la realización del test indicado.
+\newline 2. Una vez obtenido el resultado del último test, se muestra la pantalla de resultados de todos los tests completados para la sesión que recién se ha acabado de completar.\\
+\hline
+Secuencia alternativa & 1a. El test que se ha completado no era el último y había algún test más pendiente para la sesión actual. Se vuelve a la pantalla de selección de test.\\
+\hline
+Postcondición & Se muestra satisfactoriamente la pantalla de resultados de la sesión, mostrándose los valores obtenidos para cada uno de los tests que se han completado.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{CU10}
+\end{table}
+
+\subsubsection{4.1.2.2.5. Tests de valoración de la condición física}
+
 \subsection{Requisitos no funcionales}
 
 En este apartado se detallarán los requisitos no funcionales del sistema.
