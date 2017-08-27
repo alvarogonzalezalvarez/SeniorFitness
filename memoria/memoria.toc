@@ -49,16 +49,16 @@
 \contentsline {section}{\numberline {4.3}Modelo de comportamiento del sistema}{39}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Diagramas de secuencia y contrato de las operaciones del sistema}{39}{subsection.4.3.1}
 \contentsline {chapter}{Bibliografia y referencias}{41}{subsection.4.3.1}
-\contentsline {chapter}{GNU Free Documentation License}{41}{section*.73}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{41}{section*.74}
-\contentsline {section}{2. VERBATIM COPYING}{42}{section*.75}
-\contentsline {section}{3. COPYING IN QUANTITY}{42}{section*.76}
-\contentsline {section}{4. MODIFICATIONS}{43}{section*.77}
-\contentsline {section}{5. COMBINING DOCUMENTS}{44}{section*.78}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{45}{section*.79}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{45}{section*.80}
-\contentsline {section}{8. TRANSLATION}{45}{section*.81}
-\contentsline {section}{9. TERMINATION}{45}{section*.82}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{46}{section*.83}
-\contentsline {section}{11. RELICENSING}{46}{section*.84}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{46}{section*.85}
+\contentsline {chapter}{GNU Free Documentation License}{41}{section*.74}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{41}{section*.75}
+\contentsline {section}{2. VERBATIM COPYING}{42}{section*.76}
+\contentsline {section}{3. COPYING IN QUANTITY}{42}{section*.77}
+\contentsline {section}{4. MODIFICATIONS}{43}{section*.78}
+\contentsline {section}{5. COMBINING DOCUMENTS}{44}{section*.79}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{45}{section*.80}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{45}{section*.81}
+\contentsline {section}{8. TRANSLATION}{45}{section*.82}
+\contentsline {section}{9. TERMINATION}{45}{section*.83}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{46}{section*.84}
+\contentsline {section}{11. RELICENSING}{46}{section*.85}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{46}{section*.86}
