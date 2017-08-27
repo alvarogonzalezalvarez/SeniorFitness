@@ -706,6 +706,90 @@ El sistema en su totalidad está desarrollado para ser software libre bajo licen
 
 A continuación se detallarán los requisitos de información, que describen cómo gestiona el sistema la información que se va a almacenar, y son los siguientes:
 
+\begin{table}[H]
+\label{RIN01}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RIN01 & Información de la persona.\\
+\hline
+Descripción & El sistema debe almacenar la información sobre las personas mayores registradas en la aplicación.\\
+\hline
+Datos específicos & DNI de la persona.
+\newline Nombre de la persona.
+\newline Apellidos de la persona.
+\newline Género de la persona.
+\newline Fecha de nacimiento de la persona.
+\newline Foto asociada a la persona.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RIN01}
+\end{table} 
+
+\begin{table}[H]
+\label{RIN02}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RIN02 & Información de la sesión.\\
+\hline
+Descripción & El sistema debe almacenar la información correspondiente a las sesiones de ejercicio que realizan las personas registradas en la aplicación.\\
+\hline
+Datos específicos & Identificador de la persona que realiza la sesión.
+\newline Estado de la sesión.
+\newline Fecha de inicio de la sesión.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RIN02}
+\end{table} 
+
+\begin{table}[H]
+\label{RIN03}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RIN03 & Información del test.\\
+\hline
+Descripción & El sistema debe almacenar la información correspondiente a los diferentes tests que realizarán las personas y que componen la batería de pruebas Senior Fitness Test (y por tanto cada una de las sesiones).\\
+\hline
+Datos específicos & Nombre del test.
+\newline Descripción del test.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RIN03}
+\end{table} 
+
+\begin{table}[H]
+\label{RIN04}
+\begin{center}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+RIN04 & Información del resultado.\\
+\hline
+Descripción & El sistema debe almacenar los resultados que las personas obtienen en cada uno de los tests que componen la batería de pruebas Senior Fitness Test, y que estarán asociados a la sesión que la persona haya realizado en una fecha concreta.\\
+\hline
+Datos específicos & Identificador de la persona que ha realizado el test.
+\newline Identificador de la sesión en la que la persona ha realizado el test.
+\newline Identificador del test realizado.
+\newline Resultado obtenido en el test.
+\newline Fecha de obtención del resultado.\\
+\hline
+Importancia & Vital.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{RIN04}
+\end{table} 
+
 \section{Modelo conceptual de datos}
 
 En esta sección se muestra el diagrama conceptual de datos UML de la aplicación, con el que se visualizarán a modo de primer vistazo las clases que posteriormente se diseñarán e implementarán para cubrir las funcionalidades impuestas en el proyecto.\\
