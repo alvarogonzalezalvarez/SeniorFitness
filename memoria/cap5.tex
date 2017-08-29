@@ -9,13 +9,9 @@
 
 En este capítulo se describen todos los aspectos relacionados con el diseño del sistema: arquitectura del sistema, patrones de diseño, diseño físico de datos, así como el diseño de la interfaz de usuario.
 
-\section{Arquitectura del sistema}
+\section{Arquitectura física del sistema}
 
-A continuación se presentan los elementos hardware y software que componen la arquitectura física y lógica del sistema. En la arquitectura lógica del sistema se detallan los componentes a nivel de software empleados a lo largo del proyecto, que abarcan tanto al conjunto de aplicaciones, bibliotecas y librerías como al propio software desarrollado para cumplir con los objetivos y requisitos establecidos.
-
-\subsection{Arquitectura física}
-
-Para definir la arquitectura física del sistema, se detallarán los componentes a nivel de hardware requeridos para el correcto funcionamiento de la aplicación.\\
+A continuación se presentan los elementos hardware que componen la arquitectura física del sistema. Para definirla, se detallarán los componentes a nivel de hardware requeridos para el correcto funcionamiento de la aplicación.\\
 
 Cuando hablamos de un dispositivo móvil o smartphone, nos referimos a los sucesores de los teléfonos móviles sencillos, que han ido evolucionando hasta ser prácticamente ordenadores que caben en nuestros bolsillos o en nuestra palma de la mano, y que además incluyen las funciones básicas de sus antecesores, como pueden ser las llamadas, envío y recibo de sms, mms, etc.\\
 
@@ -36,7 +32,11 @@ Dado que la presente aplicación ha sido desarrollada en Android, los requisitos
 
 Es conveniente destacar la necesidad de que el dispositivo móvil disponga de Acelerómetro y Giroscopio, dado que la combinación de estos dos sensores hardware son los que permiten que exista el sensor de Gravedad que, a diferencia de los dos sensores anteriormente citados, se trata de un sensor software.
 
-\subsection{Arquitectura Android}
+\section{Arquitectura lógica del sistema}
+
+En la arquitectura lógica del sistema se detallan los componentes a nivel de software empleados a lo largo del proyecto, que abarcan tanto al conjunto de aplicaciones, bibliotecas y librerías como al propio software desarrollado para cumplir con los objetivos y requisitos establecidos.
+
+\subsection{Android}
 
 \subsubsection{Introducción}
 
@@ -123,6 +123,33 @@ Entre todas las funciones que realiza el archivo manifest, las más significativ
 \item Lista las librería necesarias.
 \item Declara el nivel mínimo de la API de Android requerido.
 \end{itemize}
+
+\subsection{Git}
+
+Git es el software de control de versiones que se ha elegido para el desarrollo del proyecto. Fue desarrollado por Linus Torvalds (creador del sistema operativo Linux) y a día de hoy se usa en grandes proyectos, por ejemplo el propio núcleo de Linux. Como es costumbre en el desarrollo de éste proyecto, Git es software libre distribuido bajo la licencia GPL, lo que lo hace una alternativa libre de usar.\\
+
+Git permite tener el código generado en la implementación del sistema en un repositorio (GitHub) y poder acceder a él remotamente desde cualquier PC, así como poder restaurar versiones anteriores en caso que la actual deba ser reemplazada.\\
+
+Como para cualquier proyecto informático, el uso de un repositorio como GitHub para el alojamiento de la aplicación que nos ocupa se antojó necesario, no sólo por el simple hecho de tener todo el sistema alojado en la nube y disponible para cualquier persona, sino por la seguridad que transmite tener todo el desarrollo en un lugar desde donde sea posible descargarlo en cualquier PC y desarrollarlo en éste, por lo que pudiera suceder a lo largo del desarrollo del proyecto.
+
+\subsection{SQLite}
+
+La plataforma Android proporciona dos herramientas principales para el almacenamiento y consulta de datos estructurados, que ya hemos nombrado en los puntos anteriores:
+
+\begin{itemize}
+\item Bases de Datos SQLite.
+\item Content providers.
+\end{itemize}
+
+En este punto nos centraremos en la primera opción, que es la que se usará en la aplicación implementada para el presente proyecto, y que abarcará todas las tareas relacionadas con el almacenamiento de los datos propios de nuestra aplicación.\\
+
+SQLite es un sistema gestor de base de datos relacional (RDBMS) basado en el Lenguaje Estructurado de Consultas (SQL), tal y como sugiere su nombre. Lo que hace único a SQLite es que se considera una solución embebida. La mayoría de los sistemas de gestión de bases de datos como Oracle, MySQL y SQL Server son procesos de servidor autónomos que se ejecutan independientemente, mientras que SQLite es en realidad una librería que está enlazada dentro de las aplicaciones.\\
+
+Se trata de un motor de bases de datos muy popular en la actualidad por ofrecer características tan interesantes como su pequeño tamaño, no necesitar servidor, precisar poca configuración, ser transaccional y por supuesto ser de código libre.\\
+
+Android incorpora de serie todas las herramientas necesarias para la creación y gestión de bases de datos SQLite, y entre ellas una completa API para llevar a cabo de manera sencilla todas las tareas necesarias.\\
+
+En Android, la forma típica de crear, actualizar y conectar con una base de datos SQLite será a través de una clase auxiliar llamada SQLiteOpenHelper, o para ser más exactos, de una clase propia que derive de ella y que debemos personalizar para adaptarnos a las necesidades concretas de nuestra aplicación.
 
 \section{Modelo de comportamiento del sistema}
 

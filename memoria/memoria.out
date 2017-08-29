@@ -27,22 +27,24 @@
 \BOOKMARK [2][-]{subsection.4.1.5}{Requisitos de informaci\363n}{section.4.1}% 27
 \BOOKMARK [1][-]{section.4.2}{Modelo conceptual de datos}{chapter.4}% 28
 \BOOKMARK [0][-]{chapter.5}{Dise\361o del sistema}{}% 29
-\BOOKMARK [1][-]{section.5.1}{Arquitectura del sistema}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.1.1}{Arquitectura f\355sica}{section.5.1}% 31
-\BOOKMARK [2][-]{subsection.5.1.2}{Arquitectura Android}{section.5.1}% 32
-\BOOKMARK [1][-]{section.5.2}{Modelo de comportamiento del sistema}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.2.1}{Diagramas de secuencia y contrato de las operaciones del sistema}{section.5.2}% 34
-\BOOKMARK [0][-]{subsection.5.2.1}{Bibliografia y referencias}{}% 35
-\BOOKMARK [0][-]{section*.85}{GNU Free Documentation License}{}% 36
-\BOOKMARK [1][-]{section*.86}{1. APPLICABILITY AND DEFINITIONS}{section*.85}% 37
-\BOOKMARK [1][-]{section*.87}{2. VERBATIM COPYING}{section*.85}% 38
-\BOOKMARK [1][-]{section*.88}{3. COPYING IN QUANTITY}{section*.85}% 39
-\BOOKMARK [1][-]{section*.89}{4. MODIFICATIONS}{section*.85}% 40
-\BOOKMARK [1][-]{section*.90}{5. COMBINING DOCUMENTS}{section*.85}% 41
-\BOOKMARK [1][-]{section*.91}{6. COLLECTIONS OF DOCUMENTS}{section*.85}% 42
-\BOOKMARK [1][-]{section*.92}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.85}% 43
-\BOOKMARK [1][-]{section*.93}{8. TRANSLATION}{section*.85}% 44
-\BOOKMARK [1][-]{section*.94}{9. TERMINATION}{section*.85}% 45
-\BOOKMARK [1][-]{section*.95}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.85}% 46
-\BOOKMARK [1][-]{section*.96}{11. RELICENSING}{section*.85}% 47
-\BOOKMARK [1][-]{section*.97}{ADDENDUM: How to use this License for your documents}{section*.85}% 48
+\BOOKMARK [1][-]{section.5.1}{Arquitectura f\355sica del sistema}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Arquitectura l\363gica del sistema}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.2.1}{Android}{section.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.2.2}{Git}{section.5.2}% 33
+\BOOKMARK [2][-]{subsection.5.2.3}{SQLite}{section.5.2}% 34
+\BOOKMARK [1][-]{section.5.3}{Modelo de comportamiento del sistema}{chapter.5}% 35
+\BOOKMARK [2][-]{subsection.5.3.1}{Diagramas de secuencia y contrato de las operaciones del sistema}{section.5.3}% 36
+\BOOKMARK [0][-]{subsection.5.3.1}{Bibliografia y referencias}{}% 37
+\BOOKMARK [0][-]{section*.85}{GNU Free Documentation License}{}% 38
+\BOOKMARK [1][-]{section*.86}{1. APPLICABILITY AND DEFINITIONS}{section*.85}% 39
+\BOOKMARK [1][-]{section*.87}{2. VERBATIM COPYING}{section*.85}% 40
+\BOOKMARK [1][-]{section*.88}{3. COPYING IN QUANTITY}{section*.85}% 41
+\BOOKMARK [1][-]{section*.89}{4. MODIFICATIONS}{section*.85}% 42
+\BOOKMARK [1][-]{section*.90}{5. COMBINING DOCUMENTS}{section*.85}% 43
+\BOOKMARK [1][-]{section*.91}{6. COLLECTIONS OF DOCUMENTS}{section*.85}% 44
+\BOOKMARK [1][-]{section*.92}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.85}% 45
+\BOOKMARK [1][-]{section*.93}{8. TRANSLATION}{section*.85}% 46
+\BOOKMARK [1][-]{section*.94}{9. TERMINATION}{section*.85}% 47
+\BOOKMARK [1][-]{section*.95}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.85}% 48
+\BOOKMARK [1][-]{section*.96}{11. RELICENSING}{section*.85}% 49
+\BOOKMARK [1][-]{section*.97}{ADDENDUM: How to use this License for your documents}{section*.85}% 50

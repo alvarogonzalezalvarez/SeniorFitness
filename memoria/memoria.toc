@@ -47,17 +47,19 @@
 \contentsline {subsection}{\numberline {4.1.5}Requisitos de informaci\IeC {\'o}n}{37}{subsection.4.1.5}
 \contentsline {section}{\numberline {4.2}Modelo conceptual de datos}{38}{section.4.2}
 \contentsline {chapter}{\numberline {5}Dise\IeC {\~n}o del sistema}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Arquitectura del sistema}{41}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Arquitectura f\IeC {\'\i }sica}{41}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Arquitectura Android}{42}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.1}Arquitectura f\IeC {\'\i }sica del sistema}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Arquitectura l\IeC {\'o}gica del sistema}{42}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Android}{42}{subsection.5.2.1}
 \contentsline {subsubsection}{Introducci\IeC {\'o}n}{42}{section*.73}
 \contentsline {subsubsection}{Arquitectura}{42}{section*.74}
 \contentsline {subsubsection}{Componentes de una aplicaci\IeC {\'o}n Android}{44}{section*.76}
 \contentsline {subsubsection}{Recursos de una aplicaci\IeC {\'o}n Android}{47}{section*.81}
 \contentsline {subsubsection}{Manifest de una aplicaci\IeC {\'o}n Android}{48}{section*.83}
-\contentsline {section}{\numberline {5.2}Modelo de comportamiento del sistema}{48}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Diagramas de secuencia y contrato de las operaciones del sistema}{49}{subsection.5.2.1}
-\contentsline {chapter}{Bibliografia y referencias}{51}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Git}{48}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}SQLite}{49}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Modelo de comportamiento del sistema}{49}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Diagramas de secuencia y contrato de las operaciones del sistema}{50}{subsection.5.3.1}
+\contentsline {chapter}{Bibliografia y referencias}{51}{subsection.5.3.1}
 \contentsline {chapter}{GNU Free Documentation License}{51}{section*.85}
 \contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{51}{section*.86}
 \contentsline {section}{2. VERBATIM COPYING}{52}{section*.87}
