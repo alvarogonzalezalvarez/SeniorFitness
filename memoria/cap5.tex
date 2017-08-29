@@ -200,15 +200,46 @@ Este patrón de diseño permite a clases con interfaces incompatibles trabajar j
 
 En el desarrollo de nuestra aplicación, el uso de este patrón se antoja necesario debido a los listados que se manejan en las diferentes pantallas de la aplicación, dado que, una vez que hemos obtenido de la base de datos el listado de usuarios, tests o sesiones, necesitaremos convertir dichas colecciones de objetos específicos en una colección de vistas (objeto View), que será sobre la que finalmente se iterará en la capa de presentación para pintar cada elemento en la layout correspondiente.
 
-\section{Modelo de comportamiento del sistema}
+\section{Diseño físico de datos}
 
-Este modelo de comportamiento especifica como debe actuar el sistema. El sistema es el que engloba todos los objetos, y el modelo consta de dos partes:
+En este apartado se detalla el diseño físico de datos usado por nuestra aplicación.\\
 
-\begin{itemize}
-\item Diagramas de secuencias del sistema: Muestran la secuencia de eventos entre el usuario y el sistema.
-\item Contrato de las operaciones del sistema: Describen el efecto que producen las operaciones en el sistema.
-\end{itemize}
+Para que se cumplan con los objetivos y los requisitos impuestos en el proyecto, es necesario implementar una estructura capaz de almacenar la información, de forma que se pueda llevar un control y hacer un estudio de los datos obtenidos durante la realización de los tests que componen la batería de pruebas Senior Fitness Test.\\
 
-\subsection{Diagramas de secuencia y contrato de las operaciones del sistema}
+La información almacenada en la base de datos consistirá tanto en las personas que realizarán los tests, como las sesiones que realizan y los resultados obtenidos en cada una de las pruebas completadas en dichas sesiones.
 
-A continuación se mostrarán los diagramas de secuencia. No todos los posibles diagramas de secuencia aparecerán, sino que nos centraremos en los más importantes. Además, para evitar contenidos duplicados, se omitirán las operaciones que ya hayan sido explicadas con anterioridad.
+\subsection{Base de datos}
+
+A continuación se detalla a través del diagrama Entidad-Relación cómo se estructura la base de datos SQLite diseñada para albergar la información citada en el punto anterior.
+
+\figura{modeloconceptual_er_detail.png}{scale=0.9}{Diagrama Entidad-Relación de la base de datos}{ciclo_vida_servicio}{H}
+
+Los atributos identificadores de cada tabla son enteros a excepción del identificador de persona, que se corresponde con el DNI de la misma. Las fechas de los campos date y birthdate son de tipo String pero parseadas desde tipo Date con el siguiente formato dd/MM/yyyy.\\
+
+En el diagrama no se han representado como atributos de las entidades las claves foráneas, aunque sí aparecen en el fichero Contract de la aplicación, en el que se definen la base de datos y así mismo las tablas del proyecto.
+
+\section{Diseño de la interfaz de usuario}
+
+En este punto se especificarán los elementos que componen las distintas interfaces de usuario que existen para la aplicación, detallándose el contenido de cada pantalla representada.
+
+\section{Uso del dispositivo móvil en la realización de ejercicios}
+
+En este punto se especificará cómo debe usarse el dispositivo móvil en aquellos tests de la batería de pruebas Senior Fitness Test en los que podremos usar el dispositivo para que detecte el movimiento realizado durante los ejercicios, contabilizando de forma autónoma aquellas repeticiones que se realizan de forma satisfactoria.
+
+\section{Diseño de clases UML}
+
+En esta sección se va a mostrar el diseño empleado para el diagrama de clases UML del sistema, que mostrará el diseño de las clases que componen el sistema con sus atributos y métodos necesarios para cumplir con los requisitos y funcionalidades del proyecto expuestas en la etapa de análisis.\\
+
+Dada la naturaleza de las aplicaciones Android, la mayor parte de las clases empleadas en el desarrollo de la aplicación serán activities, y cada una de ellas contendrá la lógica específica de una pantalla de la aplicación.\\
+
+De entre todas las pantalla de la aplicación, hay seis que se corresponden con los tests o pruebas que componen la batería de pruebas Senior Fitness Test (una pantalla para cada test). Al tratarse de pantallas con una finalidad y objetivo similar, hay funcionalidades que comparten entre ellas, por lo que se ha optado por la creación de una activity padre llamada ExerciseActivity de la que extenderán las activities asociadas a cada uno de los tests: fuerza de brazos, fuerza de piernas, resistencia aeróbica, agilidad, flexibilidad de piernas y flexibilidad de brazos, simplificando de esta forma drásticamente el desarrollo de los tests que se vayan implementando sucesivamente tras el primero.\\
+
+\section{Diseño de componentes}
+
+Para el diseño de componentes se realizarán los diseños de los diagramas de secuencia que muestran el flujo de información existente entre el usuario y los componentes del sistema.
+
+\subsection{Diagramas de secuencia}
+
+Como es sabido de los diagramas de secuencia, éstos representan los flujos de comunicación que se dan para un determinado caso de uso del sistema, por lo que, dados los casos de uso desarrollados en el capítulo de análisis de requisitos para la aplicación que nos ocupa, se procederá a diseñarlos en base a estos diagramas.\\
+
+Cabe destacar que no todos los posibles diagramas de secuencia aparecerán, sino que nos centraremos en aquellos casos de uso de la aplicación que se consideren mas relevantes.
