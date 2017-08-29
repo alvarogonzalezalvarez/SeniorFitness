@@ -38,21 +38,35 @@
 \BOOKMARK [1][-]{section.5.4}{Dise\361o f\355sico de datos}{chapter.5}% 38
 \BOOKMARK [2][-]{subsection.5.4.1}{Base de datos}{section.5.4}% 39
 \BOOKMARK [1][-]{section.5.5}{Dise\361o de la interfaz de usuario}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.6}{Uso del dispositivo m\363vil en la realizaci\363n de ejercicios}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.7}{Dise\361o de clases UML}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.8}{Dise\361o de componentes}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.8.1}{Diagramas de secuencia}{section.5.8}% 44
-\BOOKMARK [0][-]{subsection.5.8.1}{Bibliografia y referencias}{}% 45
-\BOOKMARK [0][-]{section*.89}{GNU Free Documentation License}{}% 46
-\BOOKMARK [1][-]{section*.90}{1. APPLICABILITY AND DEFINITIONS}{section*.89}% 47
-\BOOKMARK [1][-]{section*.91}{2. VERBATIM COPYING}{section*.89}% 48
-\BOOKMARK [1][-]{section*.92}{3. COPYING IN QUANTITY}{section*.89}% 49
-\BOOKMARK [1][-]{section*.93}{4. MODIFICATIONS}{section*.89}% 50
-\BOOKMARK [1][-]{section*.94}{5. COMBINING DOCUMENTS}{section*.89}% 51
-\BOOKMARK [1][-]{section*.95}{6. COLLECTIONS OF DOCUMENTS}{section*.89}% 52
-\BOOKMARK [1][-]{section*.96}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.89}% 53
-\BOOKMARK [1][-]{section*.97}{8. TRANSLATION}{section*.89}% 54
-\BOOKMARK [1][-]{section*.98}{9. TERMINATION}{section*.89}% 55
-\BOOKMARK [1][-]{section*.99}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.89}% 56
-\BOOKMARK [1][-]{section*.100}{11. RELICENSING}{section*.89}% 57
-\BOOKMARK [1][-]{section*.101}{ADDENDUM: How to use this License for your documents}{section*.89}% 58
+\BOOKMARK [2][-]{subsection.5.5.1}{Pantalla principal}{section.5.5}% 41
+\BOOKMARK [2][-]{subsection.5.5.2}{Alta de persona}{section.5.5}% 42
+\BOOKMARK [2][-]{subsection.5.5.3}{Detalle de persona}{section.5.5}% 43
+\BOOKMARK [2][-]{subsection.5.5.4}{Estad\355sticas de sesi\363n}{section.5.5}% 44
+\BOOKMARK [2][-]{subsection.5.5.5}{Selecci\363n de persona}{section.5.5}% 45
+\BOOKMARK [2][-]{subsection.5.5.6}{Selecci\363n de test}{section.5.5}% 46
+\BOOKMARK [2][-]{subsection.5.5.7}{Informaci\363n de test}{section.5.5}% 47
+\BOOKMARK [2][-]{subsection.5.5.8}{Fuerza de piernas}{section.5.5}% 48
+\BOOKMARK [2][-]{subsection.5.5.9}{Fuerza de brazos}{section.5.5}% 49
+\BOOKMARK [2][-]{subsection.5.5.10}{Resistencia Aer\363bica}{section.5.5}% 50
+\BOOKMARK [2][-]{subsection.5.5.11}{Flexibilidad de piernas}{section.5.5}% 51
+\BOOKMARK [2][-]{subsection.5.5.12}{Flexibilidad de brazos}{section.5.5}% 52
+\BOOKMARK [2][-]{subsection.5.5.13}{Agilidad}{section.5.5}% 53
+\BOOKMARK [2][-]{subsection.5.5.14}{Resultados}{section.5.5}% 54
+\BOOKMARK [1][-]{section.5.6}{Uso del dispositivo m\363vil en la realizaci\363n de ejercicios}{chapter.5}% 55
+\BOOKMARK [1][-]{section.5.7}{Dise\361o de clases UML}{chapter.5}% 56
+\BOOKMARK [1][-]{section.5.8}{Dise\361o de componentes}{chapter.5}% 57
+\BOOKMARK [2][-]{subsection.5.8.1}{Diagramas de secuencia}{section.5.8}% 58
+\BOOKMARK [0][-]{subsection.5.8.1}{Bibliografia y referencias}{}% 59
+\BOOKMARK [0][-]{section*.103}{GNU Free Documentation License}{}% 60
+\BOOKMARK [1][-]{section*.104}{1. APPLICABILITY AND DEFINITIONS}{section*.103}% 61
+\BOOKMARK [1][-]{section*.105}{2. VERBATIM COPYING}{section*.103}% 62
+\BOOKMARK [1][-]{section*.106}{3. COPYING IN QUANTITY}{section*.103}% 63
+\BOOKMARK [1][-]{section*.107}{4. MODIFICATIONS}{section*.103}% 64
+\BOOKMARK [1][-]{section*.108}{5. COMBINING DOCUMENTS}{section*.103}% 65
+\BOOKMARK [1][-]{section*.109}{6. COLLECTIONS OF DOCUMENTS}{section*.103}% 66
+\BOOKMARK [1][-]{section*.110}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.103}% 67
+\BOOKMARK [1][-]{section*.111}{8. TRANSLATION}{section*.103}% 68
+\BOOKMARK [1][-]{section*.112}{9. TERMINATION}{section*.103}% 69
+\BOOKMARK [1][-]{section*.113}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.103}% 70
+\BOOKMARK [1][-]{section*.114}{11. RELICENSING}{section*.103}% 71
+\BOOKMARK [1][-]{section*.115}{ADDENDUM: How to use this License for your documents}{section*.103}% 72
