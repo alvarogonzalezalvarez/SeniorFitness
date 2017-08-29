@@ -65,21 +65,21 @@
 \contentsline {section}{\numberline {5.4}Dise\IeC {\~n}o f\IeC {\'\i }sico de datos}{51}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Base de datos}{51}{subsection.5.4.1}
 \contentsline {section}{\numberline {5.5}Dise\IeC {\~n}o de la interfaz de usuario}{53}{section.5.5}
-\contentsline {section}{\numberline {5.6}Uso del dispositivo m\IeC {\'o}vil en la realizaci\IeC {\'o}n de ejercicios}{53}{section.5.6}
-\contentsline {section}{\numberline {5.7}Dise\IeC {\~n}o de clases UML}{53}{section.5.7}
-\contentsline {section}{\numberline {5.8}Dise\IeC {\~n}o de componentes}{53}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}Diagramas de secuencia}{53}{subsection.5.8.1}
-\contentsline {chapter}{Bibliografia y referencias}{55}{subsection.5.8.1}
-\contentsline {chapter}{GNU Free Documentation License}{55}{section*.88}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{55}{section*.89}
-\contentsline {section}{2. VERBATIM COPYING}{56}{section*.90}
-\contentsline {section}{3. COPYING IN QUANTITY}{56}{section*.91}
-\contentsline {section}{4. MODIFICATIONS}{57}{section*.92}
-\contentsline {section}{5. COMBINING DOCUMENTS}{58}{section*.93}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{59}{section*.94}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{59}{section*.95}
-\contentsline {section}{8. TRANSLATION}{59}{section*.96}
-\contentsline {section}{9. TERMINATION}{59}{section*.97}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{60}{section*.98}
-\contentsline {section}{11. RELICENSING}{60}{section*.99}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{60}{section*.100}
+\contentsline {section}{\numberline {5.6}Uso del dispositivo m\IeC {\'o}vil en la realizaci\IeC {\'o}n de ejercicios}{54}{section.5.6}
+\contentsline {section}{\numberline {5.7}Dise\IeC {\~n}o de clases UML}{54}{section.5.7}
+\contentsline {section}{\numberline {5.8}Dise\IeC {\~n}o de componentes}{55}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Diagramas de secuencia}{55}{subsection.5.8.1}
+\contentsline {chapter}{Bibliografia y referencias}{57}{subsection.5.8.1}
+\contentsline {chapter}{GNU Free Documentation License}{57}{section*.89}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{57}{section*.90}
+\contentsline {section}{2. VERBATIM COPYING}{58}{section*.91}
+\contentsline {section}{3. COPYING IN QUANTITY}{58}{section*.92}
+\contentsline {section}{4. MODIFICATIONS}{59}{section*.93}
+\contentsline {section}{5. COMBINING DOCUMENTS}{60}{section*.94}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{61}{section*.95}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{61}{section*.96}
+\contentsline {section}{8. TRANSLATION}{61}{section*.97}
+\contentsline {section}{9. TERMINATION}{61}{section*.98}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{62}{section*.99}
+\contentsline {section}{11. RELICENSING}{62}{section*.100}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{62}{section*.101}
