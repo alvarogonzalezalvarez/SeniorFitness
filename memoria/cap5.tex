@@ -7,158 +7,132 @@
 
 % Copyright (C) 2009 Pablo Recio Quijano 
 
-\section{Organización temporal}
+En este capítulo se describen todos los aspectos relacionados con el diseño del sistema: arquitectura del sistema, patrones de diseño, diseño físico de datos, así como el diseño de la interfaz de usuario.
 
-En este apartado podemos añadir un diagrama de Gannt, con la
-planificación temporal que se realizó del proyecto. Para ello podemos
-usar algún programa libre como por ejemplo \programa{Planner}:
+\section{Arquitectura del sistema}
 
-\figura{gannt.png}{scale=0.6}{Diagrama de Gannt. Desarrollo del
-  proyecto}{gannt}{H}
+A continuación se presentan los elementos hardware y software que componen la arquitectura física y lógica del sistema. En la arquitectura lógica del sistema se detallan los componentes a nivel de software empleados a lo largo del proyecto, que abarcan tanto al conjunto de aplicaciones, bibliotecas y librerías como al propio software desarrollado para cumplir con los objetivos y requisitos establecidos.
 
-Observad el código, notareis algo distinto con respecto a las imágenes
-del capítulo anterior. En este caso utilizo un comando personalizado
-en \comando{comandos.sty}, donde simplifico la creación de una
-figura, como en la figura~\ref{gannt}. % Podemos poner o no la ~
+\subsection{Arquitectura física}
 
-\section{Análisis del sistema}
+Para definir la arquitectura física del sistema, se detallarán los componentes a nivel de hardware requeridos para el correcto funcionamiento de la aplicación.\\
 
-Si el proyecto se refiere a un sistema software, normalmente
-procederemos a un análisis y a un diseño del sistema usando notación
-UML, para organizar correctamente dicho sistema.\\
+Cuando hablamos de un dispositivo móvil o smartphone, nos referimos a los sucesores de los teléfonos móviles sencillos, que han ido evolucionando hasta ser prácticamente ordenadores que caben en nuestros bolsillos o en nuestra palma de la mano, y que además incluyen las funciones básicas de sus antecesores, como pueden ser las llamadas, envío y recibo de sms, mms, etc.\\
 
-\LaTeX{} no trae soporte nativo para hacer este tipo de diagramas, y
-aunque se pueden utilizar paquetes que lo hagan. Sin embargo lo más
-cómodo es que utilizemos herramientas CASE para ayudarnos a dicha
-tarea, como pueden ser \programa{Dia} o \programa{Umbrello}, como
-podemos ver en la figura \ref{uml}.
+En los últimos años los dispositivos móviles han empezado a cobrar importancia debido a su relación entre la potencia y su reducido tamaño, llegando incluso a ser indispensables en ciertos sectores de la sociedad hoy en día.\\
 
-\figura{uml.png}{scale=1}{UML de ejemplo con Umbrello}{uml}{H}
+Junto con la aparición de los smartphones se presentaron a su vez los sistemas operativos que éstos dispositivos llevarían integrados como pueden ser Android o IOS, cada uno con características propias, ofreciendo así un entorno de fácil manejo para el usuario final y un sinfín de aplicaciones desarrolladas tanto por empresas como por particulares.\\
 
-Ya que no es el objetivo de este documento trabajar con dichas
-herramientas, aprovecharé este apartado para mostrar algunas
-cosas más de las que podemos dotar a nuestro documento \LaTeX{}.\\
+Dado que la presente aplicación ha sido desarrollada en Android, los requisitos a nivel de hardware se reducen a los siguientes:
 
-Sabemos que tenemos un fichero \texttt{bibliografia.bib}, para que la
-herramienta Bib\TeX{}  nos genere las referencias bibliográficas. Sin
-embargo a priori no se mostrarán hasta que nos las referenciemos.\\
+\begin{itemize}
+\item Dispositivos: Dispositivo móvil basado en Android.
+\item Requisitos mínimos:
+\begin{itemize}
+\item La versión de Android instalada en el dispositivo debe ser superior o igual a la versión 4.0.3 (ICE\_CREAM\_SANDWICH\_MR1).
+\item El dispositivo móvil debe disponer de Acelerómetro y Giroscopio.
+\end{itemize}
+\end{itemize}
 
-Teniendo en cuenta que todo esto lo tomamos desde la ``biblia'' de
-\LaTeX, podemos hacer una referencia a ella \cite{mitt04}. También hay
-que saber que una guia de referencia online muy buena es la página en
-\texttt{wikibooks} de \LaTeX{} \cite{website:latex-wikibooks}. 
+Es conveniente destacar la necesidad de que el dispositivo móvil disponga de Acelerómetro y Giroscopio, dado que la combinación de estos dos sensores hardware son los que permiten que exista el sensor de Gravedad que, a diferencia de los dos sensores anteriormente citados, se trata de un sensor software.
 
-% TO-DO: Multirow, Multicolumn y Supertabular.
+\subsection{Arquitectura Android}
 
-\section{Base de Datos}
+\subsubsection{Introducción}
 
-Supongamos que en este apartado, queremos incluir un \negrita{diagrama
-Entidad-Relación Extendido}, que modele la base de datos que vamos a
-utilizar en nuestro proyecto. Una posible herramienta para dibujarla
-es \programa{Dia}, una herramienta pra gráficos vectoriales bastante
-completa. Una vez hemos hecho el diagrama, podemos importarlo a una
-imagen en multitud de formatos, o también podemos a código
-\programa{.tex}.\\
+Android puede entenderse como una plataforma software cuya misión consiste en abstraer el hardware subyacente. Inicialmente fue desarrollado para dispositivos táctiles con recursos limitados, con el fin de facilitar el desarrollo de aplicaciones para dichos dispositivos.\\
 
-¿Qué utilidad tiene esto? Pues basicamente lo podremos modificar para
-refinarlo un poco, añadirle fórmulas matemáticas si quisieramos, o
-diversas cosas. Además de comprimir bastante en espacio respecto a una
-imagen. El diagrama \ref{ERe}, está realizado con Dia importándolo a
-\LaTeX{}:
+La gran diferencia de Android respecto al resto de sistemas operativos para dispositivos móviles es su núcleo basado en GNU/Linux. Esto hace que Android adquiera algunas de las principales características de Linux, convirtiéndose en un software libre, gratuito y multiplataforma. \\
 
-\begin{figure}[H]
-  \label{ERe}
-  \begin{center}
-    \input{ERe.tex}
-    % Comentar si no está el paquete tkiz instalado, y descomentar la
-    % linea siguiente. Comentar además la inclusión del paquete en
-    % estilos/estiloBase.sty
-    %\includegraphics[scale=0.8]{ERe.png}
-  \end{center}
-  \caption{Diagrama ERe de ejemplo}
-\end{figure}
+Inicialmente fue desarrollado por Android IC, pero en 2005 fue comprado por Google, y hasta entonces era un sistema operativo muy poco conocido. En el 2007 se fundó la Opend Handset Alliance, una agrupación de empresas de desarrollo de software, hardware y telecomunicaciones con el propósito de avanzar en los estándares abiertos para el desarrollo de software y hardware para dispositivos móviles, y fue entonces cuando se produjo la presentación de Android por parte de Google, liberando gran parte de su código bajo una licencia Apache.\\
 
+El éxito tras la presentación fue escaso, debido a que el sistema operativo se presentó antes de que se comercializara ningún dispositivo que lo incluyese. En la actualidad es el sistema operativo más utilizado.
 
-\section{Código fuente}
+\subsubsection{Arquitectura}
 
-En \LaTeX tenemos varias maneras de colocar nuestro código fuente, pero
-vamos a mostrar dos básicas.
+La arquitectura del sistema Android puede verse como una arquitectura por capas o niveles, de forma que cada nivel puede utilizar servicios ofrecidos por los niveles anteriores y éste, a su vez, proporciona nuevas funciones a los niveles superiores. En la siguiente imagen podemos ver los niveles que componen la arquitectura:
 
-\subsection{Entorno \texttt{Verbatim}}
+\figura{arquitectura_android.png}{scale=0.9}{Arquitectura Android}{arquitectura_android}{H}
 
-Este entorno, nos permite incluir dentro de él \negrita{cualquier}
-código, y nos respetará espacios, saltos de lineas, tabuladores... es
-decir, el compilador de \LaTeX no procesará ese entorno y lo dejará
-tal cual está. Veamos un ejemplo con el clásico programa
-\programa{Hola mundo} en \texttt{C++}:
+\begin{itemize}
+\item \textbf{Aplicaciones:} Constituye el conjunto de aplicaciones presentes en un dispositivo, ya sean las instaladas por el usuario o por defecto, las nativas y las administradas.
+\item \textbf{Framework de aplicaciones:} Plataforma de desarrollo que facilita la reutilización de componentes, permite el acceso a los diversos servicios ofrecidos y al hardware de los dispositivos. Los más importantes son:
+\begin{itemize}
+\item Activity Manager: Conjunto de APIs encargadas de gestionar el ciclo de vida de las aplicaciones.
+\item Window Manager: Gestiona las ventanas de una aplicación mediante la librería Surface Manager.
+\item Telephone Manager: Compendio de APIs que gestionan las funciones básicas de los teléfonos (llamadas, mensajería, etc).
+\item Content Provider: Proporciona los mecanismos necesarios para la comunicación entre aplicaciones.
+\item View System: Ofrece los elementos básicos necesarios para la construcción de interfaces.
+\item Location Manager: Posibilita a las aplicaciones el acceso a la ubicación del dispositivo.
+\item Notification Manager: Permite a las aplicaciones notificar al usuario información asociada a ciertos eventos que ocurran durante la ejecución de una aplicación.
+\item XMPP Service: Colección de APIs para el uso de este protocolo de intercambio basado en XML.
+\item Resource Manager: Encargado de gestionar todos los elementos que forman parte de una aplicación y son externos al código.
+\item Package Manager: Gestor de todos los paquetes instalados en un dispositivo Android y que permite la instalación de nuevos paquetes.
+\end{itemize}
+\item \textbf{Bibliotecas:} Hacen referencia al conjunto de librerías presentes en Android y proporcionan la mayoría de las características más representativas de esta plataforma. Las principales librerías que podemos encontrar son las siguientes:
+\begin{itemize}
+\item Surface Manager: Gestión de la pantalla.
+\item SQLite: Motor de bases de datos relacionales. Es el motor de bases de datos usado en la presente aplicación.
+\item Media Framework: Reproducción de imágenes, vídeo y audio.
+\item WebKit: Navegación web.
+\item SGL: Gráficos 2D
+\item Open GL/ES: Gráficos 3D.
+\item FreeType: Renderizado de fuentes.
+\item SSL: Comunicación segura mediante sockets.
+\item Libcr: Variante optimizada de C.
+\end{itemize}
+\item \textbf{Android Runtime:} Al mismo nivel que las librerías encontramos el entorno de ejecución, que está constituido por las librerías Java que forman el núcleo del lenguaje y la máquina virtual Dalvik o ART para las versiones más modernas.
+\item \textbf{Núcleo Linux:} Se utiliza como una capa de abstracción para el hardware subyacente y por tanto contiene los drivers y controladores necesarios para el correcto funcionamiento del mismo.
+\end{itemize}
 
-\begin{verbatim}
-/*Clásico programa en su versión C++*/
+\subsubsection{Componentes de una aplicación Android}
 
-#include <iostream>
+Los componentes de una aplicación Android son los elementos esenciales que la componen. Cada uno de ellos supone un punto de entrada mediante el cual el sistema puede acceder a la aplicación, aunque no todos suponen puntos de entrada para el usuario.\\
 
-using namespace std;
+Cada componente es un bloque básico que desempeña un papel específico en el funcionamiento de nuestra aplicación. Existen cuatro tipos diferentes de componentes, cada uno de ellos con un ciclo de vida y propósito único. Los componentes son los que siguen a continuación:
 
-int main()
-{
-  cout << "¡Hola, mundo!" << endl;
-  return 0; //No hace falta, pero en fin
-}
-\end{verbatim}
+\begin{itemize}
+\item \textbf{Actividades o Activities:} Cada actividad o activity respresenta una pantalla de nuestra aplicación. Las actividades trabajan en conjunto para dar una visión coherente de la aplicación, sin embargo, la vida de cada actividad es independiente del resto. El ciclo de vida que sigue una actividad se muestra en la siguiente imagen:
+\figura{ciclo_vida_activity.png}{scale=0.9}{Arquitectura Android: Ciclo de vida de una Activity}{ciclo_vida_activity}{H}
+\item \textbf{Servicios o Services:} Son componentes que se ejecutan en segundo plano con el fin de realizar operaciones de larga duración o procesos remotos. Los servicios carecen de interfaz y generalmente son llamados por las activities para realizar tareas costosas sin bloquear la interfaz, es decir, se pueden dejar en ejecución en segundo plano o logarlos a una actividad para interactuar con ella. En la siguiente imagen veremos el ciclo de vida de un servicio. En la izquierda está actuando en segundo plano y en la derecha está ligado a una activity:
+\figura{ciclo_vida_servicio.png}{scale=0.9}{Arquitectura Android: Ciclo de vida de un Servicio}{ciclo_vida_servicio}{H}
+\item \textbf{Proveedor de contenido o Content provider:} El proveedor de contenido gestiona los datos que maneja una aplicación. Controla el acceso a archivos, bases de datos SQLite, etc. Mediante el proveedor de contenidos las aplicaciones pueden consultar y modificar datos de otras aplicaciones siempre que posean los permisos adecuados. La siguiente imagen ilustra cómo una activity puede consultar datos de otra aplicación:
+\figura{content_provider.png}{scale=0.9}{Arquitectura Android: Content Provider}{content_provider}{H}
+\item \textbf{Receptor de difusiones o Broadcast receiver:} Es el componente encargado de responder a las difusiones o anuncios del sistema (por ejemplo, un anuncio del sistema que indica que queda poca batería). Carece de interfaz, pero debe crear una barra de estado para notificar al usuario cuando detexta una difusión. Una aplicación debe registrar un broadcast receiver para indicar qué difusiones le interesan.
+\figura{broadcast_receiver.png}{scale=0.9}{Arquitectura Android: Broadcast Receiver}{broadcast_receiver}{H}
+\end{itemize}
 
-Vemos, que queda un poco ``soso'': no remarca palabras del lenguaje,
-le da igual lo que es comentario y lo que es texto, y claro, a la hora
-de tener un código relativamente amplio, pues es incomodo verlo tan
-plano. Hay alternativas como \texttt{fncyverbatim}, en la cual podemos
-formatearlo algo, añadiendo números de lineas, remarcando palabras del
-lenguaje y más opciones, pero quizás la siguiente opción sea más
-completa:
+\subsubsection{Recursos de una aplicación Android}
 
-\subsection{Entorno \texttt{listing}}
+Los recursos de una aplicación corresponden con todos los ficheros, imágenes, cadenas de texto, etc, que nuestra aplicación utiliza. Cuando trabajamos desarrollando aplicaciones para Android, las buenas prácticas nos dicen que este tipo de archivos debe mantenerse independientemente al código de la aplicación.\\
 
-Si vemos en el fichero \comando{comandos.sty}, podemos ver varios
-estilos definidos para este entorno. ¿En qué consiste? Pues realmente
-este entorno, sabiendo de que lenguaje le estamos pasando el código
-(admitiendo gran variedad como C, C++, Java, \TeX, SQL, ADA, Python y
-muchísimos más), y ciertas opciones, podemos formatear el código.\\
+Este hecho, conocido como externalización de recursos, permite adaptar un mismo código a dispositivos con diferentes configuraciones y características físicas de una forma prácticamente automática. En la siguiente imagen podemos comprobar cómo quedaría una pantalla que no ha sido adaptada para diferentes dispositivos (parte superior) y una que sí (parte inferior):
 
-Este entorno podemos llamarlo de dos formas distintas, la primera es
-utilizando un entorno propiamente dicho, con sus
-$\backslash$\texttt{begin} y $\backslash$\texttt{end} dentro del cual
-copiamos el código, y otra usando el comando
-$\backslash$\texttt{lstinputlisting}, pasándole de parámetro el propio
-fichero. Veamos de las dos formas:
+\figura{externalizacion_recursos.png}{scale=0.9}{Arquitectura Android: Externalización de recursos}{externalizacion_recursos}{H}
 
-\begin{lstlisting}[style=C++]
-/*Clasico programa en su version C++*/
+\subsubsection{Manifest de una aplicación Android}
 
-#include <iostream>
+El archivo Manifest es un archivo XML que contiene información esencial para Android acerca de la aplicación. Todas las aplicaciones Android deben tener un archivo AndroidManifest.xml en su directorio raíz.\\
 
-using namespace std;
+Entre todas las funciones que realiza el archivo manifest, las más significativas son las siguientes:
 
-int main()
-{
-  cout << "Hola, mundo!" << endl;
-  return 0; //No hace falta, pero en fin
-}  
-\end{lstlisting}
+\begin{itemize}
+\item Da nombre al paquete Java de la aplicación.
+\item Describe los componentes y qué proceso los hospeda.
+\item Contiene la declaración de permisos.
+\item Lista las librería necesarias.
+\item Declara el nivel mínimo de la API de Android requerido.
+\end{itemize}
 
-O de la segunda forma:
+\section{Modelo de comportamiento del sistema}
 
-\lstinputlisting[style=C++]{hola_mundo.cpp}
+Este modelo de comportamiento especifica como debe actuar el sistema. El sistema es el que engloba todos los objetos, y el modelo consta de dos partes:
 
-Notar que uso el estilo \texttt{C++} porque ya lo tengo definido en el
-fichero mencionado anteriormente, pero se pueden añadir varios más,
-modificando los colores, si queremos o no número de lineas, o por
-ejemplo comandos de consola:
+\begin{itemize}
+\item Diagramas de secuencias del sistema: Muestran la secuencia de eventos entre el usuario y el sistema.
+\item Contrato de las operaciones del sistema: Describen el efecto que producen las operaciones en el sistema.
+\end{itemize}
 
-\begin{lstlisting}[style=consola]
-  g++ hola_mundo.cpp -o hola_mundo
-\end{lstlisting}
+\subsection{Diagramas de secuencia y contrato de las operaciones del sistema}
 
-Desde luego, es bastante más agradable para la vista, lo cual facilita
-si lectura. Sin embargo, si usamos esta última opción probablemente
-tengamos problemas con los caracteres españoles, acentos y demás,
-debido a las diferencias de codificación entre ISO Latin-1 y UTF8. Hay
-que tener cuidado en tenerlo todo en UTF8 para que el compilador
-``entienda'' los caracteres.
+A continuación se mostrarán los diagramas de secuencia. No todos los posibles diagramas de secuencia aparecerán, sino que nos centraremos en los más importantes. Además, para evitar contenidos duplicados, se omitirán las operaciones que ya hayan sido explicadas con anterioridad.
