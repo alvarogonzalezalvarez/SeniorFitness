@@ -57,19 +57,24 @@
 \contentsline {subsubsection}{Manifest de una aplicaci\IeC {\'o}n Android}{48}{section*.83}
 \contentsline {subsection}{\numberline {5.2.2}Git}{48}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}SQLite}{49}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Modelo de comportamiento del sistema}{49}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Diagramas de secuencia y contrato de las operaciones del sistema}{50}{subsection.5.3.1}
-\contentsline {chapter}{Bibliografia y referencias}{51}{subsection.5.3.1}
-\contentsline {chapter}{GNU Free Documentation License}{51}{section*.85}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{51}{section*.86}
-\contentsline {section}{2. VERBATIM COPYING}{52}{section*.87}
-\contentsline {section}{3. COPYING IN QUANTITY}{52}{section*.88}
-\contentsline {section}{4. MODIFICATIONS}{53}{section*.89}
-\contentsline {section}{5. COMBINING DOCUMENTS}{54}{section*.90}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{55}{section*.91}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{55}{section*.92}
-\contentsline {section}{8. TRANSLATION}{55}{section*.93}
-\contentsline {section}{9. TERMINATION}{55}{section*.94}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{56}{section*.95}
-\contentsline {section}{11. RELICENSING}{56}{section*.96}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{56}{section*.97}
+\contentsline {section}{\numberline {5.3}Patrones de dise\IeC {\~n}o}{49}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Patrones de dise\IeC {\~n}o creacionales}{50}{subsection.5.3.1}
+\contentsline {subsubsection}{Patr\IeC {\'o}n de dise\IeC {\~n}o singleton}{50}{section*.84}
+\contentsline {subsection}{\numberline {5.3.2}Patrones de dise\IeC {\~n}o estructurales}{51}{subsection.5.3.2}
+\contentsline {subsubsection}{Patr\IeC {\'o}n de dise\IeC {\~n}o adapter}{51}{section*.85}
+\contentsline {section}{\numberline {5.4}Modelo de comportamiento del sistema}{51}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Diagramas de secuencia y contrato de las operaciones del sistema}{51}{subsection.5.4.1}
+\contentsline {chapter}{Bibliografia y referencias}{53}{subsection.5.4.1}
+\contentsline {chapter}{GNU Free Documentation License}{53}{section*.87}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{53}{section*.88}
+\contentsline {section}{2. VERBATIM COPYING}{54}{section*.89}
+\contentsline {section}{3. COPYING IN QUANTITY}{54}{section*.90}
+\contentsline {section}{4. MODIFICATIONS}{55}{section*.91}
+\contentsline {section}{5. COMBINING DOCUMENTS}{56}{section*.92}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{57}{section*.93}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{57}{section*.94}
+\contentsline {section}{8. TRANSLATION}{57}{section*.95}
+\contentsline {section}{9. TERMINATION}{57}{section*.96}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{58}{section*.97}
+\contentsline {section}{11. RELICENSING}{58}{section*.98}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{58}{section*.99}

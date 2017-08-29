@@ -151,6 +151,55 @@ Android incorpora de serie todas las herramientas necesarias para la creación y
 
 En Android, la forma típica de crear, actualizar y conectar con una base de datos SQLite será a través de una clase auxiliar llamada SQLiteOpenHelper, o para ser más exactos, de una clase propia que derive de ella y que debemos personalizar para adaptarnos a las necesidades concretas de nuestra aplicación.
 
+\section{Patrones de diseño}
+
+Los patrones de diseño se pueden definir como los esqueletos de las soluciones a problemas comunes en el desarrollo de software. Éstos brindan una solución ya probada y documentada a problemas de desarrollo de software que están sujetos a contextos similares.\\
+
+Para que una solución sea considerada un patrón, debe poseer ciertas características. Una de ellas es que debe haber comprobado su efectividad resolviendo problemas similares en ocasiones anteriores. Otra es que debe ser reutilizable, lo que significa que es aplicable a diferentes problemas de diseño en distintas circunstancias.\\
+
+Los patrones de diseño pretenden:
+
+\begin{itemize}
+\item Proporcionar catálogos de elementos reusables en el diseño de sistemas software.
+\item Evitar la reiteración en la búsqueda de soluciones a problemas ya conocidos y solucionados anteriormente.
+\item Formalizar un vocabulario común entre diseñadores.
+\item Estandarizar el modo en que se realiza el diseño.
+\item Facilitar el aprendizaje de las nuevas generaciones de diseñadores, condensando conocimientos ya existentes.
+\end{itemize}
+
+Asimismo, no pretenden:
+
+\begin{itemize}
+\item Imponer ciertas alternativas de diseño frente a otras.
+\item Eliminar la creatividad inherente al proceso de diseño.
+\end{itemize}
+
+Para el presente proyecto se han usado patrones de diseño pertenecientes a diferentes subconjuntos de patrones de diseño. Éstos son el patrón Singleton, perteneciente al subconjunto de patrones de diseño creacionales, y el patrón Adapter, perteneciente al subconjunto de patrones de diseño estructurales. A continuación se detallarán ambos para dar conocimiento de cómo funcionan y cómo resuelven determinados problemas del sistema que los implementan.
+
+\subsection{Patrones de diseño creacionales}
+
+Corresponden a patrones de diseño de software que solucionan problemas de creación de instancias. Nos ayudan a encapsular y abstraer dicha creación.
+
+\subsubsection{Patrón de diseño singleton}
+
+El patrón singleton o patrón de instancia única es un patrón de diseño diseñado para restringir la creación de objetos pertenecientes a una clase o el valor de un tipo a un único objeto. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.\\
+
+El patrón singleton se implementa creando en la clase un método que crea una instancia del objeto sólo si todavía no existe alguna. Para asegurar que la clase no puede ser instanciada nuevamente se regula el alcance del constructor haciéndo que éste sea privado y que sea a través de un método específico la manera de crear la primera y única instancia que se va a usar a lo largo del desarrollo.\\
+
+En el desarrollo del presente proyecto, el uso de este patrón se usa para la clase que se ocupa de la definición de la base de datos, ya que a lo largo del proceso de ejecución del sistema sólo es necesario crear una única instancia de dicha clase.\\
+
+\subsection{Patrones de diseño estructurales}
+
+Corresponden a patrones de diseño de software que solucionan problemas de composición (agregación) de clases y objetos.
+
+\subsubsection{Patrón de diseño adapter}
+
+El patrón adapter, también conocido como wrapper, es un patrón de diseño que se utiliza para transformar una interfaz en otra, de tal modo que una clase que no pudiera utilizar otra clase cualquiera, haga uso de ella a través de una segunda. Dicho de otro modo, convierte la interfaz de una clase en otra interfaz que el cliente espera.\\
+
+Este patrón de diseño permite a clases con interfaces incompatibles trabajar juntas mediante un adaptador intermedio, que se encargará de realizar la conversión de una interfaz a otra.\\
+
+En el desarrollo de nuestra aplicación, el uso de este patrón se antoja necesario debido a los listados que se manejan en las diferentes pantallas de la aplicación, dado que, una vez que hemos obtenido de la base de datos el listado de usuarios, tests o sesiones, necesitaremos convertir dichas colecciones de objetos específicos en una colección de vistas (objeto View), que será sobre la que finalmente se iterará en la capa de presentación para pintar cada elemento en la layout correspondiente.
+
 \section{Modelo de comportamiento del sistema}
 
 Este modelo de comportamiento especifica como debe actuar el sistema. El sistema es el que engloba todos los objetos, y el modelo consta de dos partes:
