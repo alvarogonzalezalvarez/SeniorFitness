@@ -307,7 +307,35 @@ En el siguiente diagrama podemos ver las distintas opciones de navegación dentr
 
 \section{Uso del dispositivo móvil en la realización de ejercicios}
 
-En este punto se especificará cómo debe usarse el dispositivo móvil en aquellos tests de la batería de pruebas Senior Fitness Test en los que podremos usar el dispositivo para que detecte el movimiento realizado durante los ejercicios, contabilizando de forma autónoma aquellas repeticiones que se realizan de forma satisfactoria.
+En este punto se definirá cómo debe usarse el dispositivo móvil en aquellos tests de la batería de pruebas Senior Fitness Test en los que podremos usar el dispositivo para que, con ayuda de los diferentes sensores de los que dispone, detecte el movimiento realizado durante los ejercicios, contabilizando de forma autónoma aquellas repeticiones que se realicen de forma satisfactoria.\\
+
+No será hasta el próximo capítulo (Implementación) donde se entre en detalles sobre cómo el dispositivo móvil hace uso de los sensores de movimiento para realizar los cálculos que determinarán si debe contabilizarse una repetición o no.\\
+
+De las seis pruebas que componen la batería Senior Fitness Test, solo tres de ellas harán uso de los sensores de movimiento del dispositivo:
+
+\begin{itemize}
+\item Fuerza de piernas.
+\item Fuerza de brazos.
+\item Resistencia aeróbica.
+\end{itemize}
+
+\subsection{Fuerza de piernas (F\_Pna)}
+
+El dispositivo móvil debe ser capaz de contabilizar las repeticiones durante la realización del ejercicio estando éste colocado sobre el muslo de la persona que realiza la prueba. Quedará colocado con la pantalla hacia arriba y de forma que sea legible por la persona cuando ésta se encuentra en el punto de partida del ejercicio, esto es, estando sentada. En la siguiente imagen se ilustra la colocación del dispositivo móvil durante la realización del test:
+
+\figura{dispositivo_movil_piernas.png}{scale=0.6}{Colocación del dispositivo móvil para el test Fuerza de piernas}{dispositivo_movil_piernas}{H}
+
+\subsection{Fuerza de brazos (F\_Br)}
+
+El dispositivo móvil debe ser capaz de contabilizar las repeticiones durante la realización del ejercicio estando éste colocado sobre el antebrazo de la persona que realiza la prueba. Quedará colocado con la pantalla hacia arriba y de forma que sea legible por la persona cuando ésta se encuentra en el punto de partida del ejercicio, esto es, con el brazo extendido. En la siguiente imagen se ilustra la colocación del dispositivo móvil durante la realización del test:
+
+\figura{dispositivo_movil_brazos.png}{scale=0.6}{Colocación del dispositivo móvil para el test Fuerza de brazos}{dispositivo_movil_brazos}{H}
+
+\subsection{Resistencia aeróbica (Resist)}
+
+Al igual que para el test Fuerza de piernas, el dispositivo móvil debe ser capaz de contabilizar las repeticiones durante la realización del ejercicio estando éste colocado sobre el muslo de la persona que realiza la prueba, quedando colocado con la pantalla hacia arriba y de forma que sea legible por la persona cuando ésta se encuentra en el punto de partida del ejercicio (estando de pie en este caso).\\
+
+Cabe destacar que, aunque el dispositivo quede colocado de igual forma que para el ejercicio Fuerza de piernas tal y como ya hemos comentado, diferirá la lectura que el dispositivo móvil tendrá que realizar sobre el movimiento ejecutado, dado que el sentido del movimiento (posición inicial y posición final) no será el mismo para ambos tests.
 
 \section{Diseño de clases UML}
 
