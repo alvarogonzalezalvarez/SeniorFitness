@@ -355,7 +355,7 @@ Para el diseño de componentes se realizarán los diseños de los diagramas de s
 
 Como es sabido de los diagramas de secuencia, éstos representan los flujos de comunicación que se dan para un determinado caso de uso del sistema, por lo que, dados los casos de uso desarrollados en el capítulo de análisis de requisitos para la aplicación que nos ocupa, se procederá a diseñarlos en base a estos diagramas.\\
 
-Cabe destacar que no todos los posibles diagramas de secuencia aparecerán, sino que nos centraremos en aquellos casos de uso de la aplicación que se consideren mas relevantes.
+Cabe destacar que no todos los posibles diagramas de secuencia aparecerán, sino que nos centraremos en aquellos casos de uso de la aplicación que se consideren mas relevantes, de forma que solo se mostrarán aquellos que impliquen algún tipo de cambio en el sistema.
 
 \subsubsection{Diagrama de secuencia de registro de persona}
 
@@ -374,4 +374,12 @@ El diagrama de secuencia para el comienzo de sesión en la aplicación constituy
 Cuando se accede a la pantalla de selección de persona, el sistema hace una consulta a la base de datos para recuperar el listado de personas que están dadas de alta en la aplicación, y se mostrarán al usuario para que se proceda con la selección de la persona para la cual se creará la sesión en el siguiente paso.\\
 
 \figura{diagrama_secuencia_comienzo_sesion.png}{scale=0.6}{Diagrama de secuencia de registro de comienzo de sesión}{diagrama_secuencia_comienzo_sesion}{H}
+
+\subsubsection{Diagrama de secuencia de selección de la persona que comenzará la sesión}
+
+Partiendo de la base del diagrama de secuencia anterior, en el cual se ha obtenido el listado de personas dadas de alta en el sistema y se han mostrado al usuario, el siguiente paso consistirá en la selección de la persona para la cual se creará la sesión en el sistema.\\
+
+El sistema asociará a la persona una nueva sesión en caso de que no tuviese ninguna otra en progreso. En el caso de que el usuario ya tuviese una sesión en progreso, se continuará con la misma, mostrando la pantalla de selección de tests al usuario con el progreso y los resultados obtenidos hasta el momento.\\
+
+\figura{diagrama_secuencia_seleccion_persona.png}{scale=0.6}{Diagrama de secuencia de selección de la persona que comenzará la sesión}{diagrama_secuencia_seleccion_persona}{H}
 

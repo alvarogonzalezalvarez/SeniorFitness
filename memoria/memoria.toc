@@ -88,17 +88,18 @@
 \contentsline {subsection}{\numberline {5.8.1}Diagramas de secuencia}{72}{subsection.5.8.1}
 \contentsline {subsubsection}{Diagrama de secuencia de registro de persona}{72}{section*.105}
 \contentsline {subsubsection}{Diagrama de secuencia de comienzo de sesi\IeC {\'o}n}{73}{section*.107}
-\contentsline {chapter}{Bibliografia y referencias}{75}{figure.caption.108}
-\contentsline {chapter}{GNU Free Documentation License}{75}{section*.110}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{75}{section*.111}
-\contentsline {section}{2. VERBATIM COPYING}{76}{section*.112}
-\contentsline {section}{3. COPYING IN QUANTITY}{76}{section*.113}
-\contentsline {section}{4. MODIFICATIONS}{77}{section*.114}
-\contentsline {section}{5. COMBINING DOCUMENTS}{78}{section*.115}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{79}{section*.116}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{79}{section*.117}
-\contentsline {section}{8. TRANSLATION}{79}{section*.118}
-\contentsline {section}{9. TERMINATION}{79}{section*.119}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{80}{section*.120}
-\contentsline {section}{11. RELICENSING}{80}{section*.121}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{80}{section*.122}
+\contentsline {subsubsection}{Diagrama de secuencia de selecci\IeC {\'o}n de la persona que comenzar\IeC {\'a} la sesi\IeC {\'o}n}{73}{section*.109}
+\contentsline {chapter}{Bibliografia y referencias}{75}{figure.caption.110}
+\contentsline {chapter}{GNU Free Documentation License}{75}{section*.112}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{75}{section*.113}
+\contentsline {section}{2. VERBATIM COPYING}{76}{section*.114}
+\contentsline {section}{3. COPYING IN QUANTITY}{76}{section*.115}
+\contentsline {section}{4. MODIFICATIONS}{77}{section*.116}
+\contentsline {section}{5. COMBINING DOCUMENTS}{78}{section*.117}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{79}{section*.118}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{79}{section*.119}
+\contentsline {section}{8. TRANSLATION}{79}{section*.120}
+\contentsline {section}{9. TERMINATION}{79}{section*.121}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{80}{section*.122}
+\contentsline {section}{11. RELICENSING}{80}{section*.123}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{80}{section*.124}
