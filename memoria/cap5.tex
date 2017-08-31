@@ -383,3 +383,19 @@ El sistema asociará a la persona una nueva sesión en caso de que no tuviese ni
 
 \figura{diagrama_secuencia_seleccion_persona.png}{scale=0.6}{Diagrama de secuencia de selección de la persona que comenzará la sesión}{diagrama_secuencia_seleccion_persona}{H}
 
+\subsubsection{Diagrama de secuencia de detección de movimiento}
+
+El diagrama de secuencia para la detección de movimiento constituye el flujo de comunicación que comienza una vez el usuario pulsa sobre el botón START de cualquiera de los siguientes tests de la batería de pruebas Senior Fitness Test:
+
+\begin{itemize}
+\item Fuerza de piernas.
+\item Fuerza de brazos.
+\item Resistencia aeróbica.
+\end{itemize}
+
+En ese momento en el que la persona ya puede comenzar a hacer los movimientos requeridos por el ejercicio, la aplicación será capaz de ir contabilizando las repeticiones hechas de forma satisfactoria.\\
+
+Cuando se pulsa sobre el botón START, se activará el listener que permanece a la escucha de los sensores del dispositivo móvil, capturando el movimiento y haciendo los cálculos necesarios para determinar si el ejercicio se ha realizado correctamente o no. También se irá actualizando en pantalla el número de repeticiones contabilizadas, y se emitirá un sonido cada vez que se realice un incremento de las mismas.\\
+
+\figura{diagrama_secuencia_deteccion_movimiento.png}{scale=0.6}{Diagrama de secuencia de detección de movimiento}{diagrama_secuencia_deteccion_movimiento}{H}
+
