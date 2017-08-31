@@ -356,3 +356,14 @@ Para el diseño de componentes se realizarán los diseños de los diagramas de s
 Como es sabido de los diagramas de secuencia, éstos representan los flujos de comunicación que se dan para un determinado caso de uso del sistema, por lo que, dados los casos de uso desarrollados en el capítulo de análisis de requisitos para la aplicación que nos ocupa, se procederá a diseñarlos en base a estos diagramas.\\
 
 Cabe destacar que no todos los posibles diagramas de secuencia aparecerán, sino que nos centraremos en aquellos casos de uso de la aplicación que se consideren mas relevantes.
+
+\subsubsection{Diagrama de secuencia de registro de persona}
+
+El diagrama de secuencia para el registro o alta de persona en la aplicación constituye el flujo de comunicación que comienza una vez el usuario pulsa sobre el botón de registro de persona, que lleva a la pantalla donde se encuentra el formulario de datos de registro. En esta página, el usuario rellena los datos y seguidamente pulsa el botón Guardar.\\
+
+Al hacer esto, se ejecutará la función de la activity que nos encontramos encargada de validar los datos introducidos por el usuario. Seguidamente, consultará en la base de datos del sistema si el usuario ya existe en el sistema.\\
+
+Tras la respuesta obtenida, se procede con la inserción de los datos en la base de datos y finalmente se redirige al usuario a la pantalla principal de la aplicación.
+
+\figura{diagrama_secuencia_registro.png}{scale=0.6}{Diagrama de secuencia de registro de persona}{diagrama_secuencia_registro}{H}
+
