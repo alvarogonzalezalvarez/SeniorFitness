@@ -361,7 +361,7 @@ Cabe destacar que no todos los posibles diagramas de secuencia aparecerán, sino
 
 El diagrama de secuencia para el registro o alta de persona en la aplicación constituye el flujo de comunicación que comienza una vez el usuario pulsa sobre el botón de registro de persona, que lleva a la pantalla donde se encuentra el formulario de datos de registro. En esta página, el usuario rellena los datos y seguidamente pulsa el botón Guardar.\\
 
-Al hacer esto, se ejecutará la función de la activity que nos encontramos encargada de validar los datos introducidos por el usuario. Seguidamente, consultará en la base de datos del sistema si el usuario ya existe en el sistema.\\
+Al hacer esto, se ejecutará la función de la activity en la que nos encontramos encargada de validar los datos introducidos por el usuario. Seguidamente, consultará en la base de datos del sistema si el usuario ya existe en el sistema.\\
 
 Tras la respuesta obtenida, se procede con la inserción de los datos en la base de datos y finalmente se redirige al usuario a la pantalla principal de la aplicación.
 
@@ -399,3 +399,10 @@ Cuando se pulsa sobre el botón START, se activará el listener que permanece a 
 
 \figura{diagrama_secuencia_deteccion_movimiento.png}{scale=0.6}{Diagrama de secuencia de detección de movimiento}{diagrama_secuencia_deteccion_movimiento}{H}
 
+\subsubsection{Diagrama de secuencia de guardado de resultado}
+
+El diagrama de secuencia para el guardado de resultado constituye el flujo de comunicación que comienza una vez el usuario pulsa sobre el botón GUARDAR, que aparece en las pantallas de test una vez se ha finalizado la realización del mismo o se ha completado la información requerida.\\
+
+Al hacer esto, se insertará en el sistema el resultado asociado al test, a la sesión y al usuario que acaba de completarlo y, seguidamente, llevará al usuario a la pantalla de selección de test, donde se mostrará el estado actualizado de la prueba que se acaba de completar junto al resultado guardado.\\
+
+\figura{diagrama_secuencia_resultado.png}{scale=0.6}{Diagrama de secuencia de guardado de resultado}{diagrama_secuencia_resultado}{H}
