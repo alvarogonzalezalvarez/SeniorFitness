@@ -84,19 +84,19 @@
 \contentsline {subsection}{\numberline {5.6.2}Fuerza de brazos (F\_Br)}{69}{subsection.5.6.2}
 \contentsline {subsection}{\numberline {5.6.3}Resistencia aer\IeC {\'o}bica (Resist)}{70}{subsection.5.6.3}
 \contentsline {section}{\numberline {5.7}Dise\IeC {\~n}o de clases UML}{70}{section.5.7}
-\contentsline {section}{\numberline {5.8}Dise\IeC {\~n}o de componentes}{71}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}Diagramas de secuencia}{71}{subsection.5.8.1}
+\contentsline {section}{\numberline {5.8}Dise\IeC {\~n}o de componentes}{72}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Diagramas de secuencia}{72}{subsection.5.8.1}
 \contentsline {chapter}{Bibliografia y referencias}{73}{subsection.5.8.1}
-\contentsline {chapter}{GNU Free Documentation License}{73}{section*.105}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{73}{section*.106}
-\contentsline {section}{2. VERBATIM COPYING}{74}{section*.107}
-\contentsline {section}{3. COPYING IN QUANTITY}{74}{section*.108}
-\contentsline {section}{4. MODIFICATIONS}{75}{section*.109}
-\contentsline {section}{5. COMBINING DOCUMENTS}{76}{section*.110}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{77}{section*.111}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{77}{section*.112}
-\contentsline {section}{8. TRANSLATION}{77}{section*.113}
-\contentsline {section}{9. TERMINATION}{77}{section*.114}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{78}{section*.115}
-\contentsline {section}{11. RELICENSING}{78}{section*.116}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{78}{section*.117}
+\contentsline {chapter}{GNU Free Documentation License}{73}{section*.106}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{73}{section*.107}
+\contentsline {section}{2. VERBATIM COPYING}{74}{section*.108}
+\contentsline {section}{3. COPYING IN QUANTITY}{74}{section*.109}
+\contentsline {section}{4. MODIFICATIONS}{75}{section*.110}
+\contentsline {section}{5. COMBINING DOCUMENTS}{76}{section*.111}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{77}{section*.112}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{77}{section*.113}
+\contentsline {section}{8. TRANSLATION}{77}{section*.114}
+\contentsline {section}{9. TERMINATION}{77}{section*.115}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{78}{section*.116}
+\contentsline {section}{11. RELICENSING}{78}{section*.117}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{78}{section*.118}
