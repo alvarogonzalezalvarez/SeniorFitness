@@ -94,19 +94,21 @@
 \contentsline {chapter}{\numberline {6}Implementaci\IeC {\'o}n del sistema}{77}{chapter.6}
 \contentsline {section}{\numberline {6.1}Soluci\IeC {\'o}n propuesta}{77}{section.6.1}
 \contentsline {section}{\numberline {6.2}Entorno de construcci\IeC {\'o}n}{77}{section.6.2}
-\contentsline {section}{\numberline {6.3}C\IeC {\'o}digo fuente}{77}{section.6.3}
-\contentsline {section}{\numberline {6.4}Detecci\IeC {\'o}n de movimiento}{77}{section.6.4}
-\contentsline {chapter}{Bibliografia y referencias}{79}{section.6.4}
-\contentsline {chapter}{GNU Free Documentation License}{81}{section*.117}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{81}{section*.118}
-\contentsline {section}{2. VERBATIM COPYING}{82}{section*.119}
-\contentsline {section}{3. COPYING IN QUANTITY}{82}{section*.120}
-\contentsline {section}{4. MODIFICATIONS}{83}{section*.121}
-\contentsline {section}{5. COMBINING DOCUMENTS}{84}{section*.122}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{85}{section*.123}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{85}{section*.124}
-\contentsline {section}{8. TRANSLATION}{85}{section*.125}
-\contentsline {section}{9. TERMINATION}{85}{section*.126}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{86}{section*.127}
-\contentsline {section}{11. RELICENSING}{86}{section*.128}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{86}{section*.129}
+\contentsline {subsection}{\numberline {6.2.1}Android Studio}{78}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Software Development Kit}{79}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}C\IeC {\'o}digo fuente}{79}{section.6.3}
+\contentsline {section}{\numberline {6.4}Detecci\IeC {\'o}n de movimiento}{79}{section.6.4}
+\contentsline {chapter}{Bibliografia y referencias}{81}{section.6.4}
+\contentsline {chapter}{GNU Free Documentation License}{83}{section*.118}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{83}{section*.119}
+\contentsline {section}{2. VERBATIM COPYING}{84}{section*.120}
+\contentsline {section}{3. COPYING IN QUANTITY}{84}{section*.121}
+\contentsline {section}{4. MODIFICATIONS}{85}{section*.122}
+\contentsline {section}{5. COMBINING DOCUMENTS}{86}{section*.123}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{87}{section*.124}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{87}{section*.125}
+\contentsline {section}{8. TRANSLATION}{87}{section*.126}
+\contentsline {section}{9. TERMINATION}{87}{section*.127}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{88}{section*.128}
+\contentsline {section}{11. RELICENSING}{88}{section*.129}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{88}{section*.130}

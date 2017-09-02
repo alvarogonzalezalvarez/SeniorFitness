@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{website:androidstudio}
+{Android Developers}.
+\newblock {Android Studio}.
+\newblock
+  \url{https://developer.android.com/studio/intro/index.html#project_structure}.
+
 \bibitem{website:git}
 GIT.
 \newblock {Documentation}.
@@ -14,6 +20,12 @@ GIT.
 INE.
 \newblock {Instituto Nacional de Estadística}.
 \newblock \url{http://www.ine.es}.
+
+\bibitem{website:cuota}
+{Kantar Worldpanel ComTech}.
+\newblock {Cuota de mercado de smartphones en España}.
+\newblock
+  \url{http://es.kantar.com/tech/móvil/2017/junio-2017-cuota-de-mercado-de-smartphones-en-españa-2017/}.
 
 \bibitem{mitt04}
 C.~Rikli, R. y~Jones.

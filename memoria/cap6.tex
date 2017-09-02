@@ -11,7 +11,52 @@ En este capítulo vamos a describir y explicar los detalles de la implementació
 
 \section{Solución propuesta}
 
+Debido a los objetivos y requisitos definidos en las anteriores secciones del documento, ya desde un primer momento se antojaba necesario realizar la implementación de una aplicación móvil, por lo que disponíamos de dos opciones a considerar: hacer una aplicación Android o IOS.\\
+
+Bajo esta disyuntiva, los factores que nos llevaron a tomar la decisión de implementar una aplicación móvil Android fueron los siguientes:
+
+\begin{itemize}
+\item Como bien es sabido, la base de Android es Java. Java es uno de los lenguajes más universales y extendidos en el mundo del desarrollo, así que un grandísimo número de desarrolladores lo encontrarán más amigable. Esto, sumado a que desde 2008 me dedico profesionalmente al desarrollo de aplicaciones web con Java, fue un factor determinante a la hora tomar la decisión.
+\item Android es un sistema más abierto y "libre" para el desarrollador, permitiéndole tener en una app un control mucho más amplio del terminal que en IOS.
+\item La disponibilidad de las herramientas para desarrollar la aplicación también influyó en la decisión. Desarrollar una aplicación IOS requiere hacer uso de un ordenador Mac y de un iPhone para el testeo de la aplicación en el hardware real; herramientas que, teniendo en cuenta que necesitamos hacer uso de los sensores hardware del dispositivo, habría sido necesario adquirir para acometer el desarrollo.
+\item Android copa actualmente el 92\% del mercado español \cite{website:cuota}, por lo que por estadística podría hacer uso de la aplicación un público más amplio.
+\end{itemize}
+
+Todos estos factores, sumados a la baja curva de aprendizaje necesaria debido principalmente a mi experiencia previa con Java, nos llevaron a seleccionar Android como plataforma de desarrollo.
+
 \section{Entorno de construcción}
+
+Una vez que se ha llegado a la conclusión anterior de implementar la aplicación móvil haciendo uso de Android, se procede a analizar el entorno de construcción que permitirá el desarrollo de todo el sistema.
+
+\subsection{Android Studio}
+
+Para el desarrollo de la aplicación haremos uso del entorno de desarrollo integrado (IDE) Android Studio \cite{website:androidstudio}. Android Studio es el entorno de desarrollo integrado oficial para el desarrollo de aplicaciones para Android y se basa en IntelliJ IDEA.\\
+
+Entre las muchas ventajas que nos ofrece podemos contar con una vista ordenada y modular de los archivos que componen nuestro proyecto. La vista mostrada no se corresponde con la forma original de los archivos en disco, sino que está pensada para optimizar el trabajo.\\
+
+Integrado en nuestro entorno de trabajo, podemos encontrar un sistema para el control de versiones, que incluye soporte para los repositorios más conocidos (Git, Subversion, etc). En nuestro caso se integró con Git, que es el software de control de versiones seleccionado para el presente proyecto, como ya se indicó anteriormente en el documento.\\
+
+La interfaz gráfica está dividida de forma que se muestra una gran cantidad de información de forma eficiente. Además es totalmente personalizable, permitiendo al usuario mostrar y ocultar secciones según se requiera. Android Studio sigue el contexto de trabajo del usuario, mostrando las ventanas con las herramientas que considera oportunas en cada instante.\\
+
+A continuación se muestra un ejemplo de interfaz gráfica:
+
+\figura{androidstudio.png}{scale=0.34}{Interfaz de Android Studio}{androidstudio}{H}
+
+\begin{enumerate}
+\item Barra de herramientas: Permite realizar una amplia de gama de acciones: edición, búsqueda, iniciar aplicación, debug, etc. 
+\item Barra de navegación: Permite navegar entre los archivos abiertos para facilitar su edición.
+\item Ventana de edición: Permite modificar los diferentes archivos.
+\item Ventana de herramientas: Proporciona acceso a la gestión del proyecto, control de versiones, consola, etc.
+\item Barra de estado: Muestra el estado del proyecto, así como mensajes y avisos.
+\end{enumerate}
+
+Para finalizar nuestra visión de Android Studio, finalizaremos hablando de Gradle. Gradle es un sistema abierto que automatiza la compilación del código. Utiliza un grafo dirigido acíclico para determinar en qué orden se pueden ejecutar las tareas. Android Studio incorpora esta tecnología para facilitar la reutilización de código permitiendo generar APKs con distintas funcionalidades partiendo de un mismo proyecto.
+
+\subsection{Android Software Development Kit}
+
+Android SDK o Software Development Kit es un conjunto de herramientas para desarrollar, compilar y depurar aplicaciones para el sistema operativo Android, en definitiva, es una API que además de herramientas para el desarrollo, proporciona soporte técnico, ejemplos y una buena documentación.\\
+
+El SDK incluye un emulador de dispositivos Android, lo que permite probar las aplicaciones de forma rápida y eficiente. Los parámetros de nuestro emulador pueden configurarse de forma que podemos elegir las características que tendrá nuestro dispositivo, como la memoria principal, el tamaño del dispositivo o la versión de Android, lo que permite al programador probar su código en una infinidad de dispositivos sin necesidad de adquirirlos.
 
 \section{Código fuente}
 

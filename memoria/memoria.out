@@ -62,19 +62,21 @@
 \BOOKMARK [0][-]{chapter.6}{Implementaci\363n del sistema}{}% 62
 \BOOKMARK [1][-]{section.6.1}{Soluci\363n propuesta}{chapter.6}% 63
 \BOOKMARK [1][-]{section.6.2}{Entorno de construcci\363n}{chapter.6}% 64
-\BOOKMARK [1][-]{section.6.3}{C\363digo fuente}{chapter.6}% 65
-\BOOKMARK [1][-]{section.6.4}{Detecci\363n de movimiento}{chapter.6}% 66
-\BOOKMARK [0][-]{section.6.4}{Bibliografia y referencias}{}% 67
-\BOOKMARK [0][-]{section*.117}{GNU Free Documentation License}{}% 68
-\BOOKMARK [1][-]{section*.118}{1. APPLICABILITY AND DEFINITIONS}{section*.117}% 69
-\BOOKMARK [1][-]{section*.119}{2. VERBATIM COPYING}{section*.117}% 70
-\BOOKMARK [1][-]{section*.120}{3. COPYING IN QUANTITY}{section*.117}% 71
-\BOOKMARK [1][-]{section*.121}{4. MODIFICATIONS}{section*.117}% 72
-\BOOKMARK [1][-]{section*.122}{5. COMBINING DOCUMENTS}{section*.117}% 73
-\BOOKMARK [1][-]{section*.123}{6. COLLECTIONS OF DOCUMENTS}{section*.117}% 74
-\BOOKMARK [1][-]{section*.124}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.117}% 75
-\BOOKMARK [1][-]{section*.125}{8. TRANSLATION}{section*.117}% 76
-\BOOKMARK [1][-]{section*.126}{9. TERMINATION}{section*.117}% 77
-\BOOKMARK [1][-]{section*.127}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.117}% 78
-\BOOKMARK [1][-]{section*.128}{11. RELICENSING}{section*.117}% 79
-\BOOKMARK [1][-]{section*.129}{ADDENDUM: How to use this License for your documents}{section*.117}% 80
+\BOOKMARK [2][-]{subsection.6.2.1}{Android Studio}{section.6.2}% 65
+\BOOKMARK [2][-]{subsection.6.2.2}{Software Development Kit}{section.6.2}% 66
+\BOOKMARK [1][-]{section.6.3}{C\363digo fuente}{chapter.6}% 67
+\BOOKMARK [1][-]{section.6.4}{Detecci\363n de movimiento}{chapter.6}% 68
+\BOOKMARK [0][-]{section.6.4}{Bibliografia y referencias}{}% 69
+\BOOKMARK [0][-]{section*.118}{GNU Free Documentation License}{}% 70
+\BOOKMARK [1][-]{section*.119}{1. APPLICABILITY AND DEFINITIONS}{section*.118}% 71
+\BOOKMARK [1][-]{section*.120}{2. VERBATIM COPYING}{section*.118}% 72
+\BOOKMARK [1][-]{section*.121}{3. COPYING IN QUANTITY}{section*.118}% 73
+\BOOKMARK [1][-]{section*.122}{4. MODIFICATIONS}{section*.118}% 74
+\BOOKMARK [1][-]{section*.123}{5. COMBINING DOCUMENTS}{section*.118}% 75
+\BOOKMARK [1][-]{section*.124}{6. COLLECTIONS OF DOCUMENTS}{section*.118}% 76
+\BOOKMARK [1][-]{section*.125}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.118}% 77
+\BOOKMARK [1][-]{section*.126}{8. TRANSLATION}{section*.118}% 78
+\BOOKMARK [1][-]{section*.127}{9. TERMINATION}{section*.118}% 79
+\BOOKMARK [1][-]{section*.128}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.118}% 80
+\BOOKMARK [1][-]{section*.129}{11. RELICENSING}{section*.118}% 81
+\BOOKMARK [1][-]{section*.130}{ADDENDUM: How to use this License for your documents}{section*.118}% 82
