@@ -60,6 +60,75 @@ El SDK incluye un emulador de dispositivos Android, lo que permite probar las ap
 
 \section{Código fuente}
 
+El código fuente desarrollado de la aplicación está alojado en el repositorio GitHub:\\ 
+
+\url{https://github.com/alvarogonzalezalvarez/SeniorFitness}\\
+
+A continuación se muestra una lista con las diferentes clases Java implementadas durante la realización de la aplicación. Junto a cada una de las clases habrá una pequeña descripción sobre la labor que desempeña cada una.
+
+\subsection{Activities}
+
+Una Activity es un componente de la aplicación que contiene una pantalla con la que los usuarios pueden interactuar para realizar una acción. A cada actividad se le asigna una ventana en la que se pinta la interfaz de usuario asociada. A continuación se listan las activities que se han implementado:
+
+\begin{itemize}
+\item \textbf{AddUserActivity:} Activity que contiene la lógica de negocio referente a la pantalla de registro/alta de personas. 
+\item \textbf{AgilidadActivity:} Activity que contiene la lógica de negocio referente a la pantalla del test Agilidad de la batería de pruebas Senior Fitness Test. Esta actividad extiende a ExerciseActivity.
+\item \textbf{ExerciseActivity:} Activity que contiene toda la lógica de negocio común a todos los tests de la batería de pruebas Senior Fitness Test. Provee los métodos y funciones listas para su uso o sobreescritura por cada uno de los tests.
+\item \textbf{FlexibilidadBrazosActivity:} Activity que contiene la lógica de negocio referente a la pantalla del test Flexibilidad de brazos de la batería de pruebas Senior Fitness Test. Esta actividad extiende a ExerciseActivity.
+\item \textbf{FlexibilidadPiernasActivity:} Activity que contiene la lógica de negocio referente a la pantalla del test Flexibilidad de piernas de la batería de pruebas Senior Fitness Test. Esta actividad extiende a ExerciseActivity.
+\item \textbf{FuerzaBrazosActivity:} Activity que contiene la lógica de negocio referente a la pantalla del test Fuerza de brazos de la batería de pruebas Senior Fitness Test. Esta actividad extiende a ExerciseActivity.
+\item \textbf{FuerzaPiernasActivity:} Activity que contiene la lógica de negocio referente a la pantalla del test Fuerza de piernas de la batería de pruebas Senior Fitness Test. Esta actividad extiende a ExerciseActivity.
+\item \textbf{InfoActivity:} Activity que contiene la lógica de negocio referente a la pantalla de información de los diferentes tests de la batería de pruebas Senior Fitness Test.
+\item \textbf{MainActivity:} Activity que contiene la lógica de negocio referente a la pantalla principal de la aplicación. Esta actividad es la que se lanza por defecto cuando se abre la aplicación.
+\item \textbf{ResistenciaAerobicaActivity:} Activity que contiene la lógica de negocio referente a la pantalla del test Resistencia aeróbica de la batería de pruebas Senior Fitness Test. Esta actividad extiende a ExerciseActivity.
+\item \textbf{ResultsActivity:} Activity que contiene la lógica de negocio referente a la pantalla de resultados mostrada tras finalizar todos los tests de una sesión.
+\item \textbf{SelectTestActivity:} Activity que contiene la lógica de negocio referente a la pantalla de selección de los diferentes tests que componen la batería de pruebas Senior Fitness Test.
+\item \textbf{StartSessionActivity:} Activity que contiene la lógica de negocio referente a la pantalla de selección de la persona que comenzará la sesión de ejercicios.
+\item \textbf{StatsActivity:} Activity que contiene la lógica de negocio referente a la pantalla de estadísticas de una sesión concreta ya completada por la persona para la cual se está visualizando el detalle.
+\item \textbf{UserDetailsActivity:} Activity que contiene la lógica de negocio referente a la pantalla de detalle/historial de usuario.
+\end{itemize}
+
+\subsection{Listeners}
+
+Los listeners o escuchadores son clases usadas para recibir notificaciones procedentes del SensorManager (clase que nos permite acceder a los sensores del dispositivo). A continuación listamos los listeners que se han implementado.
+
+\begin{itemize}
+\item \textbf{ExerciseListener:} Listener que implementa la clase SensorEventListener. Cada vez que hay un evento del sensor usado se invoca el método onSensorChanged, que será el método donde se harán los cálculos necesarios para detectar si el ejercicio se ha realizado de forma satisfactoria. Éste método debe ser implementado por los listeners que extienden de ExerciseListener.
+\item \textbf{FuerzaBrazosListener:} Listener encargado de detectar y leer los movimientos realizados durante la realización del test Fuerza de brazos de la batería de pruebas Senior Fitness Test. Este listener extiende a ExerciseListener.
+\item \textbf{FuerzaPiernasListener:} Listener encargado de detectar y leer los movimientos realizados durante la realización del test Fuerza de piernas de la batería de pruebas Senior Fitness Test. Este listener extiende a ExerciseListener.
+\item \textbf{ResistenciaAerobicaListener:} Listener encargado de detectar y leer los movimientos realizados durante la realización del test Resistencia aeróbica de la batería de pruebas Senior Fitness Test. Este listener extiende a ExerciseListener.
+\end{itemize}
+
+\subsection{Base de Datos}
+
+A continuación se listarán las clases encargadas de la definición, gestión y uso de la base de datos:
+
+\begin{itemize}
+\item \textbf{SeniorFitnessContract:} Clase java donde se definen las tablas usadas y los nombres y tipos de los campos de cada una de las mismas.
+\item \textbf{SeniorFitnessDBHelper:} Clase java que extiende a SQLiteOpenHelper. Se encarga de gestionar la creación y manipulación de la base de datos, así como del versionado de la misma.
+\end{itemize}
+
+\subsection{Modelo}
+
+Se listarán a continuación las clases Java que representan el modelo de la aplicación:
+
+\begin{itemize}
+\item \textbf{Result:} Clase java que representa los resultados obtenidos, asociado a un test, a una sesión y a una persona.
+\item \textbf{Session:} Clase java que representa a las sesiones de tests que realizan las personas dadas de alta en la aplicación.
+\item \textbf{Test:} Clase java que representa a los diferentes tests que componen la batería de pruebas Senior Fitness Test.
+\item \textbf{User:} Clase java que representa a las personas dadas de alta en la aplicación.
+\end{itemize}
+
+\subsection{Adapters}
+
+Un adapter es un objeto que funciona como puente entre un AdapterView y los correspondientes datos para esa vista, proporcionando acceso a los datos del elemento. También es el encargado de construir una vista (View) por cada elemento del conjunto de datos. A continuación listamos los adapters implementados para la aplicación:
+
+\begin{itemize}
+\item \textbf{SessionsAdapter:} Adapter utilizado para convertir en una View independiente cada elemento contenido en el listado de sesiones recuperadas para una persona concreta y mostradas en la pantalla de detalle de persona.
+\item \textbf{TestsAdapter:} Adapter utilizado para convertir en una View independiente cada elemento contenido en el listado de tests mostrados en la pantalla de selección de test.
+\item \textbf{UsersAdapter:} Adapter utilizado para convertir en una View independiente cada elemento contenido en el listado de personas dadas de alta en la aplicación, y que se muestran en la pantalla principal y en la pantalla de selección de persona.
+\end{itemize}
+
 \section{Detección de movimiento}
 
 
