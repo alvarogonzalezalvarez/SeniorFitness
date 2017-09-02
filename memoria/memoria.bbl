@@ -1,8 +1,28 @@
 \begin{thebibliography}{1}
 
+\bibitem{website:git}
+GIT.
+\newblock {Documentation}.
+\newblock \url{https://git-scm.com/documentation}.
+
+\bibitem{website:android}
+{Google}.
+\newblock {Android Developers}.
+\newblock \url{https://developer.android.com/index.html}.
+
+\bibitem{website:ine}
+INE.
+\newblock {Instituto Nacional de Estadística}.
+\newblock \url{http://www.ine.es}.
+
 \bibitem{mitt04}
 C.~Rikli, R. y~Jones.
 \newblock {\em Senior fitness test manual}.
 \newblock Human Kinetics, 2001.
+
+\bibitem{website:sqlite}
+SQLite.
+\newblock {Documentation}.
+\newblock \url{https://www.sqlite.org/docs.html}.
 
 \end{thebibliography}

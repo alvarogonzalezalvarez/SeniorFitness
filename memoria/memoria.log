@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  2 SEP 2017 15:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  2 SEP 2017 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2037,7 +2037,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 50.
- <./imagenes/fuerza_piernas.png, id=671, 241.90375pt x 195.73125pt>
+ <./imagenes/fuerza_piernas.png, id=673, 241.90375pt x 195.73125pt>
 File: ./imagenes/fuerza_piernas.png Graphic file (type png)
 
 <use ./imagenes/fuerza_piernas.png>
@@ -2071,14 +2071,14 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 58.
  [6]
-<./imagenes/fuerza_brazos.png, id=682, 241.90375pt x 194.7275pt>
+<./imagenes/fuerza_brazos.png, id=684, 241.90375pt x 194.7275pt>
 File: ./imagenes/fuerza_brazos.png Graphic file (type png)
 
 <use ./imagenes/fuerza_brazos.png>
 Package pdftex.def Info: ./imagenes/fuerza_brazos.png used on input line 64.
 (pdftex.def)             Requested size: 241.90315pt x 194.727pt.
 
-<./imagenes/resistencia_aerobica.png, id=683, 241.90375pt x 195.73125pt>
+<./imagenes/resistencia_aerobica.png, id=685, 241.90375pt x 195.73125pt>
 File: ./imagenes/resistencia_aerobica.png Graphic file (type png)
 
 <use ./imagenes/resistencia_aerobica.png>
@@ -2113,7 +2113,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 70.
  [7 <./imagenes/fuerza_piernas.png> <./imagenes/fuerza_brazos.png>]
-<./imagenes/flexibilidad_piernas.png, id=693, 242.9075pt x 194.7275pt>
+<./imagenes/flexibilidad_piernas.png, id=695, 242.9075pt x 194.7275pt>
 File: ./imagenes/flexibilidad_piernas.png Graphic file (type png)
 
 <use ./imagenes/flexibilidad_piernas.png>
@@ -2121,7 +2121,7 @@ Package pdftex.def Info: ./imagenes/flexibilidad_piernas.png used on input line
  76.
 (pdftex.def)             Requested size: 242.90689pt x 194.727pt.
 
-<./imagenes/flexibilidad_brazos.png, id=694, 240.9pt x 225.84375pt>
+<./imagenes/flexibilidad_brazos.png, id=696, 240.9pt x 225.84375pt>
 File: ./imagenes/flexibilidad_brazos.png Graphic file (type png)
 
 <use ./imagenes/flexibilidad_brazos.png>
@@ -2154,7 +2154,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 82.
  [8 <./imagenes/resistencia_aerobica.png> <./imagenes/flexibilidad_piernas.png>
 ]
-<./imagenes/agilidad.png, id=703, 241.90375pt x 225.84375pt>
+<./imagenes/agilidad.png, id=705, 241.90375pt x 225.84375pt>
 File: ./imagenes/agilidad.png Graphic file (type png)
 
 <use ./imagenes/agilidad.png>
@@ -2508,7 +2508,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 140.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 140.
-[15] <./imagenes/seniorfitness_gantt.png, id=736, 431.6125pt x 1246.6575pt>
+[15] <./imagenes/seniorfitness_gantt.png, id=738, 431.6125pt x 1246.6575pt>
 File: ./imagenes/seniorfitness_gantt.png Graphic file (type png)
 
 <use ./imagenes/seniorfitness_gantt.png>
@@ -2732,7 +2732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<./imagenes/casosdeusoUML.png, id=760, 394.47375pt x 1054.94125pt>
+<./imagenes/casosdeusoUML.png, id=762, 394.47375pt x 1054.94125pt>
 File: ./imagenes/casosdeusoUML.png Graphic file (type png)
 
 <use ./imagenes/casosdeusoUML.png>
@@ -2766,7 +2766,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 66.
  [21]
-<./imagenes/casosdeusoUMLfuerza_resistencia.png, id=766, 577.15625pt x 346.2937
+<./imagenes/casosdeusoUMLfuerza_resistencia.png, id=768, 577.15625pt x 346.2937
 5pt>
 File: ./imagenes/casosdeusoUMLfuerza_resistencia.png Graphic file (type png)
  <use ./imagenes/casosdeusoUMLfuerza_resistencia.png>
@@ -2840,7 +2840,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 72.
  [23 <./imagenes/casosdeusoUMLfuerza_resistencia.png>]
-<./imagenes/casosdeusoUMLagilidad.png, id=776, 608.2725pt x 318.18875pt>
+<./imagenes/casosdeusoUMLagilidad.png, id=778, 608.2725pt x 318.18875pt>
 File: ./imagenes/casosdeusoUMLagilidad.png Graphic file (type png)
 
 <use ./imagenes/casosdeusoUMLagilidad.png>
@@ -2848,7 +2848,7 @@ Package pdftex.def Info: ./imagenes/casosdeusoUMLagilidad.png used on input lin
 e 74.
 (pdftex.def)             Requested size: 364.96632pt x 190.9147pt.
 
-<./imagenes/casosdeusoUMLflexibilidad.png, id=777, 600.2425pt x 110.4125pt>
+<./imagenes/casosdeusoUMLflexibilidad.png, id=779, 600.2425pt x 110.4125pt>
 File: ./imagenes/casosdeusoUMLflexibilidad.png Graphic file (type png)
 
 <use ./imagenes/casosdeusoUMLflexibilidad.png>
@@ -3293,7 +3293,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 795--796
 
  []
 
-<./imagenes/modeloconceptual_er.png, id=844, 754.82pt x 446.66875pt>
+<./imagenes/modeloconceptual_er.png, id=846, 754.82pt x 446.66875pt>
 File: ./imagenes/modeloconceptual_er.png Graphic file (type png)
 
 <use ./imagenes/modeloconceptual_er.png>
@@ -3487,7 +3487,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-<./imagenes/arquitectura_android.png, id=861, 488.57532pt x 395.22656pt>
+<./imagenes/arquitectura_android.png, id=864, 488.57532pt x 395.22656pt>
 File: ./imagenes/arquitectura_android.png Graphic file (type png)
 
 <use ./imagenes/arquitectura_android.png>
@@ -3552,7 +3552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<./imagenes/ciclo_vida_activity.png, id=875, 377.91188pt x 374.90062pt>
+<./imagenes/ciclo_vida_activity.png, id=879, 377.91188pt x 374.90062pt>
 File: ./imagenes/ciclo_vida_activity.png Graphic file (type png)
 
 <use ./imagenes/ciclo_vida_activity.png>
@@ -3584,7 +3584,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 96.
  [44]
-<./imagenes/ciclo_vida_servicio.png, id=881, 322.20375pt x 375.65344pt>
+<./imagenes/ciclo_vida_servicio.png, id=885, 322.20375pt x 375.65344pt>
 File: ./imagenes/ciclo_vida_servicio.png Graphic file (type png)
 
 <use ./imagenes/ciclo_vida_servicio.png>
@@ -3619,7 +3619,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 98.
  [45 <./imagenes/ciclo_vida_activity.png>]
-<./imagenes/content_provider.png, id=887, 413.29407pt x 253.69781pt>
+<./imagenes/content_provider.png, id=891, 413.29407pt x 253.69781pt>
 File: ./imagenes/content_provider.png Graphic file (type png)
 
 <use ./imagenes/content_provider.png>
@@ -3654,7 +3654,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 100.
  [46 <./imagenes/ciclo_vida_servicio.png>]
-<./imagenes/broadcast_receiver.png, id=893, 482.55281pt x 213.04594pt>
+<./imagenes/broadcast_receiver.png, id=897, 482.55281pt x 213.04594pt>
 File: ./imagenes/broadcast_receiver.png Graphic file (type png)
 
 <use ./imagenes/broadcast_receiver.png>
@@ -3691,7 +3691,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 110.
 [47 <./imagenes/content_provider.png> <./imagenes/broadcast_receiver.png>]
-<./imagenes/externalizacion_recursos.png, id=901, 407.27156pt x 323.70938pt>
+<./imagenes/externalizacion_recursos.png, id=905, 407.27156pt x 323.70938pt>
 File: ./imagenes/externalizacion_recursos.png Graphic file (type png)
 
 <use ./imagenes/externalizacion_recursos.png>
@@ -3936,7 +3936,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 211.
 
-<./imagenes/modeloconceptual_er_detail.png, id=918, 341.02406pt x 742.27313pt>
+<./imagenes/modeloconceptual_er_detail.png, id=926, 341.02406pt x 742.27313pt>
 File: ./imagenes/modeloconceptual_er_detail.png Graphic file (type png)
 
 <use ./imagenes/modeloconceptual_er_detail.png>
@@ -4030,7 +4030,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
-<./imagenes/diagrama_pantallas.png, id=928, 837.1275pt x 787.94376pt>
+<./imagenes/diagrama_pantallas.png, id=936, 837.1275pt x 787.94376pt>
 File: ./imagenes/diagrama_pantallas.png Graphic file (type png)
 
 <use ./imagenes/diagrama_pantallas.png>
@@ -4075,7 +4075,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 252.
 
-<./imagenes/pantalla_principal.png, id=933, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_principal.png, id=941, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_principal.png Graphic file (type png)
 
 <use ./imagenes/pantalla_principal.png>
@@ -4123,7 +4123,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 256.
 
-<./imagenes/alta_persona.png, id=938, 1084.05pt x 1927.2pt>
+<./imagenes/alta_persona.png, id=946, 1084.05pt x 1927.2pt>
 File: ./imagenes/alta_persona.png Graphic file (type png)
 
 <use ./imagenes/alta_persona.png>
@@ -4170,7 +4170,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 260.
 
-<./imagenes/detalle_persona.png, id=944, 1084.05pt x 1927.2pt>
+<./imagenes/detalle_persona.png, id=952, 1084.05pt x 1927.2pt>
 File: ./imagenes/detalle_persona.png Graphic file (type png)
 
 <use ./imagenes/detalle_persona.png>
@@ -4218,7 +4218,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 264.
 
-<./imagenes/estadisticas_sesion.png, id=949, 1084.05pt x 1927.2pt>
+<./imagenes/estadisticas_sesion.png, id=957, 1084.05pt x 1927.2pt>
 File: ./imagenes/estadisticas_sesion.png Graphic file (type png)
 
 <use ./imagenes/estadisticas_sesion.png>
@@ -4266,7 +4266,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 268.
 
-<./imagenes/seleccion_persona.png, id=954, 1084.05pt x 1927.2pt>
+<./imagenes/seleccion_persona.png, id=962, 1084.05pt x 1927.2pt>
 File: ./imagenes/seleccion_persona.png Graphic file (type png)
 
 <use ./imagenes/seleccion_persona.png>
@@ -4314,7 +4314,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 272.
 
-<./imagenes/seleccion_test.png, id=959, 1084.05pt x 1927.2pt>
+<./imagenes/seleccion_test.png, id=967, 1084.05pt x 1927.2pt>
 File: ./imagenes/seleccion_test.png Graphic file (type png)
 
 <use ./imagenes/seleccion_test.png>
@@ -4361,7 +4361,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 276.
 
-<./imagenes/informacion_test.png, id=964, 1084.05pt x 1927.2pt>
+<./imagenes/informacion_test.png, id=972, 1084.05pt x 1927.2pt>
 File: ./imagenes/informacion_test.png Graphic file (type png)
 
 <use ./imagenes/informacion_test.png>
@@ -4409,7 +4409,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 280.
 
-<./imagenes/pantalla_fuerza_piernas.png, id=969, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_fuerza_piernas.png, id=977, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_fuerza_piernas.png Graphic file (type png)
 
 <use ./imagenes/pantalla_fuerza_piernas.png>
@@ -4457,7 +4457,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 284.
 
-<./imagenes/pantalla_fuerza_brazos.png, id=975, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_fuerza_brazos.png, id=983, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_fuerza_brazos.png Graphic file (type png)
 
 <use ./imagenes/pantalla_fuerza_brazos.png>
@@ -4505,7 +4505,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 288.
 
-<./imagenes/pantalla_resistencia_aerobica.png, id=980, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_resistencia_aerobica.png, id=989, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_resistencia_aerobica.png Graphic file (type png)
 
 <use ./imagenes/pantalla_resistencia_aerobica.png>
@@ -4553,7 +4553,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 292.
 
-<./imagenes/pantalla_flexibilidad_piernas.png, id=986, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_flexibilidad_piernas.png, id=994, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_flexibilidad_piernas.png Graphic file (type png)
 
 <use ./imagenes/pantalla_flexibilidad_piernas.png>
@@ -4601,7 +4601,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 296.
 
-<./imagenes/pantalla_flexibilidad_brazos.png, id=991, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_flexibilidad_brazos.png, id=999, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_flexibilidad_brazos.png Graphic file (type png)
 
 <use ./imagenes/pantalla_flexibilidad_brazos.png>
@@ -4649,7 +4649,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 300.
 
-<./imagenes/pantalla_agilidad.png, id=996, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_agilidad.png, id=1004, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_agilidad.png Graphic file (type png)
 
 <use ./imagenes/pantalla_agilidad.png>
@@ -4697,7 +4697,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 304.
 
-<./imagenes/pantalla_resultados.png, id=1001, 1084.05pt x 1927.2pt>
+<./imagenes/pantalla_resultados.png, id=1009, 1084.05pt x 1927.2pt>
 File: ./imagenes/pantalla_resultados.png Graphic file (type png)
 
 <use ./imagenes/pantalla_resultados.png>
@@ -4793,7 +4793,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 322.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 322.
-<./imagenes/dispositivo_movil_piernas.png, id=1011, 116.435pt x 296.10625pt>
+<./imagenes/dispositivo_movil_piernas.png, id=1019, 116.435pt x 296.10625pt>
 File: ./imagenes/dispositivo_movil_piernas.png Graphic file (type png)
 
 <use ./imagenes/dispositivo_movil_piernas.png>
@@ -4813,7 +4813,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 328.
 
-<./imagenes/dispositivo_movil_brazos.png, id=1012, 323.2075pt x 250.9375pt>
+<./imagenes/dispositivo_movil_brazos.png, id=1020, 323.2075pt x 250.9375pt>
 File: ./imagenes/dispositivo_movil_brazos.png Graphic file (type png)
 
 <use ./imagenes/dispositivo_movil_brazos.png>
@@ -4889,7 +4889,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-<./imagenes/diagrama_clases_uml.png, id=1018, 539.76656pt x 966.61125pt>
+<./imagenes/diagrama_clases_uml.png, id=1026, 539.76656pt x 966.61125pt>
 File: ./imagenes/diagrama_clases_uml.png Graphic file (type png)
 
 <use ./imagenes/diagrama_clases_uml.png>
@@ -4989,7 +4989,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--365
  []
 
 
-<./imagenes/diagrama_secuencia_registro.png, id=1028, 591.20876pt x 366.36874pt
+<./imagenes/diagrama_secuencia_registro.png, id=1036, 591.20876pt x 366.36874pt
 >
 File: ./imagenes/diagrama_secuencia_registro.png Graphic file (type png)
  <use ./imagenes/diagrama_secuencia_registro.png>
@@ -5031,7 +5031,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--375
  []
 
 
-<./imagenes/diagrama_secuencia_comienzo_sesion.png, id=1034, 632.3625pt x 257.9
+<./imagenes/diagrama_secuencia_comienzo_sesion.png, id=1042, 632.3625pt x 257.9
 6375pt>
 File: ./imagenes/diagrama_secuencia_comienzo_sesion.png Graphic file (type png)
 
@@ -5050,7 +5050,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--383
  []
 
 
-<./imagenes/diagrama_secuencia_seleccion_persona.png, id=1035, 568.1225pt x 380
+<./imagenes/diagrama_secuencia_seleccion_persona.png, id=1043, 568.1225pt x 380
 .42125pt>
 File: ./imagenes/diagrama_secuencia_seleccion_persona.png Graphic file (type pn
 g)
@@ -5096,7 +5096,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--399
  []
 
 
-<./imagenes/diagrama_secuencia_deteccion_movimiento.png, id=1043, 744.7825pt x 
+<./imagenes/diagrama_secuencia_deteccion_movimiento.png, id=1051, 744.7825pt x 
 342.27875pt>
 File: ./imagenes/diagrama_secuencia_deteccion_movimiento.png Graphic file (type
  png)
@@ -5142,7 +5142,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--407
  []
 
 
-<./imagenes/diagrama_secuencia_resultado.png, id=1049, 734.745pt x 243.91125pt>
+<./imagenes/diagrama_secuencia_resultado.png, id=1057, 734.745pt x 243.91125pt>
 File: ./imagenes/diagrama_secuencia_resultado.png Graphic file (type png)
 <use ./imagenes/diagrama_secuencia_resultado.png>
 Package pdftex.def Info: ./imagenes/diagrama_secuencia_resultado.png used on in
@@ -5734,23 +5734,23 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 88.
  ) 
 Here is how much of TeX's memory you used:
- 21132 strings out of 492995
- 377458 string characters out of 6132704
- 455222 words of memory out of 5000000
- 23921 multiletter control sequences out of 15000+600000
+ 21140 strings out of 492995
+ 377588 string characters out of 6132704
+ 455361 words of memory out of 5000000
+ 23925 multiletter control sequences out of 15000+600000
  47658 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,10n,56p,941b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,56p,970b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on memoria.pdf (105 pages, 3485185 bytes).
+Output written on memoria.pdf (105 pages, 3487863 bytes).
 PDF statistics:
- 1196 PDF objects out of 1200 (max. 8388607)
- 1014 compressed objects within 11 object streams
- 298 named destinations out of 1000 (max. 500000)
+ 1209 PDF objects out of 1440 (max. 8388607)
+ 1027 compressed objects within 11 object streams
+ 302 named destinations out of 1000 (max. 500000)
  868 words of extra memory for PDF output out of 10000 (max. 10000000)
 
