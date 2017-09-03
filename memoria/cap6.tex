@@ -131,5 +131,62 @@ Un adapter es un objeto que funciona como puente entre un AdapterView y los corr
 
 \section{Detección de movimiento}
 
+Una de las características principales de la aplicación es la capacidad de leer y detectar los movimientos realizados durante la realización de determinados tests. A continuación entraremos en los detalles sobre cómo se ha implementado el cálculo y la lectura de los parámetros necesarios para determinar si las repeticiones del ejercicio se han realizado de forma satisfactoria o no, para lo cual se ha hecho uso del sensor de gravedad.\\
 
+\subsection{Sensor de gravedad}
 
+El sensor de gravedad mide el efecto de la aceleración de la gravedad de la tierra sobre el dispositivo. No se trata de un sensor hardware, sino que es un sensor software o virtual derivado del acelerómetro, donde otros sensores hardware como el giroscopio ayudan a eliminar la aceleración lineal de los datos. La gravedad se mide en $m/s^{2}$ como el caso del acelerómetro, y se mide sobre los ejes X, Y y Z.\\
+
+Supongamos que tenemos el dispositivo móvil colocado sobre una mesa, tumbado sobre su parte trasera y de forma totalmente paralela al suelo y con la pantalla mirando hacia el techo; en este caso la gravedad estaría ejerciendo una aceleración de 9,8 $m/s^{2}$ sobre la pantalla del dispositivo de forma perpendicular a la misma, o lo que es lo mismo, estaría ejerciendo una aceleración de 9,8 $m/s^{2}$ sobre el eje Z tal y como podemos observar en el siguiente gráfico:
+
+\figura{gravedadz.png}{scale=0.2}{Efecto de la gravedad sobre el eje Z con el dispositivo colocado de forma paralela sobre el suelo y con la pantalla hacia arriba}{gravedadz}{H}
+
+Partiendo de este gráfico podemos definir cada eje como sigue:
+
+\begin{itemize}
+\item \textbf{Eje Z:} Es la línea que atraviesa el dispositivo móvil de forma perpendicular a su pantalla.
+\item \textbf{Eje Y:} Es la línea paralela a la pantalla que atraviesa el dispositivo desde su parte superior hasta la inferior o viceversa.
+\item \textbf{Eje X:} Es la línea paralela a la pantalla que atraviesa el dispositivo desde su lado izquierdo hasta el derecho o viceversa.
+\end{itemize}
+
+Por lo que, teniendo en cuenta la situación de los ejes respecto al dispositivo, podríamos decir entonces que si sostenemos el móvil de forma perpendicular al suelo, como por ejemplo en el supuesto de que estuviésemos de pie realizando una llamada telefónica y tuviésemos el altavoz sobre la oreja, la gravedad estaría ejerciendo sobre el eje Y del dispositivo (es decir, atravesándolo desde la parte superior hasta la inferior), por lo que el gráfico mientras sujetamos el dispositivo de la forma comentada sería el siguiente:
+
+\figura{gravedady.png}{scale=0.2}{Efecto de la gravedad sobre el eje Y con el dispositivo colocado de forma perpendicular (de pié) sobre el suelo}{gravedady}{H}
+
+Una vez hemos entendido como se mide la gravedad sobre cada uno de los ejes del dispositivo móvil, podemos hacer uso de las medidas obtenidas sobre cada eje para determinar la posición en la que se encuentra el móvil conforme se va realizando el movimiento de cada ejercicio.
+
+\subsection{Lectura para el test Fuerza de brazos}
+
+Teniendo en cuenta que el dispositivo móvil debe colocarse sobre el antebrazo tal y como se ilustró en la figura \ref{dispositivo_movil_brazos}, sabremos que la aceleración ejercida sobre el dispositivo en la posición inicial del ejercicio será negativa sobre el eje Y (dado que la persona tendrá el brazo totalmente extendido con el puño hacia abajo, quedando el dispositivo bocabajo) tal y como puede observarse en el estado de la siguiente gráfica mientras el dispositivo se encuentra en la posición comentada:
+
+\figura{gravedady_brazos_inicial.png}{scale=0.15}{Fuerza de brazos: Efecto de la gravedad sobre el eje Y en la posición inicial}{gravedady_brazos_inicial}{H}
+
+Por tanto, en la posición final del ejercicio (cuando el brazo queda flexionado con el puño hacia arriba) la gravedad ejercida sobre el eje Y será positiva:
+
+\figura{gravedady_brazos_final.png}{scale=0.15}{Fuerza de brazos: Efecto de la gravedad sobre el eje Y en la posición final}{gravedady_brazos_final}{H}
+
+De esta forma, sabremos que la repetición se ha completado de forma satisfactoria cuando la gravedad ejercida en el eje Y pasa de ser negativa, a ser positiva y mayor que 7,5 $m/s^{2}$ (para asegurarnos de que se ha flexionado el brazo lo suficiente) en la posición final.
+
+\subsection{Lectura para el test Fuerza de piernas}
+
+Teniendo en cuenta que el dispositivo móvil debe colocarse sobre la pierna tal y como se ilustró en la figura \ref{dispositivo_movil_piernas}, sabremos que la aceleración ejercida sobre el dispositivo en la posición inicial del ejercicio será normalmente cercano a 0 $m/s^{2}$ (dos unidades arriba o abajo) sobre el eje Y (dado que el punto de partida del ejercicio es estando sentado, y por tanto el dispositivo móvil queda prácticamente paralelo al suelo) tal y como puede observarse en el estado de la siguiente gráfica mientras el dispositivo se encuentra en la posición comentada:
+
+\figura{gravedady_piernas_inicial.png}{scale=0.15}{Fuerza de piernas: Efecto de la gravedad sobre el eje Y en la posición inicial}{gravedady_piernas_inicial}{H}
+
+Sin embargo, en la posición final del ejercicio, al tenerse que levantar la persona de la silla y quedar prácticamente de pie (y por tanto quedar el dispositivo móvil bocabajo), la gravedad ejercida sobre el eje Y será negativa y se acercará a los -9,8 $m/s^{2}$, tal y como se puede ver en la siguiente gráfica:
+
+\figura{gravedady_piernas_final.png}{scale=0.15}{Fuerza de piernas: Efecto de la gravedad sobre el eje Y en la posición final}{gravedady_piernas_final}{H}
+
+Así, sabremos que la repetición se ha completado de forma satisfactoria cuando la gravedad ejercida en el eje Y pasa de estar rondando el 0, a ser negativa y menor que -8,5 $m/s^{2}$ en la posición final.
+
+\subsection{Lectura para el test Resistencia aeróbica}
+
+La lectura para este caso es exactamente la misma que para el test de Fuerza de piernas, pero de forma inversa; en este ejercicio la posición inicial será estando la persona de pié con el dispositivo móvil colocado en la pierna tal y como se ilustra en la figura \ref{dispositivo_movil_piernas}, por lo que en este caso la gráfica sería la siguiente en la posición inicial:
+
+\figura{gravedady_resistencia_inicial.png}{scale=0.15}{Resistencia aeróbica: Efecto de la gravedad sobre el eje Y en la posición inicial}{gravedady_resistencia_inicial}{H}
+
+Por tanto, para la posición final, al quedar la pierna flexionada con la rodilla levantada hasta una altura equivalente al punto medio entre la rótula y la cresta ilíaca, el dispositivo móvil quedará prácticamente paralelo al suelo, por lo que la gravedad ejercida sobre el eje Y estará rondando el 0, tal y como se puede observar a continuación:
+
+\figura{gravedady_resistencia_final.png}{scale=0.15}{Resistencia aeróbica: Efecto de la gravedad sobre el eje Y en la posición final}{gravedady_resistencia_final}{H}
+
+De esta forma, sabremos que la repetición se ha completado de forma satisfactoria cuando la gravedad ejercida en el eje Y pasa de ser negativa y menor a -8,5 $m/s^{2}$ , a ser mayor que -4,5 $m/s^{2}$ en la posición final (para asegurarnos de que se ha levantado la rodilla lo suficiente).
