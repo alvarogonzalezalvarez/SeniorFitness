@@ -31,6 +31,7 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Resultados");
         dbHelper = new SeniorFitnessDBHelper(this);
     }
 
