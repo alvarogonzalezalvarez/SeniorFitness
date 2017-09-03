@@ -107,13 +107,14 @@
 \contentsline {subsection}{\numberline {6.4.2}Lectura para el test Fuerza de brazos}{83}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Lectura para el test Fuerza de piernas}{84}{subsection.6.4.3}
 \contentsline {subsection}{\numberline {6.4.4}Lectura para el test Resistencia aer\IeC {\'o}bica}{86}{subsection.6.4.4}
-\contentsline {chapter}{\numberline {7}Pruebas del sistema}{89}{chapter.7}
+\contentsline {chapter}{\numberline {7}Pruebas y validaciones}{89}{chapter.7}
 \contentsline {section}{\numberline {7.1}Estrategia}{89}{section.7.1}
 \contentsline {section}{\numberline {7.2}Entorno de pruebas}{89}{section.7.2}
 \contentsline {section}{\numberline {7.3}Pruebas unitarias}{90}{section.7.3}
 \contentsline {section}{\numberline {7.4}Pruebas de integraci\IeC {\'o}n}{90}{section.7.4}
 \contentsline {section}{\numberline {7.5}Pruebas funcionales}{90}{section.7.5}
-\contentsline {chapter}{Bibliografia y referencias}{93}{section.7.5}
+\contentsline {section}{\numberline {7.6}Pruebas no funcionales}{91}{section.7.6}
+\contentsline {chapter}{Bibliografia y referencias}{93}{section.7.6}
 \contentsline {chapter}{GNU Free Documentation License}{95}{section*.126}
 \contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{95}{section*.127}
 \contentsline {section}{2. VERBATIM COPYING}{96}{section*.128}
