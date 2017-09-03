@@ -11,3 +11,73 @@ En este capitulo se presenta el plan de pruebas del sistema, incluyendo los dife
 
 \section{Estrategia}
 
+La estrategia que se siga en el devenir de la ejecución de pruebas sobre el sistema abarcará tanto al alcance de éstas como el objetivo, interpretación y evaluación de los resultados que éstas reflejen.\\
+
+Para el proyecto se han realizado pruebas unitarias, de integración, funcionales y no funcionales. Las dos primeras se basan en las pruebas empleadas de manera automática, mientras que las otras dos se realizan atendiendo a los requerimientos funcionales y no funcionales especificados para el proyecto.
+
+\section{Entorno de pruebas}
+
+En esta sección se procede a especificar las características de los dispositivos empleados para la realización de las pruebas. La aplicación se ha ido depurando haciendo uso del mismo ordenador portátil que se ha empleado para el desarrollo del sistema y sus características son:
+
+\begin{itemize}
+\item MacBook Pro (13 pulgadas, mediados 2010)
+\item Procesador Intel Core 2 Duo, 2,4 GHz
+\item 4 GB RAM
+\item HDD 164GB
+\item Gráfica NVIDIA GeForce 320M 256 MB
+\item Monitor 13 pulgadas
+\end{itemize}
+
+En cuanto a las características del dispositivo móvil usado para las pruebas funcionales y no funcionales realizadas sobre el hardware real, son las siguientes:
+
+\begin{itemize}
+\item Xiaomi MI5
+\item Versión de Android 6.0.1 MXB48T
+\item Procesador Quad-core Max 1,80 GHz
+\item 3 GB RAM
+\item 32 GB de memoria interna
+\item Pantalla de 5,15 pulgadas
+\end{itemize}
+
+\section{Pruebas unitarias}
+
+Una prueba unitaria es una forma de comprobar el correcto funcionamiento de una unidad o módulo de código, de manera que sirva para asegurar que cada módulo funciona por separado antes de integrarlo con el resto de módulos del sistema.\\
+
+Al dividirse el desarrollo del proyecto en iteraciones como se mencionó en el capítulo 3 Planificación en la sección y se detalló concretamente en la sección 3.4.2. del mismo, se han realizado las pruebas en cada una de las iteraciones antes de continuar con la siguiente.\\
+
+Por tanto, se realizaron pruebas unitarias en cada módulo desarrollado de forma independiente tras cada iteración haciendo uso del depurador de código que lleva integrado Android Studio, y que nos permite ir haciendo debug a la aplicación línea a línea, comprobando que el comportamiento de la lógica de negocio de cada uno de los módulos era el esperado y que los valores de las variables y devueltos por los diferentes métodos y funciones eran consistentes y ajenos a fallos, corrigiéndolos si estos aparecían.
+
+\section{Pruebas de integración}
+
+Una prueba de integración se basa en la comprobación del correcto funcionamiento de un subsistema completo compuesto por varios módulos que, aunque funcionen correctamente por separado, pueden provocar errores a la hora de integrar unos con otros.\\
+
+Al igual que para las pruebas unitarias, las pruebas de integración se han realizado a medida que se avanzaron en las iteraciones del proyecto cuando los módulos de cada iteración se integraban con los anteriormente desarrollados, comprobando que no se produjesen por ejemplo errores de dependencia entre clases.\\
+
+La realización de pruebas de integración se llevó a cabo con las herramientas de debug integradas en Android Studio, tal y como se ha comentado en el punto anterior para el caso de las pruebas unitarias.
+
+\section{Pruebas funcionales}
+
+Las pruebas funcionales se realizan en base a los requerimientos y requisitos establecidos para el desarrollo del proyecto, de modo que será necesario ir comprobando que se cumplen cada una de las funcionalidades especificadas.\\
+
+Se ha establecido por tanto una serie de pruebas concretas para probar que los resultados que proporcione el sistema son los que se esperan de cada funcionalidad, que son las que pasamos a listar a continuación:
+
+\begin{itemize}
+\item Alta de persona
+\item Listar todas las personas dadas de alta en la aplicación y verificación de los datos mostrados
+\item Visualizar el detalle de la persona
+\item Eliminar persona
+\item Mostrar detalles de sesión realizada
+\item Continuar sesión de ejercicios en progreso
+\item Iniciar nueva sesión de ejercicios
+\item Listar los diferentes tests y sus datos
+\item Seleccionar test para su realización
+\item Realizar el test Fuerza de piernas
+\item Realizar el test Fuerza de brazos
+\item Realizar el test Resistencia aeróbica
+\item Realizar el test Agilidad
+\item Introducir la medida obtenida tras la realización del test Flexibilidad de piernas
+\item Introducir la medida obtenida tras la realización del test Flexibilidad de brazos
+\item Guardar el resultado obtenido/introducido en los tests
+\item Visualizar la pantalla de resultados tras completar todos los tests
+\end{itemize}
+

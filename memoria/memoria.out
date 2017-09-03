@@ -77,17 +77,21 @@
 \BOOKMARK [2][-]{subsection.6.4.4}{Lectura para el test Resistencia aer\363bica}{section.6.4}% 77
 \BOOKMARK [0][-]{chapter.7}{Pruebas del sistema}{}% 78
 \BOOKMARK [1][-]{section.7.1}{Estrategia}{chapter.7}% 79
-\BOOKMARK [0][-]{section.7.1}{Bibliografia y referencias}{}% 80
-\BOOKMARK [0][-]{section*.126}{GNU Free Documentation License}{}% 81
-\BOOKMARK [1][-]{section*.127}{1. APPLICABILITY AND DEFINITIONS}{section*.126}% 82
-\BOOKMARK [1][-]{section*.128}{2. VERBATIM COPYING}{section*.126}% 83
-\BOOKMARK [1][-]{section*.129}{3. COPYING IN QUANTITY}{section*.126}% 84
-\BOOKMARK [1][-]{section*.130}{4. MODIFICATIONS}{section*.126}% 85
-\BOOKMARK [1][-]{section*.131}{5. COMBINING DOCUMENTS}{section*.126}% 86
-\BOOKMARK [1][-]{section*.132}{6. COLLECTIONS OF DOCUMENTS}{section*.126}% 87
-\BOOKMARK [1][-]{section*.133}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.126}% 88
-\BOOKMARK [1][-]{section*.134}{8. TRANSLATION}{section*.126}% 89
-\BOOKMARK [1][-]{section*.135}{9. TERMINATION}{section*.126}% 90
-\BOOKMARK [1][-]{section*.136}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.126}% 91
-\BOOKMARK [1][-]{section*.137}{11. RELICENSING}{section*.126}% 92
-\BOOKMARK [1][-]{section*.138}{ADDENDUM: How to use this License for your documents}{section*.126}% 93
+\BOOKMARK [1][-]{section.7.2}{Entorno de pruebas}{chapter.7}% 80
+\BOOKMARK [1][-]{section.7.3}{Pruebas unitarias}{chapter.7}% 81
+\BOOKMARK [1][-]{section.7.4}{Pruebas de integraci\363n}{chapter.7}% 82
+\BOOKMARK [1][-]{section.7.5}{Pruebas funcionales}{chapter.7}% 83
+\BOOKMARK [0][-]{section.7.5}{Bibliografia y referencias}{}% 84
+\BOOKMARK [0][-]{section*.126}{GNU Free Documentation License}{}% 85
+\BOOKMARK [1][-]{section*.127}{1. APPLICABILITY AND DEFINITIONS}{section*.126}% 86
+\BOOKMARK [1][-]{section*.128}{2. VERBATIM COPYING}{section*.126}% 87
+\BOOKMARK [1][-]{section*.129}{3. COPYING IN QUANTITY}{section*.126}% 88
+\BOOKMARK [1][-]{section*.130}{4. MODIFICATIONS}{section*.126}% 89
+\BOOKMARK [1][-]{section*.131}{5. COMBINING DOCUMENTS}{section*.126}% 90
+\BOOKMARK [1][-]{section*.132}{6. COLLECTIONS OF DOCUMENTS}{section*.126}% 91
+\BOOKMARK [1][-]{section*.133}{7. AGGREGATION WITH INDEPENDENT WORKS}{section*.126}% 92
+\BOOKMARK [1][-]{section*.134}{8. TRANSLATION}{section*.126}% 93
+\BOOKMARK [1][-]{section*.135}{9. TERMINATION}{section*.126}% 94
+\BOOKMARK [1][-]{section*.136}{10. FUTURE REVISIONS OF THIS LICENSE}{section*.126}% 95
+\BOOKMARK [1][-]{section*.137}{11. RELICENSING}{section*.126}% 96
+\BOOKMARK [1][-]{section*.138}{ADDENDUM: How to use this License for your documents}{section*.126}% 97
