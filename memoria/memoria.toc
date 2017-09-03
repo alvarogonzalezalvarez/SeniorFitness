@@ -117,23 +117,24 @@
 \contentsline {chapter}{\numberline {8}Herramientas utilizadas}{93}{chapter.8}
 \contentsline {section}{\numberline {8.1}Cliente del sistema de control de versiones}{93}{section.8.1}
 \contentsline {section}{\numberline {8.2}Redacci\IeC {\'o}n de la memoria}{93}{section.8.2}
-\contentsline {section}{\numberline {8.3}Realizaci\IeC {\'o}n de diagramas}{94}{section.8.3}
-\contentsline {section}{\numberline {8.4}Ilustraci\IeC {\'o}n y retoque}{94}{section.8.4}
-\contentsline {chapter}{\numberline {9}Manual de instalaci\IeC {\'o}n}{95}{chapter.9}
-\contentsline {chapter}{\numberline {10}Manual de usuario}{97}{chapter.10}
-\contentsline {chapter}{\numberline {11}Conclusiones}{99}{chapter.11}
-\contentsline {section}{\numberline {11.1}Objetivos alcanzados}{99}{section.11.1}
-\contentsline {chapter}{Bibliografia y referencias}{101}{section.11.1}
-\contentsline {chapter}{GNU Free Documentation License}{103}{section*.130}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{103}{section*.131}
-\contentsline {section}{2. VERBATIM COPYING}{104}{section*.132}
-\contentsline {section}{3. COPYING IN QUANTITY}{104}{section*.133}
-\contentsline {section}{4. MODIFICATIONS}{105}{section*.134}
-\contentsline {section}{5. COMBINING DOCUMENTS}{106}{section*.135}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{107}{section*.136}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{107}{section*.137}
-\contentsline {section}{8. TRANSLATION}{107}{section*.138}
-\contentsline {section}{9. TERMINATION}{107}{section*.139}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{108}{section*.140}
-\contentsline {section}{11. RELICENSING}{108}{section*.141}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{108}{section*.142}
+\contentsline {section}{\numberline {8.3}Gesti\IeC {\'o}n del proyecto}{94}{section.8.3}
+\contentsline {section}{\numberline {8.4}Realizaci\IeC {\'o}n de diagramas}{94}{section.8.4}
+\contentsline {section}{\numberline {8.5}Ilustraci\IeC {\'o}n y retoque}{95}{section.8.5}
+\contentsline {chapter}{\numberline {9}Manual de instalaci\IeC {\'o}n}{97}{chapter.9}
+\contentsline {chapter}{\numberline {10}Manual de usuario}{99}{chapter.10}
+\contentsline {chapter}{\numberline {11}Conclusiones}{101}{chapter.11}
+\contentsline {section}{\numberline {11.1}Objetivos alcanzados}{101}{section.11.1}
+\contentsline {chapter}{Bibliografia y referencias}{103}{section.11.1}
+\contentsline {chapter}{GNU Free Documentation License}{105}{section*.131}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{105}{section*.132}
+\contentsline {section}{2. VERBATIM COPYING}{106}{section*.133}
+\contentsline {section}{3. COPYING IN QUANTITY}{106}{section*.134}
+\contentsline {section}{4. MODIFICATIONS}{107}{section*.135}
+\contentsline {section}{5. COMBINING DOCUMENTS}{108}{section*.136}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{109}{section*.137}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{109}{section*.138}
+\contentsline {section}{8. TRANSLATION}{109}{section*.139}
+\contentsline {section}{9. TERMINATION}{109}{section*.140}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{110}{section*.141}
+\contentsline {section}{11. RELICENSING}{110}{section*.142}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{110}{section*.143}
