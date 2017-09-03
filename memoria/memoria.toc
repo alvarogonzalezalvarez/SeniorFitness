@@ -107,17 +107,19 @@
 \contentsline {subsection}{\numberline {6.4.2}Lectura para el test Fuerza de brazos}{83}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Lectura para el test Fuerza de piernas}{84}{subsection.6.4.3}
 \contentsline {subsection}{\numberline {6.4.4}Lectura para el test Resistencia aer\IeC {\'o}bica}{86}{subsection.6.4.4}
-\contentsline {chapter}{Bibliografia y referencias}{89}{figure.caption.123}
-\contentsline {chapter}{GNU Free Documentation License}{91}{section*.126}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{91}{section*.127}
-\contentsline {section}{2. VERBATIM COPYING}{92}{section*.128}
-\contentsline {section}{3. COPYING IN QUANTITY}{92}{section*.129}
-\contentsline {section}{4. MODIFICATIONS}{93}{section*.130}
-\contentsline {section}{5. COMBINING DOCUMENTS}{94}{section*.131}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{95}{section*.132}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{95}{section*.133}
-\contentsline {section}{8. TRANSLATION}{95}{section*.134}
-\contentsline {section}{9. TERMINATION}{95}{section*.135}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{96}{section*.136}
-\contentsline {section}{11. RELICENSING}{96}{section*.137}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{96}{section*.138}
+\contentsline {chapter}{\numberline {7}Pruebas del sistema}{89}{chapter.7}
+\contentsline {section}{\numberline {7.1}Estrategia}{89}{section.7.1}
+\contentsline {chapter}{Bibliografia y referencias}{91}{section.7.1}
+\contentsline {chapter}{GNU Free Documentation License}{93}{section*.126}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{93}{section*.127}
+\contentsline {section}{2. VERBATIM COPYING}{94}{section*.128}
+\contentsline {section}{3. COPYING IN QUANTITY}{94}{section*.129}
+\contentsline {section}{4. MODIFICATIONS}{95}{section*.130}
+\contentsline {section}{5. COMBINING DOCUMENTS}{96}{section*.131}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{97}{section*.132}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{97}{section*.133}
+\contentsline {section}{8. TRANSLATION}{97}{section*.134}
+\contentsline {section}{9. TERMINATION}{97}{section*.135}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{98}{section*.136}
+\contentsline {section}{11. RELICENSING}{98}{section*.137}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{98}{section*.138}
