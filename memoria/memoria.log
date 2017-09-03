@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  3 SEP 2017 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  3 SEP 2017 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6277,7 +6277,28 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 83.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 83.
-(./cap9.tex)
+(./cap9.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Overfull \hbox (6.93155pt too wide) in paragraph at lines 15--16
+[][][]$\T1/pcr/m/n/10.95 https : / / github . com / alvarogonzalezalvarez / Sen
+iorFitness / tree / master / apk$[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+)
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand >>
@@ -6919,10 +6940,10 @@ e/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on memoria.pdf (129 pages, 6376834 bytes).
+Output written on memoria.pdf (129 pages, 6377526 bytes).
 PDF statistics:
- 1540 PDF objects out of 1728 (max. 8388607)
- 1310 compressed objects within 14 object streams
+ 1541 PDF objects out of 1728 (max. 8388607)
+ 1311 compressed objects within 14 object streams
  374 named destinations out of 1000 (max. 500000)
  1162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
