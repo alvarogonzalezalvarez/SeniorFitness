@@ -122,6 +122,9 @@
 \contentsline {section}{\numberline {8.5}Ilustraci\IeC {\'o}n y retoque}{95}{section.8.5}
 \contentsline {chapter}{\numberline {9}Manual de instalaci\IeC {\'o}n}{97}{chapter.9}
 \contentsline {chapter}{\numberline {10}Manual de usuario}{99}{chapter.10}
+\contentsline {section}{\numberline {10.1}Consideraciones previas}{99}{section.10.1}
+\contentsline {section}{\numberline {10.2}Primera ejecuci\IeC {\'o}n}{99}{section.10.2}
+\contentsline {section}{\numberline {10.3}Alta de persona}{99}{section.10.3}
 \contentsline {chapter}{\numberline {11}Conclusiones}{101}{chapter.11}
 \contentsline {section}{\numberline {11.1}Objetivos alcanzados}{101}{section.11.1}
 \contentsline {chapter}{Bibliografia y referencias}{103}{section.11.1}
