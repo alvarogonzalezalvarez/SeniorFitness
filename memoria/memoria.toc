@@ -125,19 +125,41 @@
 \contentsline {section}{\numberline {10.1}Consideraciones previas}{99}{section.10.1}
 \contentsline {section}{\numberline {10.2}Primera ejecuci\IeC {\'o}n}{99}{section.10.2}
 \contentsline {section}{\numberline {10.3}Alta de persona}{99}{section.10.3}
-\contentsline {chapter}{\numberline {11}Conclusiones}{101}{chapter.11}
-\contentsline {section}{\numberline {11.1}Objetivos alcanzados}{101}{section.11.1}
-\contentsline {chapter}{Bibliografia y referencias}{103}{section.11.1}
-\contentsline {chapter}{GNU Free Documentation License}{105}{section*.130}
-\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{105}{section*.131}
-\contentsline {section}{2. VERBATIM COPYING}{106}{section*.132}
-\contentsline {section}{3. COPYING IN QUANTITY}{106}{section*.133}
-\contentsline {section}{4. MODIFICATIONS}{107}{section*.134}
-\contentsline {section}{5. COMBINING DOCUMENTS}{108}{section*.135}
-\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{109}{section*.136}
-\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{109}{section*.137}
-\contentsline {section}{8. TRANSLATION}{109}{section*.138}
-\contentsline {section}{9. TERMINATION}{109}{section*.139}
-\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{110}{section*.140}
-\contentsline {section}{11. RELICENSING}{110}{section*.141}
-\contentsline {section}{ADDENDUM: How to use this License for your documents}{110}{section*.142}
+\contentsline {subsection}{\numberline {10.3.1}Agregar foto}{99}{subsection.10.3.1}
+\contentsline {section}{\numberline {10.4}Empezar o continuar con sesi\IeC {\'o}n}{100}{section.10.4}
+\contentsline {section}{\numberline {10.5}Selecci\IeC {\'o}n de test}{100}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}Fuerza de piernas}{100}{subsection.10.5.1}
+\contentsline {subsubsection}{En qu\IeC {\'e} consiste}{100}{section*.128}
+\contentsline {subsubsection}{Uso de la aplicaci\IeC {\'o}n}{100}{section*.129}
+\contentsline {subsection}{\numberline {10.5.2}Fuerza de brazos}{101}{subsection.10.5.2}
+\contentsline {subsubsection}{En qu\IeC {\'e} consiste}{101}{section*.131}
+\contentsline {subsubsection}{Uso de la aplicaci\IeC {\'o}n}{101}{section*.132}
+\contentsline {subsection}{\numberline {10.5.3}Resistencia aer\IeC {\'o}bica}{101}{subsection.10.5.3}
+\contentsline {subsubsection}{En qu\IeC {\'e} consiste}{101}{section*.134}
+\contentsline {subsubsection}{Uso de la aplicaci\IeC {\'o}n}{102}{section*.135}
+\contentsline {subsection}{\numberline {10.5.4}Flexibilidad de piernas}{102}{subsection.10.5.4}
+\contentsline {subsubsection}{En qu\IeC {\'e} consiste}{102}{section*.137}
+\contentsline {subsubsection}{Uso de la aplicaci\IeC {\'o}n}{102}{section*.138}
+\contentsline {subsection}{\numberline {10.5.5}Flexibilidad de brazos}{102}{subsection.10.5.5}
+\contentsline {subsubsection}{En qu\IeC {\'e} consiste}{102}{section*.139}
+\contentsline {subsubsection}{Uso de la aplicaci\IeC {\'o}n}{103}{section*.140}
+\contentsline {subsection}{\numberline {10.5.6}Agilidad}{103}{subsection.10.5.6}
+\contentsline {subsubsection}{En qu\IeC {\'e} consiste}{103}{section*.141}
+\contentsline {subsubsection}{Uso de la aplicaci\IeC {\'o}n}{103}{section*.142}
+\contentsline {section}{\numberline {10.6}Consultar detalle e historial de persona}{103}{section.10.6}
+\contentsline {chapter}{\numberline {11}Conclusiones}{105}{chapter.11}
+\contentsline {section}{\numberline {11.1}Objetivos alcanzados}{105}{section.11.1}
+\contentsline {chapter}{Bibliografia y referencias}{107}{section.11.1}
+\contentsline {chapter}{GNU Free Documentation License}{109}{section*.145}
+\contentsline {section}{1. APPLICABILITY AND DEFINITIONS}{109}{section*.146}
+\contentsline {section}{2. VERBATIM COPYING}{110}{section*.147}
+\contentsline {section}{3. COPYING IN QUANTITY}{110}{section*.148}
+\contentsline {section}{4. MODIFICATIONS}{111}{section*.149}
+\contentsline {section}{5. COMBINING DOCUMENTS}{112}{section*.150}
+\contentsline {section}{6. COLLECTIONS OF DOCUMENTS}{113}{section*.151}
+\contentsline {section}{7. AGGREGATION WITH INDEPENDENT WORKS}{113}{section*.152}
+\contentsline {section}{8. TRANSLATION}{113}{section*.153}
+\contentsline {section}{9. TERMINATION}{113}{section*.154}
+\contentsline {section}{10. FUTURE REVISIONS OF THIS LICENSE}{114}{section*.155}
+\contentsline {section}{11. RELICENSING}{114}{section*.156}
+\contentsline {section}{ADDENDUM: How to use this License for your documents}{114}{section*.157}
