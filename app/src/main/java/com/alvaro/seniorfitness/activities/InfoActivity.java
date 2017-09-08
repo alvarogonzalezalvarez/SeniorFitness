@@ -40,6 +40,17 @@ public class InfoActivity extends AppCompatActivity {
         tests.put("Resist",new Test("Resist","Resistencia Aeróbica","Número de veces que levanta la rodilla " +
                 "hasta una altura equivalente al punto medio entre la rótula y la cresta ilíaca",
                 null, R.drawable.resistenciaaerobica));
+        tests.put("Flex_Pna",new Test("Flex_Pna","Flexibilidad de Piernas","Sentado en el borde de una silla, estirar " +
+                "la pierna e intentar alcanzar con las manos los dedos del pie, que está con una flexión de tobillo " +
+                "de 90 grados. Se mide la distancia entre la punta de los dedos de la mano y la punta " +
+                "del pie (positiva si los dedos de la mano sobrepasan los dedos del pie o negativa si los dedos de " +
+                "la mano no alcanzan a tocar los dedos del pie)",
+                null, R.drawable.flexibilidadpiernas));
+        tests.put("Flex_Br",new Test("Flex_Br","Flexibilidad de Brazos","Una mano se pasa por encima del mismo hombro y la " +
+                "otra pasa a tocar la parte media de la espalda intentando que ambas manos se toquen. Se mide la " +
+                "distancia entre la punta de los dedos de cada mano (positiva si los dedos de la mano se " +
+                "superponen o negativa si no llegan a tocarse los dedos de la mano)",
+                null, R.drawable.flexibilidadbrazos));
         tests.put("Agil",new Test("Agil","Agilidad","Partiendo de sentado, tiempo que tarda en levantarse " +
                 "caminar hasta un cono situado a 2.44 m, girar y volver a sentarse", null,
                 R.drawable.agilidad));

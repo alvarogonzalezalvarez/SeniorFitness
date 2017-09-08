@@ -52,7 +52,7 @@ public class SelectTestActivity extends AppCompatActivity {
         userId = getIntent().getStringExtra("userId");
         listView = (ListView) findViewById(R.id.listTests);
 
-        tests = new Test[4];
+        tests = new Test[6];
         tests[0] = new Test("F_Pna","Fuerza de Piernas","Número de veces que es capaz de " +
                 "sentarse y levantarse de una silla con los brazos en cruz y colocados sobre el pecho", null);
         tests[1] = new Test("F_Br","Fuerza de Brazos","Número de flexiones de brazo completas, " +
@@ -60,7 +60,16 @@ public class SelectTestActivity extends AppCompatActivity {
                 "mujeres y 5 libras (3,63 kg) para hombres", null);
         tests[2] = new Test("Resist","Resistencia Aeróbica","Número de veces que levanta la rodilla " +
                 "hasta una altura equivalente al punto medio entre la rótula y la cresta ilíaca", null);
-        tests[3] = new Test("Agil","Agilidad","Partiendo de sentado, tiempo que tarda en levantarse " +
+        tests[3] = new Test("Flex_Pna","Flexibilidad de Piernas","Sentado en el borde de una silla, estirar " +
+                "la pierna e intentar alcanzar con las manos los dedos del pie, que está con una flexión de tobillo " +
+                "de 90 grados. Se mide la distancia entre la punta de los dedos de la mano y la punta " +
+                "del pie (positiva si los dedos de la mano sobrepasan los dedos del pie o negativa si los dedos de " +
+                "la mano no alcanzan a tocar los dedos del pie)", null);
+        tests[4] = new Test("Flex_Br","Flexibilidad de Brazos","Una mano se pasa por encima del mismo hombro y la " +
+                "otra pasa a tocar la parte media de la espalda intentando que ambas manos se toquen. Se mide la " +
+                "distancia entre la punta de los dedos de cada mano (positiva si los dedos de la mano se " +
+                "superponen o negativa si no llegan a tocarse los dedos de la mano)", null);
+        tests[5] = new Test("Agil","Agilidad","Partiendo de sentado, tiempo que tarda en levantarse " +
                 "caminar hasta un cono situado a 2.44 m, girar y volver a sentarse", null);
 
         these = this;
@@ -167,6 +176,10 @@ public class SelectTestActivity extends AppCompatActivity {
                         intent = new Intent(these, FuerzaBrazosActivity.class);
                     } else if ("Resist".equals(theTest.getTestID())) {
                         intent = new Intent(these, ResistenciaAerobicaActivity.class);
+                    } else if ("Flex_Pna".equals(theTest.getTestID())) {
+                        intent = new Intent(these, FlexibilidadPiernasActivity.class);
+                    } else if ("Flex_Br".equals(theTest.getTestID())) {
+                        intent = new Intent(these, FlexibilidadBrazosActivity.class);
                     } else if ("Agil".equals(theTest.getTestID())) {
                         intent = new Intent(these, AgilidadActivity.class);
                     }
@@ -279,6 +292,10 @@ public class SelectTestActivity extends AppCompatActivity {
                                 intent = new Intent(these, FuerzaBrazosActivity.class);
                             } else if ("Resist".equals(theTest.getTestID())) {
                                 intent = new Intent(these, ResistenciaAerobicaActivity.class);
+                            } else if ("Flex_Pna".equals(theTest.getTestID())) {
+                                intent = new Intent(these, FlexibilidadPiernasActivity.class);
+                            } else if ("Flex_Br".equals(theTest.getTestID())) {
+                                intent = new Intent(these, FlexibilidadBrazosActivity.class);
                             } else if ("Agil".equals(theTest.getTestID())) {
                                 intent = new Intent(these, AgilidadActivity.class);
                             }

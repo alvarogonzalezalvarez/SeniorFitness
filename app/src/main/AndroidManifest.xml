@@ -95,6 +95,22 @@
                 android:value=".activities.SelectTestActivity" />
         </activity>
         <activity
+            android:name=".activities.FlexibilidadBrazosActivity"
+            android:parentActivityName=".activities.SelectTestActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectTestActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FlexibilidadPiernasActivity"
+            android:parentActivityName=".activities.SelectTestActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectTestActivity" />
+        </activity>
+        <activity
             android:name=".activities.AgilidadActivity"
             android:screenOrientation="portrait">
             <meta-data

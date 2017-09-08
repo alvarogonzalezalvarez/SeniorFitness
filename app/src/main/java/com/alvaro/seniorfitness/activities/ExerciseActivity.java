@@ -39,6 +39,7 @@ public class ExerciseActivity extends AppCompatActivity {
     SensorEventListener listener;
     SensorManager sensorService;
     TextView repCount;
+    TextView centimeters;
     CountDownTimer countDown;
     ToneGenerator tone;
     Chronometer chronometer;
@@ -59,47 +60,53 @@ public class ExerciseActivity extends AppCompatActivity {
         sessionId = getIntent().getStringExtra("sessionId");
         testId = getIntent().getStringExtra("testId");
         repCount = (TextView) findViewById(R.id.repCount);
+        centimeters = (TextView) findViewById(R.id.centimeters);
         sensorService = (SensorManager) getApplicationContext()
                 .getSystemService(getApplicationContext().SENSOR_SERVICE);
         these = this;
 
         final Button startButton = (Button) findViewById(R.id.start);
         final Button stopButton = (Button) findViewById(R.id.stop);
-        stopButton.setVisibility(View.GONE);
         final Button resetButton = (Button) findViewById(R.id.reset);
-        resetButton.setVisibility(View.GONE);
+        if (startButton != null) {
+            startButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    start(v);
+                    startButton.setVisibility(View.GONE);
+                    stopButton.setVisibility(View.VISIBLE);
+                    resetButton.setVisibility(View.VISIBLE);
+                }
+            });
+        }
+        if (stopButton != null) {
+            stopButton.setVisibility(View.GONE);
+            stopButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    stop(v);
+                    stopButton.setVisibility(View.GONE);
+                    startButton.setVisibility(View.GONE);
+                }
+            });
+        }
+        if (resetButton != null) {
+            resetButton.setVisibility(View.GONE);
+            resetButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    reset(v);
+                    stopButton.setVisibility(View.GONE);
+                    resetButton.setVisibility(View.GONE);
+                    startButton.setVisibility(View.VISIBLE);
+                }
+            });
+        }
         final Button saveButton = (Button) findViewById(R.id.save);
-        saveButton.setVisibility(View.GONE);
+        if (centimeters == null) {
+            saveButton.setVisibility(View.GONE);
+        }
         TextView remainingTime = (TextView) findViewById(R.id.remainingTime);
         if (remainingTime != null) {
             remainingTime.setVisibility(View.GONE);
         }
-
-        startButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                start(v);
-                startButton.setVisibility(View.GONE);
-                stopButton.setVisibility(View.VISIBLE);
-                resetButton.setVisibility(View.VISIBLE);
-            }
-        });
-
-        stopButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                stop(v);
-                stopButton.setVisibility(View.GONE);
-                startButton.setVisibility(View.GONE);
-            }
-        });
-
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                reset(v);
-                stopButton.setVisibility(View.GONE);
-                resetButton.setVisibility(View.GONE);
-                startButton.setVisibility(View.VISIBLE);
-            }
-        });
 
         chronometer = (Chronometer) findViewById(R.id.chronometer);
 
@@ -111,6 +118,9 @@ public class ExerciseActivity extends AppCompatActivity {
                 if (chronometer != null) {
                     new insertResult().execute(userId, testId, sessionId,
                             Long.valueOf(elapsedTime/1000).toString(), dateString);
+                } else if (centimeters != null) {
+                    new insertResult().execute(userId, testId, sessionId, centimeters.getText().toString(),
+                            dateString);
                 } else {
                     new insertResult().execute(userId, testId, sessionId, repCount.getText().toString(),
                             dateString);
@@ -174,6 +184,8 @@ public class ExerciseActivity extends AppCompatActivity {
 
     public void reset(View view) {
         if (chronometer != null) {
+            Button saveButton = (Button) findViewById(R.id.save);
+            saveButton.setVisibility(View.GONE);
             elapsedTime = 0;
             chronometer.setBase(SystemClock.elapsedRealtime());
             chronometer.stop();

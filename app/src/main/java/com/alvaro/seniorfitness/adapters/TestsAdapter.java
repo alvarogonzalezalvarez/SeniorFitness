@@ -67,6 +67,8 @@ public class TestsAdapter extends BaseAdapter {
             String units = " repeticiones";
             if ("Agil".equals(test.getTestID())) {
                 units = " segundos";
+            } else if ("Flex_Pna".equals(test.getTestID()) || "Flex_Br".equals(test.getTestID())) {
+                units = " centímetros";
             }
             result.setText(test.getResult() + units);
         }
