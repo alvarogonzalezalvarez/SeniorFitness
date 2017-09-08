@@ -33,19 +33,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="DNI"/>
+            android:hint="DNI"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"/>
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Nombre"/>
+            android:hint="Nombre"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"/>
         <EditText
             android:id="@+id/lastname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Apellidos"/>
+            android:hint="Apellidos"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"/>
         <EditText
             android:id="@+id/birthdate"
             android:layout_width="match_parent"
@@ -71,6 +80,36 @@
                 android:layout_height="wrap_content"
                 android:text = "Mujer" />
         </RadioGroup>
+        <TextView
+            android:id="@+id/nulltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Por favor, rellena todos los campos"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"/>
+        <TextView
+            android:id="@+id/invaliddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Formato de fecha no válido"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"/>
+        <TextView
+            android:id="@+id/invaliddni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Formato de DNI no válido"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"/>
         <Button android:id="@+id/save"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

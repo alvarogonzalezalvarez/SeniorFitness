@@ -26,6 +26,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alvaro.seniorfitness.R;
@@ -52,6 +53,9 @@ public class AddUserActivity extends AppCompatActivity {
     private final Activity these = this;
     private String imagePath;
     private Uri picUri;
+    private TextView nullText;
+    private TextView invalidDni;
+    private TextView invalidDate;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,6 +65,12 @@ public class AddUserActivity extends AppCompatActivity {
         setTitle("Alta de Usuario");
         dbHelper = new SeniorFitnessDBHelper(this);
 
+        nullText = (TextView) findViewById(R.id.nulltext);
+        nullText.setVisibility(View.GONE);
+        invalidDni = (TextView) findViewById(R.id.invaliddni);
+        invalidDni.setVisibility(View.GONE);
+        invalidDate = (TextView) findViewById(R.id.invaliddate);
+        invalidDate.setVisibility(View.GONE);
         photo = (ImageView) findViewById(R.id.thePhoto);
         final Button saveButton = (Button) findViewById(R.id.save);
         final Button photoButton = (Button) findViewById(R.id.photo);
@@ -74,21 +84,39 @@ public class AddUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String birthdateString = birthdate.getText().toString();
+                boolean validForm = true;
+                invalidDate.setVisibility(View.GONE);
+                nullText.setVisibility(View.GONE);
+                invalidDni.setVisibility(View.GONE);
                 try {
                     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                     Date fecha = sdf.parse(birthdate.getText().toString());
                     birthdateString = sdf.format(fecha);
-                } catch (ParseException e) {}
+                } catch (ParseException e) {
+                    validForm = false;
+                    invalidDate.setVisibility(View.VISIBLE);
+                }
                 int selectedId = genderRadioGroup.getCheckedRadioButtonId();
                 String gender;
                 if(selectedId == R.id.female_radio_btn)
                     gender = "Mujer";
                 else
                     gender = "Hombre";
-                new insertPerson().execute(userid.getText().toString(),
-                        name.getText().toString(), lastname.getText().toString(),
-                        gender, birthdateString, imagePath);
-                NavUtils.navigateUpFromSameTask(these);
+                if ("".equals(userid.getText().toString()) || "".equals(name.getText().toString()) ||
+                        "".equals(lastname.getText().toString()) || "".equals(birthdateString)) {
+                    validForm = false;
+                    nullText.setVisibility(View.VISIBLE);
+                }
+                if (!validarDni(userid.getText().toString())) {
+                    validForm = false;
+                    invalidDni.setVisibility(View.VISIBLE);
+                }
+                if (validForm) {
+                    new insertPerson().execute(userid.getText().toString(),
+                            name.getText().toString(), lastname.getText().toString(),
+                            gender, birthdateString, imagePath);
+                    NavUtils.navigateUpFromSameTask(these);
+                }
             }
         });
         photoButton.setOnClickListener(new View.OnClickListener() {
@@ -297,6 +325,63 @@ public class AddUserActivity extends AppCompatActivity {
                     .makeText(this, "This device doesn't support the crop action!", Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+
+    public boolean validarDni(String dni) {
+        String letraMayuscula = ""; //Guardaremos la letra introducida en formato mayúscula
+
+        // Aquí excluimos cadenas distintas a 9 caracteres que debe tener un dni y también si el último caracter no es una letra
+        if(dni.length() != 9 || Character.isLetter(dni.charAt(8)) == false ) {
+            return false;
+        }
+
+        // Al superar la primera restricción, la letra la pasamos a mayúscula
+        letraMayuscula = (dni.substring(8)).toUpperCase();
+
+        // Por último validamos que sólo tengo 8 dígitos entre los 8 primeros caracteres y que la letra introducida es igual a la de la ecuación
+        // Llamamos a los métodos privados de la clase soloNumeros() y letraDNI()
+        if(soloNumeros(dni) == true && letraDNI(dni).equals(letraMayuscula)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean soloNumeros(String dni) {
+        int i, j = 0;
+        String numero = ""; // Es el número que se comprueba uno a uno por si hay alguna letra entre los 8 primeros dígitos
+        String miDNI = ""; // Guardamos en una cadena los números para después calcular la letra
+        String[] unoNueve = {"0","1","2","3","4","5","6","7","8","9"};
+
+        for(i = 0; i < dni.length() - 1; i++) {
+            numero = dni.substring(i, i+1);
+
+            for(j = 0; j < unoNueve.length; j++) {
+                if(numero.equals(unoNueve[j])) {
+                    miDNI += unoNueve[j];
+                }
+            }
+        }
+
+        if(miDNI.length() != 8) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    private String letraDNI(String dni) {
+        // El método es privado porque lo voy a usar internamente en esta clase, no se necesita fuera de ella
+        // pasar miNumero a integer
+        int miDNI = Integer.parseInt(dni.substring(0,8));
+        int resto = 0;
+        String miLetra = "";
+        String[] asignacionLetra = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+        resto = miDNI % 23;
+        miLetra = asignacionLetra[resto];
+        return miLetra;
     }
 
 }
