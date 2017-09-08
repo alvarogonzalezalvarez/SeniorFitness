@@ -35,13 +35,24 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/invalidvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Valor introducido no válido"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"/>
+
     <Button
         android:id="@+id/save"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:background="@android:color/holo_green_light"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:text="GUARDAR" />
 
 </LinearLayout>

@@ -40,6 +40,7 @@ public class ExerciseActivity extends AppCompatActivity {
     SensorManager sensorService;
     TextView repCount;
     TextView centimeters;
+    TextView invalidValue;
     CountDownTimer countDown;
     ToneGenerator tone;
     Chronometer chronometer;
@@ -61,10 +62,14 @@ public class ExerciseActivity extends AppCompatActivity {
         testId = getIntent().getStringExtra("testId");
         repCount = (TextView) findViewById(R.id.repCount);
         centimeters = (TextView) findViewById(R.id.centimeters);
+        invalidValue = (TextView) findViewById(R.id.invalidvalue);
         sensorService = (SensorManager) getApplicationContext()
                 .getSystemService(getApplicationContext().SENSOR_SERVICE);
         these = this;
 
+        if (invalidValue != null) {
+            invalidValue.setVisibility(View.GONE);
+        }
         final Button startButton = (Button) findViewById(R.id.start);
         final Button stopButton = (Button) findViewById(R.id.stop);
         final Button resetButton = (Button) findViewById(R.id.reset);
@@ -115,19 +120,28 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                 String dateString = sdf.format(new Date());
+                boolean validForm = true;
                 if (chronometer != null) {
                     new insertResult().execute(userId, testId, sessionId,
                             Long.valueOf(elapsedTime/1000).toString(), dateString);
                 } else if (centimeters != null) {
-                    new insertResult().execute(userId, testId, sessionId, centimeters.getText().toString(),
-                            dateString);
+                    invalidValue.setVisibility(View.GONE);
+                    if ("".equals(centimeters.getText().toString())){
+                        validForm = false;
+                        invalidValue.setVisibility(View.VISIBLE);
+                    } else {
+                        new insertResult().execute(userId, testId, sessionId, centimeters.getText().toString(),
+                                dateString);
+                    }
                 } else {
                     new insertResult().execute(userId, testId, sessionId, repCount.getText().toString(),
                             dateString);
                 }
-                Intent intent = NavUtils.getParentActivityIntent(these);
-                intent.putExtra("userId", userId);
-                NavUtils.navigateUpTo(these, intent);
+                if (validForm) {
+                    Intent intent = NavUtils.getParentActivityIntent(these);
+                    intent.putExtra("userId", userId);
+                    NavUtils.navigateUpTo(these, intent);
+                }
             }
         });
 
