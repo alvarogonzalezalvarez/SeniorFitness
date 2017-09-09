@@ -1,46 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: memoria.aux
-The style file: plain.bst
+The style file: unsrt.bst
 Database file #1: bibliografia.bib
 You've used 7 entries,
-            2118 wiz_defined-function locations,
-            524 strings with 4659 characters,
-and the built_in function-call counts, 1459 in all, are:
-= -- 133
-> -- 49
+            1791 wiz_defined-function locations,
+            472 strings with 4186 characters,
+and the built_in function-call counts, 934 in all, are:
+= -- 73
+> -- 32
 < -- 0
-+ -- 21
-- -- 14
-* -- 40
-:= -- 251
++ -- 15
+- -- 8
+* -- 7
+:= -- 149
 add.period$ -- 21
 call.type$ -- 7
-change.case$ -- 27
+change.case$ -- 6
 chr.to.int$ -- 0
 cite$ -- 7
-duplicate$ -- 54
-empty$ -- 155
-format.name$ -- 14
-if$ -- 317
+duplicate$ -- 40
+empty$ -- 128
+format.name$ -- 8
+if$ -- 220
 int.to.chr$ -- 0
 int.to.str$ -- 7
 missing$ -- 2
 newline$ -- 38
-num.names$ -- 14
-pop$ -- 56
+num.names$ -- 7
+pop$ -- 37
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 0
 quote$ -- 0
-skip$ -- 54
+skip$ -- 33
 stack$ -- 0
-substring$ -- 35
+substring$ -- 0
 swap$ -- 7
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 26
+type$ -- 0
 warning$ -- 0
-while$ -- 14
+while$ -- 7
 width$ -- 8
 write$ -- 66

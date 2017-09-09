@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  9 SEP 2017 20:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.13)  9 SEP 2017 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6833,13 +6833,13 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 96.
  (./memoria.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 25--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
 []\T1/ptm/m/n/10.95 Kantar World-pa-nel Com-Tech.  Cuo-ta de mer-ca-do de smart
 p-ho-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
 \T1/ptm/m/n/10.95 nes en Es-pa-ña.  [][]$\T1/pcr/m/n/10.95 http : / / es . kant
 ar . com / tech / móvil / 2017 /
  []
@@ -7265,7 +7265,7 @@ e/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on memoria.pdf (133 pages, 7366959 bytes).
+Output written on memoria.pdf (133 pages, 7366941 bytes).
 PDF statistics:
  1684 PDF objects out of 1728 (max. 8388607)
  1449 compressed objects within 15 object streams

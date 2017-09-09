@@ -1,25 +1,29 @@
 \begin{thebibliography}{1}
 
-\bibitem{website:androidstudio}
-{Android Developers}.
-\newblock {Android Studio}.
-\newblock
-  \url{https://developer.android.com/studio/intro/index.html#project_structure}.
+\bibitem{mitt04}
+R.~Rikli and C.~Jones.
+\newblock {\em Senior fitness test manual}.
+\newblock Human Kinetics, 2001.
 
-\bibitem{website:git}
-GIT.
-\newblock {Documentation}.
-\newblock \url{https://git-scm.com/documentation}.
+\bibitem{website:ine}
+INE.
+\newblock {Instituto Nacional de Estadística}.
+\newblock \url{http://www.ine.es}.
 
 \bibitem{website:android}
 {Google}.
 \newblock {Android Developers}.
 \newblock \url{https://developer.android.com/index.html}.
 
-\bibitem{website:ine}
-INE.
-\newblock {Instituto Nacional de Estadística}.
-\newblock \url{http://www.ine.es}.
+\bibitem{website:git}
+GIT.
+\newblock {Documentation}.
+\newblock \url{https://git-scm.com/documentation}.
+
+\bibitem{website:sqlite}
+SQLite.
+\newblock {Documentation}.
+\newblock \url{https://www.sqlite.org/docs.html}.
 
 \bibitem{website:cuota}
 {Kantar Worldpanel ComTech}.
@@ -27,14 +31,10 @@ INE.
 \newblock
   \url{http://es.kantar.com/tech/móvil/2017/junio-2017-cuota-de-mercado-de-smartphones-en-españa-2017/}.
 
-\bibitem{mitt04}
-C.~Rikli, R. y~Jones.
-\newblock {\em Senior fitness test manual}.
-\newblock Human Kinetics, 2001.
-
-\bibitem{website:sqlite}
-SQLite.
-\newblock {Documentation}.
-\newblock \url{https://www.sqlite.org/docs.html}.
+\bibitem{website:androidstudio}
+{Android Developers}.
+\newblock {Android Studio}.
+\newblock
+  \url{https://developer.android.com/studio/intro/index.html#project_structure}.
 
 \end{thebibliography}
