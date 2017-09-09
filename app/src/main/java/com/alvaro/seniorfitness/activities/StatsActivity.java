@@ -1,11 +1,13 @@
 package com.alvaro.seniorfitness.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -45,6 +47,7 @@ public class StatsActivity extends AppCompatActivity {
     private ArrayList<BarEntry> bargroup2;
     private ArrayList<BarEntry> bargroup3;
     ArrayList<IBarDataSet> dataSets = new ArrayList<>();
+    private Activity these = this;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -356,7 +359,7 @@ public class StatsActivity extends AppCompatActivity {
             bargroup2.add(new BarEntry(agil, 5));
 
             BarDataSet barDataSet = new BarDataSet(bargroup2, "Media");
-            barDataSet.setColor(R.color.colorPrimary);
+            barDataSet.setColor(ContextCompat.getColor(these, R.color.colorPrimary));
             dataSets.add(barDataSet);
 
             new getOtherPersons().execute();
@@ -553,7 +556,7 @@ public class StatsActivity extends AppCompatActivity {
                 description = description + "mujeres";
             }
             BarDataSet barDataSet = new BarDataSet(bargroup3, description);
-            barDataSet.setColor(R.color.colorPrimaryDark);
+            barDataSet.setColor(ContextCompat.getColor(these, R.color.colorBlack));
             dataSets.add(barDataSet);
 
             BarData data = new BarData(labels, dataSets);
