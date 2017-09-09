@@ -52,7 +52,7 @@ public class InfoActivity extends AppCompatActivity {
                 "superponen o negativa si no llegan a tocarse los dedos de la mano)",
                 null, R.drawable.flexibilidadbrazos));
         tests.put("Agil",new Test("Agil","Agilidad","Partiendo de sentado, tiempo que tarda en levantarse " +
-                "caminar hasta un cono situado a 2.44 m, girar y volver a sentarse", null,
+                "caminar hasta un cono situado a 2,44 metros, girar y volver a sentarse", null,
                 R.drawable.agilidad));
 
         setTitle(tests.get(testId).getName());

@@ -70,7 +70,7 @@ public class SelectTestActivity extends AppCompatActivity {
                 "distancia entre la punta de los dedos de cada mano (positiva si los dedos de la mano se " +
                 "superponen o negativa si no llegan a tocarse los dedos de la mano)", null);
         tests[5] = new Test("Agil","Agilidad","Partiendo de sentado, tiempo que tarda en levantarse " +
-                "caminar hasta un cono situado a 2.44 m, girar y volver a sentarse", null);
+                "caminar hasta un cono situado a 2,44 metros, girar y volver a sentarse", null);
 
         these = this;
         new getSessions().execute();
