@@ -6,7 +6,7 @@ R.~Rikli and C.~Jones.
 \newblock Human Kinetics, 2001.
 
 \bibitem{website:ine}
-INE.
+{INE}.
 \newblock {Instituto Nacional de Estadística}.
 \newblock \url{http://www.ine.es}.
 
@@ -16,14 +16,19 @@ INE.
 \newblock \url{https://developer.android.com/index.html}.
 
 \bibitem{website:git}
-GIT.
+{GIT}.
 \newblock {Documentation}.
 \newblock \url{https://git-scm.com/documentation}.
 
 \bibitem{website:sqlite}
-SQLite.
+{SQLite}.
 \newblock {Documentation}.
 \newblock \url{https://www.sqlite.org/docs.html}.
+
+\bibitem{website:mpandroid}
+{Philipp Jahoda}.
+\newblock {MPAndroidChart Wiki}.
+\newblock \url{https://github.com/PhilJay/MPAndroidChart/wiki}.
 
 \bibitem{website:cuota}
 {Kantar Worldpanel ComTech}.
