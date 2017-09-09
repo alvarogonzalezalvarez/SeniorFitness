@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,9 +56,30 @@ public class InfoActivity extends AppCompatActivity {
                 "caminar hasta un cono situado a 2,44 metros, girar y volver a sentarse", null,
                 R.drawable.agilidad));
 
+        String howToPierna = "Colocar el dispositivo sobre el muslo. " +
+                "Debe quedar colocado con la pantalla hacia arriba y de forma que sea legible desde " +
+                "el punto de partida del ejercicio.";
+        String howToBrazo = "Colocar el dispositivo sobre el antebrazo. Debe quedar colocado con la pantalla " +
+                "hacia arriba y de forma que sea legible desde el punto de partida del ejercicio.";
+
         setTitle(tests.get(testId).getName());
+        ImageView pierna = (ImageView) findViewById(R.id.legimage);
+        pierna.setVisibility(View.GONE);
+        ImageView brazo = (ImageView) findViewById(R.id.armimage);
+        brazo.setVisibility(View.GONE);
         TextView description = (TextView) findViewById(R.id.description);
         description.setText(tests.get(testId).getDescription());
+        TextView howto = (TextView) findViewById(R.id.howto);
+        howto.setVisibility(View.GONE);
+        if ("F_Pna".equals(testId) || "Resist".equals(testId)) {
+            howto.setText(howToPierna);
+            howto.setVisibility(View.VISIBLE);
+            pierna.setVisibility(View.VISIBLE);
+        } else  if ("F_Br".equals(testId)) {
+            howto.setText(howToBrazo);
+            howto.setVisibility(View.VISIBLE);
+            brazo.setVisibility(View.VISIBLE);
+        }
         ImageView image = (ImageView) findViewById(R.id.image);
         image.setImageResource(tests.get(testId).getImage());
     }
