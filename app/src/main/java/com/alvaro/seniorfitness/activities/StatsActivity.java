@@ -16,6 +16,7 @@ import com.alvaro.seniorfitness.database.SeniorFitnessContract;
 import com.alvaro.seniorfitness.database.SeniorFitnessDBHelper;
 import com.alvaro.seniorfitness.model.Result;
 import com.alvaro.seniorfitness.model.Session;
+import com.alvaro.seniorfitness.model.User;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -357,6 +358,204 @@ public class StatsActivity extends AppCompatActivity {
             BarDataSet barDataSet = new BarDataSet(bargroup2, "Media");
             barDataSet.setColor(R.color.colorPrimary);
             dataSets.add(barDataSet);
+
+            new getOtherPersons().execute();
+        }
+    }
+
+    private class getOtherPersons extends AsyncTask<Void, Void, User[]> {
+
+        @Override
+        protected User[] doInBackground(Void... params) {
+            SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+            String[] projection = {
+                    SeniorFitnessContract.User.COLUMN_NAME_USERID,
+                    SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE,
+                    SeniorFitnessContract.User.COLUMN_NAME_GENDER,
+                    SeniorFitnessContract.User.COLUMN_NAME_NAME,
+                    SeniorFitnessContract.User.COLUMN_NAME_LASTNAME,
+                    SeniorFitnessContract.User.COLUMN_NAME_PHOTO
+            };
+
+            String where = SeniorFitnessContract.User.COLUMN_NAME_USERID + " != ? AND " +
+                    SeniorFitnessContract.User.COLUMN_NAME_GENDER + " = ?";
+            String[] whereArgs = new String[] { userId, gender };
+
+            Cursor c = db.query(
+                    SeniorFitnessContract.User.TABLE_NAME, // Nombre de la tabla
+                    projection,             // Columnas a devolver
+                    where,                  // Columnas para la cláusula WHERE
+                    whereArgs,              // Valores para la cláusula WHERE
+                    null,                   // GROUP BY
+                    null,                   // HAVING
+                    null);             // ORDER BY
+
+            // Recorrer la información devuelta
+            User[] data = new User[c.getCount()];
+            int i = 0;
+
+            while (c.moveToNext()) {
+                String userId = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_USERID));
+                String name = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_NAME));
+                String lastName = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_LASTNAME));
+                String gender = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_GENDER));
+                String birthdate = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_BIRTHDATE));
+                String photo = c.getString(c.getColumnIndex(SeniorFitnessContract.User.COLUMN_NAME_PHOTO));
+                data[i++] = new User(userId, name, lastName, gender, birthdate, photo);
+            }
+
+            c.close();
+
+            return data;
+        }
+
+        @Override
+        protected void onPostExecute(User[] users) {
+            if (users != null && users.length > 0) {
+                new getOtherUsersResults().execute(users);
+            } else {
+                BarData data = new BarData(labels, dataSets);
+                barChart.setData(data);
+                barChart.invalidate();
+                barChart.getXAxis().setLabelsToSkip(0);
+                barChart.setDescription("Tabla comparativa de resultados");
+            }
+        }
+    }
+
+    private class getOtherUsersResults extends AsyncTask<User[], Void, Result[]> {
+
+        @Override
+        protected Result[] doInBackground(User[]... params) {
+            SQLiteDatabase db = dbHelper.getReadableDatabase();
+            User[] usersList = params[0];
+
+            String[] projection = {
+                    SeniorFitnessContract.Result.COLUMN_NAME_USERID,
+                    SeniorFitnessContract.Result.COLUMN_NAME_SESSIONID,
+                    SeniorFitnessContract.Result.COLUMN_NAME_TESTID,
+                    SeniorFitnessContract.Result.COLUMN_NAME_RESULT,
+                    SeniorFitnessContract.Result.COLUMN_NAME_DATE
+            };
+
+            String where = "";
+            for (User user:usersList) {
+                where = where + SeniorFitnessContract.Result.COLUMN_NAME_USERID + " = '" +
+                        user.getUserID() + "' OR ";
+            }
+            where = where.substring(0,where.length()-4);
+
+            Cursor c = db.query(
+                    SeniorFitnessContract.Result.TABLE_NAME, // Nombre de la tabla
+                    projection,             // Columnas a devolver
+                    where,                  // Columnas para la cláusula WHERE
+                    null,                   // Valores para la cláusula WHERE
+                    null,                   // GROUP BY
+                    null,                   // HAVING
+                    null);             // ORDER BY
+
+            // Recorrer la información devuelta
+            Result[] data = new Result[c.getCount()];
+            int i = 0;
+
+            while (c.moveToNext()) {
+                String userId = c.getString(c.getColumnIndex(SeniorFitnessContract.Result.COLUMN_NAME_USERID));
+                String sessionId = c.getString(c.getColumnIndex(SeniorFitnessContract.Result.COLUMN_NAME_SESSIONID));
+                String testId = c.getString(c.getColumnIndex(SeniorFitnessContract.Result.COLUMN_NAME_TESTID));
+                String result = c.getString(c.getColumnIndex(SeniorFitnessContract.Result.COLUMN_NAME_RESULT));
+                String date = c.getString(c.getColumnIndex(SeniorFitnessContract.Result.COLUMN_NAME_DATE));;
+                data[i++] = new Result(userId, testId, sessionId, result, date);
+            }
+
+            c.close();
+
+            return data;
+        }
+
+        @Override
+        protected void onPostExecute(Result[] results) {
+            float fpna = 0;
+            int fpna_count = 0;
+            float fbr = 0;
+            int fbr_count = 0;
+            float resist = 0;
+            int resist_count = 0;
+            float flexpna = 0;
+            int flexpna_count = 0;
+            float flexbr = 0;
+            int flexbr_count = 0;
+            float agil = 0;
+            int agil_count = 0;
+            for (Result result:results) {
+                if ("F_Pna".equals(result.getTestID())) {
+                    float value = 0;
+                    if (!"".equals(result.getResult())){
+                        value = Float.valueOf(result.getResult().replace(",","."));
+                    }
+                    fpna = fpna + value;
+                    fpna_count++;
+                } else if ("F_Br".equals(result.getTestID())) {
+                    float value = 0;
+                    if (!"".equals(result.getResult())){
+                        value = Float.valueOf(result.getResult().replace(",","."));
+                    }
+                    fbr = fbr + value;
+                    fbr_count++;
+                } else if ("Resist".equals(result.getTestID())) {
+                    float value = 0;
+                    if (!"".equals(result.getResult())){
+                        value = Float.valueOf(result.getResult().replace(",","."));
+                    }
+                    resist = resist + value;
+                    resist_count++;
+                } else if ("Flex_Pna".equals(result.getTestID())) {
+                    float value = 0;
+                    if (!"".equals(result.getResult())){
+                        value = Float.valueOf(result.getResult().replace(",","."));
+                    }
+                    flexpna = flexpna + value;
+                    flexpna_count++;
+                } else if ("Flex_Br".equals(result.getTestID())) {
+                    float value = 0;
+                    if (!"".equals(result.getResult())){
+                        value = Float.valueOf(result.getResult().replace(",","."));
+                    }
+                    flexbr = flexbr + value;
+                    flexbr_count++;
+                } else if ("Agil".equals(result.getTestID())) {
+                    float value = 0;
+                    if (!"".equals(result.getResult())){
+                        value = Float.valueOf(result.getResult().replace(",","."));
+                    }
+                    agil = agil + value;
+                    agil_count++;
+                }
+            }
+
+            fpna = (float)fpna/fpna_count;
+            bargroup3.add(new BarEntry(fpna, 0));
+            fbr = (float)fbr/fbr_count;
+            bargroup3.add(new BarEntry(fbr, 1));
+            resist = (float)resist/resist_count;
+            bargroup3.add(new BarEntry(resist, 2));
+            flexpna = (float)flexpna/flexpna_count;
+            bargroup3.add(new BarEntry(flexpna, 3));
+            flexbr = (float)flexbr/flexbr_count;
+            bargroup3.add(new BarEntry(flexbr, 4));
+            agil = (float)agil/agil_count;
+            bargroup3.add(new BarEntry(agil, 5));
+
+            String description = "Media resto ";
+            if ("Hombre".equals(gender)) {
+                description = description + "hombres";
+            } else {
+                description = description + "mujeres";
+            }
+            BarDataSet barDataSet = new BarDataSet(bargroup3, description);
+            barDataSet.setColor(R.color.colorPrimaryDark);
+            dataSets.add(barDataSet);
+
             BarData data = new BarData(labels, dataSets);
             barChart.setData(data);
             barChart.invalidate();
