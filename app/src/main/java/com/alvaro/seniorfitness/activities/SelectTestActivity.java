@@ -217,6 +217,8 @@ public class SelectTestActivity extends AppCompatActivity {
             Intent intent = new Intent(these, ResultsActivity.class);
             intent.putExtra("userId", userId);
             intent.putExtra("sessionId", sessionId);
+            intent.putExtra("birthdate", birthdate);
+            intent.putExtra("gender", gender);
             startActivity(intent);
         }
     }

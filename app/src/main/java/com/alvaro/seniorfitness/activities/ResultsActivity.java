@@ -34,6 +34,8 @@ public class ResultsActivity extends AppCompatActivity {
     private SeniorFitnessDBHelper dbHelper;
     private Activity these;
     private String userId;
+    private String birthdate;
+    private String gender;
     private String sessionId;
     private Test[] tests;
     private ListView listView;
@@ -47,6 +49,8 @@ public class ResultsActivity extends AppCompatActivity {
         dbHelper = new SeniorFitnessDBHelper(this);
         userId = getIntent().getStringExtra("userId");
         sessionId = getIntent().getStringExtra("sessionId");
+        birthdate = getIntent().getStringExtra("birthdate");
+        gender = getIntent().getStringExtra("gender");
         listView = (ListView) findViewById(R.id.listTests);
 
         tests = new Test[6];
@@ -131,7 +135,7 @@ public class ResultsActivity extends AppCompatActivity {
                 }
             }
 
-            TestsAdapter adapter = new TestsAdapter(these,tests,userId);
+            TestsAdapter adapter = new TestsAdapter(these,tests,userId,birthdate,gender);
             listView.setAdapter(adapter);
         }
     }
