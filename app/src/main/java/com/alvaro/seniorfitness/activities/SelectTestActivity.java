@@ -189,6 +189,8 @@ public class SelectTestActivity extends AppCompatActivity {
                     }
                     intent.putExtra("userId", userId);
                     intent.putExtra("sessionId", sessionId);
+                    intent.putExtra("birthdate", birthdate);
+                    intent.putExtra("gender", gender);
                     intent.putExtra("testId", theTest.getTestID());
                     startActivity(intent);
                 }
@@ -307,6 +309,8 @@ public class SelectTestActivity extends AppCompatActivity {
                             }
                             intent.putExtra("userId", userId);
                             intent.putExtra("sessionId", sessionId);
+                            intent.putExtra("birthdate", birthdate);
+                            intent.putExtra("gender", gender);
                             intent.putExtra("testId", theTest.getTestID());
                             startActivity(intent);
                         } else {

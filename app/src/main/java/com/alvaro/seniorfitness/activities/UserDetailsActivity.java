@@ -174,6 +174,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                             Intent intent = new Intent(these, SelectTestActivity.class);
                             intent.putExtra("userId", theSession.getUserID());
                             intent.putExtra("sessionId", theSession.getSessionID());
+                            intent.putExtra("gender", gender);
+                            intent.putExtra("birthdate", birthdate);
                             startActivity(intent);
                         } else {
                             Intent intent = new Intent(these, StatsActivity.class);

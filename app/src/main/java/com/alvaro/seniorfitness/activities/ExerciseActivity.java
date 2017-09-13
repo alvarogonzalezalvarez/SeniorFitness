@@ -49,6 +49,8 @@ public class ExerciseActivity extends AppCompatActivity {
     String userId;
     String sessionId;
     String testId;
+    String birthdate;
+    String gender;
     private SeniorFitnessDBHelper dbHelper;
 
     protected void initActivity(int layoutResID) {
@@ -60,6 +62,8 @@ public class ExerciseActivity extends AppCompatActivity {
         userId = getIntent().getStringExtra("userId");
         sessionId = getIntent().getStringExtra("sessionId");
         testId = getIntent().getStringExtra("testId");
+        birthdate = getIntent().getStringExtra("birthdate");
+        gender = getIntent().getStringExtra("gender");
         repCount = (TextView) findViewById(R.id.repCount);
         centimeters = (TextView) findViewById(R.id.centimeters);
         invalidValue = (TextView) findViewById(R.id.invalidvalue);
@@ -140,6 +144,8 @@ public class ExerciseActivity extends AppCompatActivity {
                 if (validForm) {
                     Intent intent = NavUtils.getParentActivityIntent(these);
                     intent.putExtra("userId", userId);
+                    intent.putExtra("gender", gender);
+                    intent.putExtra("birthdate", birthdate);
                     NavUtils.navigateUpTo(these, intent);
                 }
             }
