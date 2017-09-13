@@ -22,6 +22,8 @@ public class InfoActivity extends AppCompatActivity {
     Map<String, Test> tests;
     String userId;
     String testId;
+    String birthdate;
+    String gender;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class InfoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         userId = getIntent().getStringExtra("userId");
         testId = getIntent().getStringExtra("testId");
+        birthdate = getIntent().getStringExtra("birthdate");
+        gender = getIntent().getStringExtra("gender");
 
         tests = new HashMap<String, Test>();
         tests.put("F_Pna",new Test("F_Pna","Fuerza de Piernas","Número de veces que es capaz de " +
@@ -91,6 +95,8 @@ public class InfoActivity extends AppCompatActivity {
             case android.R.id.home:
                 Intent intent = NavUtils.getParentActivityIntent(this);
                 intent.putExtra("userId", userId);
+                intent.putExtra("birthdate", birthdate);
+                intent.putExtra("gender", gender);
                 NavUtils.navigateUpTo(this, intent);
                 return true;
         }

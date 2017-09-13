@@ -236,6 +236,8 @@ public class ExerciseActivity extends AppCompatActivity {
             case android.R.id.home:
                 Intent intent = NavUtils.getParentActivityIntent(this);
                 intent.putExtra("userId", userId);
+                intent.putExtra("birthdate", birthdate);
+                intent.putExtra("gender", gender);
                 NavUtils.navigateUpTo(this, intent);
                 return true;
         }

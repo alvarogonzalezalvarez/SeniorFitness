@@ -818,6 +818,8 @@ public class TestsAdapter extends BaseAdapter {
                 Intent intent = new Intent(context, InfoActivity.class);
                 intent.putExtra("testId", test.getTestID());
                 intent.putExtra("userId", userId);
+                intent.putExtra("birthdate", birthdate);
+                intent.putExtra("gender", gender);
                 context.startActivity(intent);
             }
         });
