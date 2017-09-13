@@ -111,6 +111,8 @@ public class StartSessionActivity extends AppCompatActivity {
                         User theUser = result[position];
                         Intent intent = new Intent(these, SelectTestActivity.class);
                         intent.putExtra("userId", theUser.getUserID());
+                        intent.putExtra("birthdate", theUser.getBirthdate());
+                        intent.putExtra("gender", theUser.getGender());
                         startActivity(intent);
                     }
                 });

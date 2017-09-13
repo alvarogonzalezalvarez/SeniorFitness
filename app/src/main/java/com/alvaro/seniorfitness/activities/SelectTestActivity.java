@@ -39,6 +39,8 @@ public class SelectTestActivity extends AppCompatActivity {
     private Activity these;
     private String userId;
     private String sessionId;
+    private String birthdate;
+    private String gender;
     private Test[] tests;
     private ListView listView;
 
@@ -50,6 +52,8 @@ public class SelectTestActivity extends AppCompatActivity {
         setTitle("Tests");
         dbHelper = new SeniorFitnessDBHelper(this);
         userId = getIntent().getStringExtra("userId");
+        birthdate = getIntent().getStringExtra("birthdate");
+        gender = getIntent().getStringExtra("gender");
         listView = (ListView) findViewById(R.id.listTests);
 
         tests = new Test[6];
@@ -163,7 +167,7 @@ public class SelectTestActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long result) {
-            TestsAdapter adapter = new TestsAdapter(these,tests,userId);
+            TestsAdapter adapter = new TestsAdapter(these,tests,userId,birthdate,gender);
             listView.setAdapter(adapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -278,7 +282,7 @@ public class SelectTestActivity extends AppCompatActivity {
             if (count == tests.length) {
                 new updateSession().execute(sessionId, userId, "COMPLETED");
             } else {
-                TestsAdapter adapter = new TestsAdapter(these,tests,userId);
+                TestsAdapter adapter = new TestsAdapter(these,tests,userId,birthdate,gender);
                 listView.setAdapter(adapter);
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
