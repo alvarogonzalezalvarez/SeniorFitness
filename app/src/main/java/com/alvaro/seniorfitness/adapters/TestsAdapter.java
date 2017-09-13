@@ -97,6 +97,10 @@ public class TestsAdapter extends BaseAdapter {
                 }
                 age = cal2.get(Calendar.YEAR) - cal1.get(Calendar.YEAR) + factor;
 
+                if ("Flex_Pna".equals(test.getTestID()) || "Flex_Br".equals(test.getTestID())) {
+                    resultFloat = (float)resultFloat/2.54f;
+                }
+
                 if ("Mujer".equals(gender)) {
                     if (age >= 60 && age <= 64) {
                         if ("F_Pna".equals(test.getTestID())) {
