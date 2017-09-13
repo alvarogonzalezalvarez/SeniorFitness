@@ -7,68 +7,70 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Flexibilidad de piernas\relax }}{8}{figure.caption.20}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Flexibilidad de brazos\relax }}{9}{figure.caption.22}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Agilidad\relax }}{9}{figure.caption.24}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Intervalo normal de valores seg\IeC {\'u}n la edad para mujeres\relax }}{10}{figure.caption.26}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Intervalo normal de valores seg\IeC {\'u}n la edad para hombres\relax }}{10}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de Gantt inicial del proyecto\relax }}{17}{figure.caption.26}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de Gantt inicial del proyecto\relax }}{17}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama UML: Casos de uso de la aplicaci\IeC {\'o}n\relax }}{22}{figure.caption.28}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama UML: Casos de uso test fuerza de piernas\relax }}{23}{figure.caption.29}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama UML: Casos de uso test fuerza de brazos\relax }}{23}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama UML: Casos de uso test resistencia aer\IeC {\'o}bica\relax }}{24}{figure.caption.31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama UML: Casos de uso test agilidad\relax }}{24}{figure.caption.32}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama UML: Casos de uso test flexibilidad de piernas\relax }}{24}{figure.caption.33}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama UML: Casos de uso test flexibilidad de brazos\relax }}{25}{figure.caption.34}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces An\IeC {\'a}lisis: Modelo conceptual Entidad-Relaci\IeC {\'o}n\relax }}{39}{figure.caption.71}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama UML: Casos de uso de la aplicaci\IeC {\'o}n\relax }}{22}{figure.caption.32}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama UML: Casos de uso test fuerza de piernas\relax }}{23}{figure.caption.33}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama UML: Casos de uso test fuerza de brazos\relax }}{23}{figure.caption.34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama UML: Casos de uso test resistencia aer\IeC {\'o}bica\relax }}{24}{figure.caption.35}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama UML: Casos de uso test agilidad\relax }}{24}{figure.caption.36}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama UML: Casos de uso test flexibilidad de piernas\relax }}{24}{figure.caption.37}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama UML: Casos de uso test flexibilidad de brazos\relax }}{25}{figure.caption.38}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces An\IeC {\'a}lisis: Modelo conceptual Entidad-Relaci\IeC {\'o}n\relax }}{39}{figure.caption.75}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Arquitectura Android\relax }}{43}{figure.caption.74}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Arquitectura Android: Ciclo de vida de una Activity\relax }}{45}{figure.caption.76}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Arquitectura Android: Ciclo de vida de un Servicio\relax }}{46}{figure.caption.77}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Arquitectura Android: Content Provider\relax }}{47}{figure.caption.78}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Arquitectura Android: Broadcast Receiver\relax }}{47}{figure.caption.79}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Arquitectura Android: Externalizaci\IeC {\'o}n de recursos\relax }}{48}{figure.caption.81}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Diagrama Entidad-Relaci\IeC {\'o}n de la base de datos\relax }}{52}{figure.caption.85}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Navegaci\IeC {\'o}n entre pantallas\relax }}{54}{figure.caption.86}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Pantalla principal\relax }}{55}{figure.caption.87}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Pantalla de alta de persona\relax }}{56}{figure.caption.88}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Pantalla de detalle de persona\relax }}{57}{figure.caption.89}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Pantalla de estad\IeC {\'\i }sticas de sesi\IeC {\'o}n\relax }}{58}{figure.caption.90}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Pantalla de selecci\IeC {\'o}n de persona\relax }}{59}{figure.caption.91}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Pantalla de selecci\IeC {\'o}n de test\relax }}{60}{figure.caption.92}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Pantalla de informaci\IeC {\'o}n de test\relax }}{61}{figure.caption.93}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Pantalla de test de fuerza de piernas\relax }}{62}{figure.caption.94}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Pantalla de test de fuerza de brazos\relax }}{63}{figure.caption.95}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Pantalla de test de resistencia aer\IeC {\'o}bica\relax }}{64}{figure.caption.96}
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Pantalla de test de flexibilidad de piernas\relax }}{65}{figure.caption.97}
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Pantalla de test de flexibilidad de brazos\relax }}{66}{figure.caption.98}
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Pantalla de test de agilidad\relax }}{67}{figure.caption.99}
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Pantalla de resultados\relax }}{68}{figure.caption.100}
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de piernas\relax }}{69}{figure.caption.101}
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de brazos\relax }}{70}{figure.caption.102}
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Diagrama UML con el dise\IeC {\~n}o de clases de la aplicaci\IeC {\'o}n\relax }}{71}{figure.caption.103}
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Diagrama de secuencia de registro de persona\relax }}{72}{figure.caption.105}
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Diagrama de secuencia de registro de comienzo de sesi\IeC {\'o}n\relax }}{73}{figure.caption.107}
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Diagrama de secuencia de selecci\IeC {\'o}n de la persona que comenzar\IeC {\'a} la sesi\IeC {\'o}n\relax }}{74}{figure.caption.109}
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Diagrama de secuencia de detecci\IeC {\'o}n de movimiento\relax }}{75}{figure.caption.111}
-\contentsline {figure}{\numberline {5.30}{\ignorespaces Diagrama de secuencia de guardado de resultado\relax }}{75}{figure.caption.113}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Arquitectura Android\relax }}{43}{figure.caption.78}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Arquitectura Android: Ciclo de vida de una Activity\relax }}{45}{figure.caption.80}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Arquitectura Android: Ciclo de vida de un Servicio\relax }}{46}{figure.caption.81}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Arquitectura Android: Content Provider\relax }}{47}{figure.caption.82}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Arquitectura Android: Broadcast Receiver\relax }}{47}{figure.caption.83}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Arquitectura Android: Externalizaci\IeC {\'o}n de recursos\relax }}{48}{figure.caption.85}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Diagrama Entidad-Relaci\IeC {\'o}n de la base de datos\relax }}{52}{figure.caption.89}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Navegaci\IeC {\'o}n entre pantallas\relax }}{54}{figure.caption.90}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Pantalla principal\relax }}{55}{figure.caption.91}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Pantalla de alta de persona\relax }}{56}{figure.caption.92}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Pantalla de detalle de persona\relax }}{57}{figure.caption.93}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Pantalla de estad\IeC {\'\i }sticas de sesi\IeC {\'o}n\relax }}{58}{figure.caption.94}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Pantalla de selecci\IeC {\'o}n de persona\relax }}{59}{figure.caption.95}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Pantalla de selecci\IeC {\'o}n de test\relax }}{60}{figure.caption.96}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Pantalla de informaci\IeC {\'o}n de test\relax }}{61}{figure.caption.97}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Pantalla de test de fuerza de piernas\relax }}{62}{figure.caption.98}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Pantalla de test de fuerza de brazos\relax }}{63}{figure.caption.99}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Pantalla de test de resistencia aer\IeC {\'o}bica\relax }}{64}{figure.caption.100}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Pantalla de test de flexibilidad de piernas\relax }}{65}{figure.caption.101}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Pantalla de test de flexibilidad de brazos\relax }}{66}{figure.caption.102}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Pantalla de test de agilidad\relax }}{67}{figure.caption.103}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Pantalla de resultados\relax }}{68}{figure.caption.104}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de piernas\relax }}{69}{figure.caption.105}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de brazos\relax }}{70}{figure.caption.106}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Diagrama UML con el dise\IeC {\~n}o de clases de la aplicaci\IeC {\'o}n\relax }}{71}{figure.caption.107}
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Diagrama de secuencia de registro de persona\relax }}{72}{figure.caption.109}
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Diagrama de secuencia de registro de comienzo de sesi\IeC {\'o}n\relax }}{73}{figure.caption.111}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Diagrama de secuencia de selecci\IeC {\'o}n de la persona que comenzar\IeC {\'a} la sesi\IeC {\'o}n\relax }}{74}{figure.caption.113}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Diagrama de secuencia de detecci\IeC {\'o}n de movimiento\relax }}{75}{figure.caption.115}
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Diagrama de secuencia de guardado de resultado\relax }}{75}{figure.caption.117}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Interfaz de Android Studio\relax }}{78}{figure.caption.114}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Efecto de la gravedad sobre el eje Z con el dispositivo colocado de forma paralela sobre el suelo y con la pantalla hacia arriba\relax }}{82}{figure.caption.115}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Efecto de la gravedad sobre el eje Y con el dispositivo colocado de forma perpendicular (de pie) sobre el suelo\relax }}{83}{figure.caption.116}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Fuerza de brazos: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n inicial\relax }}{84}{figure.caption.117}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Fuerza de brazos: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n final\relax }}{84}{figure.caption.118}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Fuerza de piernas: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n inicial\relax }}{85}{figure.caption.119}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Fuerza de piernas: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n final\relax }}{85}{figure.caption.120}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Resistencia aer\IeC {\'o}bica: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n inicial\relax }}{86}{figure.caption.121}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Resistencia aer\IeC {\'o}bica: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n final\relax }}{86}{figure.caption.122}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Logo de GitHub\relax }}{93}{figure.caption.123}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Logo de LaTeX\relax }}{94}{figure.caption.124}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Logo de Gantt Project\relax }}{94}{figure.caption.125}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Logo de Dia\relax }}{94}{figure.caption.126}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Logo de Gimp\relax }}{95}{figure.caption.127}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Interfaz de Android Studio\relax }}{78}{figure.caption.118}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Efecto de la gravedad sobre el eje Z con el dispositivo colocado de forma paralela sobre el suelo y con la pantalla hacia arriba\relax }}{82}{figure.caption.119}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Efecto de la gravedad sobre el eje Y con el dispositivo colocado de forma perpendicular (de pie) sobre el suelo\relax }}{83}{figure.caption.120}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Fuerza de brazos: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n inicial\relax }}{84}{figure.caption.121}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Fuerza de brazos: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n final\relax }}{84}{figure.caption.122}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Fuerza de piernas: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n inicial\relax }}{85}{figure.caption.123}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Fuerza de piernas: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n final\relax }}{85}{figure.caption.124}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Resistencia aer\IeC {\'o}bica: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n inicial\relax }}{86}{figure.caption.125}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Resistencia aer\IeC {\'o}bica: Efecto de la gravedad sobre el eje Y en la posici\IeC {\'o}n final\relax }}{86}{figure.caption.126}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de piernas\relax }}{100}{figure.caption.130}
-\contentsline {figure}{\numberline {10.2}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de brazos\relax }}{101}{figure.caption.133}
-\contentsline {figure}{\numberline {10.3}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Resistencia aer\IeC {\'o}bica\relax }}{102}{figure.caption.136}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Logo de GitHub\relax }}{93}{figure.caption.127}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Logo de LaTeX\relax }}{94}{figure.caption.128}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Logo de Gantt Project\relax }}{94}{figure.caption.129}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Logo de Dia\relax }}{94}{figure.caption.130}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Logo de Gimp\relax }}{95}{figure.caption.131}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de piernas\relax }}{100}{figure.caption.134}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Fuerza de brazos\relax }}{101}{figure.caption.137}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Colocaci\IeC {\'o}n del dispositivo m\IeC {\'o}vil para el test Resistencia aer\IeC {\'o}bica\relax }}{102}{figure.caption.140}
 \addvspace {10\p@ }
