@@ -809,6 +809,13 @@ public class TestsAdapter extends BaseAdapter {
             } catch (ParseException e) {}
 
             result.setText(test.getResult() + units + intervalo);
+            if (intervalo.contains("encima")) {
+                result.setTextColor(Color.BLUE);
+            } else if (intervalo.contains("debajo")) {
+                result.setTextColor(Color.RED);
+            } else {
+                result.setTextColor(Color.rgb(44,160,44));
+            }
         }
         photo.setScaleType(ImageView.ScaleType.FIT_END);
 

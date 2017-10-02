@@ -36,7 +36,11 @@ public class ResultsActivity extends AppCompatActivity {
     private String userId;
     private String birthdate;
     private String gender;
+    private String name;
+    private String lastname;
+    private String photo;
     private String sessionId;
+    private String isFromStats;
     private Test[] tests;
     private ListView listView;
 
@@ -51,6 +55,10 @@ public class ResultsActivity extends AppCompatActivity {
         sessionId = getIntent().getStringExtra("sessionId");
         birthdate = getIntent().getStringExtra("birthdate");
         gender = getIntent().getStringExtra("gender");
+        name = getIntent().getStringExtra("name");
+        lastname = getIntent().getStringExtra("lastname");
+        photo = getIntent().getStringExtra("photo");
+        isFromStats = getIntent().getStringExtra("isFromStats");
         listView = (ListView) findViewById(R.id.listTests);
 
         tests = new Test[6];
@@ -145,7 +153,19 @@ public class ResultsActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+                if (isFromStats != null && "true".equals(isFromStats)) {
+                    Intent intent = new Intent(these, StatsActivity.class);
+                    intent.putExtra("userId", userId);
+                    intent.putExtra("sessionId", sessionId);
+                    intent.putExtra("name", name);
+                    intent.putExtra("lastname", lastname);
+                    intent.putExtra("gender", gender);
+                    intent.putExtra("birthdate", birthdate);
+                    intent.putExtra("photo", photo);
+                    startActivity(intent);
+                } else {
+                    NavUtils.navigateUpFromSameTask(this);
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);

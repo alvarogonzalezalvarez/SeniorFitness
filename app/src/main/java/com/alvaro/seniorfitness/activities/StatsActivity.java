@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -581,8 +582,26 @@ public class StatsActivity extends AppCompatActivity {
                 intent.putExtra("photo", photo);
                 NavUtils.navigateUpTo(this, intent);
                 return true;
+            case R.id.navigation_show_result:
+                Intent intent_results = new Intent(these, ResultsActivity.class);
+                intent_results.putExtra("userId", userId);
+                intent_results.putExtra("sessionId", sessionId);
+                intent_results.putExtra("birthdate", birthdate);
+                intent_results.putExtra("gender", gender);
+                intent_results.putExtra("isFromStats", "true");
+                intent_results.putExtra("name", name);
+                intent_results.putExtra("lastname", lastname);
+                intent_results.putExtra("photo", photo);
+                startActivity(intent_results);
+                return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.stats, menu);
+        return true;
     }
 
 }
