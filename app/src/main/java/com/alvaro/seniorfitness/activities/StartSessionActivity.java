@@ -33,7 +33,7 @@ public class StartSessionActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Selección de Usuario");
+        setTitle("Selección de Persona");
         dbHelper = new SeniorFitnessDBHelper(this);
         usersText = (TextView) findViewById(R.id.usersText);
         usersText.setVisibility(View.GONE);

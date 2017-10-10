@@ -62,7 +62,7 @@ public class AddUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle("Alta de Usuario");
+        setTitle("Alta de Persona");
         dbHelper = new SeniorFitnessDBHelper(this);
 
         nullText = (TextView) findViewById(R.id.nulltext);
